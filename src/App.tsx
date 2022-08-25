@@ -8,8 +8,6 @@ import {
   theme,
   Image,
 } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
 import LOGO from './assets/logo/LOGO.svg'
 
 export const App = () => (
