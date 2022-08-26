@@ -12,7 +12,7 @@ export const WhatIsLyda = () => {
       h={"790px"}
       justifyContent={"center"}
       px={"auto"}
-      py={"120px"}
+    
     >
       <Flex  
       alignItems={"center"}>
@@ -30,7 +30,7 @@ export const WhatIsLyda = () => {
           <Text
             mt={"32px"}
             fontSize={"16px"}
-            fontWeight={400}
+            fontWeight={300}
             w={"437px"}
             lineHeight={"25px"}
             mb={"50px"}

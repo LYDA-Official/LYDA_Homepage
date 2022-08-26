@@ -13,17 +13,28 @@ type BasicButtonPtop = {
   link?: string;
   color: string;
   mr?: string;
+  border?: string;
 };
 
 export const BasicButton = (prop: BasicButtonPtop) => {
-  const { text, w, h, isDisabled, fontSize, func, style, bg, link, color, mr } = prop;
+  const {
+    text,
+    w,
+    h,
+    isDisabled,
+    fontSize,
+    func,
+    style,
+    bg,
+    link,
+    color,
+    mr,
+    border,
+  } = prop;
 
   if (link) {
-    
     return (
-      <a   style={{textDecoration: 'none'}} href={link} 
-     
-      download="">
+      <a style={{ textDecoration: "none" }} href={link} download="">
         <Button
           _hover={{ cursor: "pointer" }}
           onClick={func}
@@ -34,7 +45,7 @@ export const BasicButton = (prop: BasicButtonPtop) => {
           bg={bg}
           mr={mr}
           borderRadius={0}
-       
+          border={border}
           borderTopRightRadius={"20px"}
           fontWeight={500}
           color={color}
@@ -59,7 +70,7 @@ export const BasicButton = (prop: BasicButtonPtop) => {
       borderTopRightRadius={"20px"}
       fontWeight={500}
       color={color}
-    
+      border={border}
     >
       {text}
     </Button>
