@@ -5,7 +5,7 @@ import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
 import theme from "./theme";
-import { Router } from "./assets/pages/Router";
+import { Router } from "./pages/Router";
 import { BrowserRouter } from "react-router-dom";
 
 const container = document.getElementById("root");

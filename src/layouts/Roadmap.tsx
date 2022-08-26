@@ -1,14 +1,6 @@
-import {
-    Box,
-    Flex,
-    Button,
-    Stack,
-    Image,
-    useTheme,
-    CircularProgress,
-    useColorMode,
-    Text,
-    Link,
-    // Tooltip,
-  } from "@chakra-ui/react";
-  import React from "react";
+import { Flex } from "@chakra-ui/react";
+import React from "react";
+
+export const Roadmap = () => {
+  return <Flex bg={"red"}>Roadmap</Flex>;
+};

@@ -13,13 +13,16 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import LOGO from "../assets/logo/LOGO.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink,useMatch } from "react-router-dom";
 import theme from "../theme/index";
 import Discord from "../assets/icons/Discord.svg";
 import Twitter from "../assets/icons/Twitter.svg";
 import Telegram from "../assets/icons/Telegram.svg";
 
 export const Header: React.FC = () => {
+  const about = useMatch('/about');
+  const register = useMatch('/register')
+
   const socialLinks = [
     {
       title: "Twitter",
@@ -32,10 +35,10 @@ export const Header: React.FC = () => {
       href: "https://t.me/lyda_official",
     },
     {
-        title: "Discord",
-        icon: Discord,
-        href: "https://twitter.com/Lyda_official",
-      },
+      title: "Discord",
+      icon: Discord,
+      href: "https://twitter.com/Lyda_official",
+    },
   ];
   return (
     <NavBarContainer>
@@ -46,26 +49,27 @@ export const Header: React.FC = () => {
       </Flex>
       <Flex w={"300px"} fontSize={"20px"} fontWeight={500}>
         <NavLink to="/about" style={{ width: "90%" }}>
-          ABOUT
+          <Text color={about?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>ABOUT</Text>
         </NavLink>
-        <NavLink to="/about" style={{ width: "100%" }}>
-          PRE - REGISTER
+        <NavLink to="/register" style={{ width: "100%" }}>
+        <Text color={register?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>PRE - REGISTER</Text>
+          
         </NavLink>
       </Flex>
-<Flex>
-{socialLinks.map ((link:any, index:number) => (
-            <Link    href={link.href} isExternal={true}>
-                <Image src={link.icon} h={'32px'} w={'32px'} ml={'32px'} />
-           </Link>
-
-      ))}
-</Flex>
-       
+      <Flex>
+        {socialLinks.map((link: any, index: number) => (
+          <Link href={link.href} isExternal={true} key={index}>
+            <Image src={link.icon} h={"32px"} w={"32px"} ml={"32px"} />
+          </Link>
+        ))}
+      </Flex>
     </NavBarContainer>
   );
 };
 
 const NavBarContainer = ({ children, ...rest }: { children: any }) => {
+
+
   return (
     <Flex
       as="nav"

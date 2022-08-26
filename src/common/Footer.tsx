@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
       </Text>
       <Flex>
         {socialLinks.map((link: any, index: number) => (
-          <Link href={link.href} isExternal={true}>
+          <Link href={link.href} isExternal={true} key={index}>
             <Image src={link.icon} h={"28px"} w={"28px"} ml={"32px"} />
           </Link>
         ))}
