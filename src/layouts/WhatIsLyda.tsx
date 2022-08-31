@@ -2,27 +2,19 @@ import { Flex, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import theme from "../theme/index";
 import { BasicButton } from "../common/BasicButton";
-import graph from '../assets/graph.png'
+import graph from "../assets/graph.png";
 
 export const WhatIsLyda = () => {
-  
   return (
-    <Flex
-      bg={"white"}
-      h={"790px"}
-      justifyContent={"center"}
-      px={"auto"}
-    
-    >
-      <Flex  
-      alignItems={"center"}>
+    <Flex bg={"white"} h={"790px"} justifyContent={"center"} px={"auto"}>
+      <Flex alignItems={"center"} {...theme.LAYOUT_STYLE.layoutStyle()}>
         <Flex
           w={"100%"}
           flexDir="column"
           color={"blue.200"}
           fontFamily={theme.fonts.main}
           fontStyle="normal"
-          mr={'136px'}
+          mr={"136px"}
         >
           <Text fontSize={"70px"} fontWeight={700} lineHeight={"70px"}>
             WHAT IS LYDA
@@ -31,7 +23,6 @@ export const WhatIsLyda = () => {
             mt={"32px"}
             fontSize={"16px"}
             fontWeight={300}
-            w={"437px"}
             lineHeight={"25px"}
             mb={"50px"}
           >
@@ -56,7 +47,7 @@ export const WhatIsLyda = () => {
             />
           </Flex>
         </Flex>
-<Image src={graph} h={'550px'} w={'550px'} />
+        <Image src={graph} h={"550px"} w={"550px"} />
       </Flex>
     </Flex>
   );

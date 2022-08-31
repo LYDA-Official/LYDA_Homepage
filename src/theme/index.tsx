@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, useMediaQuery } from "@chakra-ui/react";
 import { createBreakpoints, mode } from "@chakra-ui/theme-tools";
 import "@fontsource/saira/500.css";
 import "@fontsource/saira/300.css";
@@ -23,6 +23,16 @@ const colors = {
   },
 };
 
+export const LAYOUT_STYLE = {
+  layoutStyle: ()=>({
+    w: '1200px',
+  
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems:'center'
+  })
+} 
+
 const theme = extendTheme({
     styles: {
         global: (props:any) => {
@@ -33,5 +43,6 @@ const theme = extendTheme({
         }}},
   colors,
   fonts,
+  LAYOUT_STYLE
 });
 export default theme;

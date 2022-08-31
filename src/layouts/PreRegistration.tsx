@@ -3,6 +3,7 @@ import React from "react";
 import bg from "../assets/bg.png";
 import theme from "../theme/index";
 import { BasicButton } from "../common/BasicButton";
+
 export const PreRegistration = () => {
   return (
     <Flex
@@ -11,10 +12,11 @@ export const PreRegistration = () => {
       backgroundSize={"100% 1022px"}
       h={"1022px"}
       justifyContent={"center"}
-      px={"auto"}
-      flexDir={"column"}
-      alignItems={"center"}
+     
     >
+      <Flex  {...theme.LAYOUT_STYLE.layoutStyle()}
+        fontFamily={theme.fonts.main}
+        flexDir={"column"}>
       <Flex
         alignItems={"center"}
         justifyContent={"center"}
@@ -23,10 +25,11 @@ export const PreRegistration = () => {
         fontStyle={"normal"}
         flexDir={"column"}
         mb={"64px"}
+        color={'white.0'}
       >
         {" "}
         <Text fontWeight={600} fontSize={"48px"} mb={"20px"}>
-          PreRegistration
+          Pre Registration
         </Text>
         <Text
           fontSize={"16px"}
@@ -51,6 +54,7 @@ export const PreRegistration = () => {
             boxShadow: "0px 16px 56px rgba(19, 90, 95, 0.75)",
           }}
           bg={"purple.0"}
+          color={'white.0'}
         >
           <Text
             fontWeight={600}
@@ -112,6 +116,8 @@ export const PreRegistration = () => {
           <BasicButton text="BTN" color="blue.200" bg="transparent" border="2px solid #060B22"/>
         </Flex>
       </Flex>
+      </Flex>
+     
     </Flex>
   );
 };

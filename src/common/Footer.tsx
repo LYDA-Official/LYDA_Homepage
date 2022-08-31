@@ -40,6 +40,7 @@ export const Footer: React.FC = () => {
       alignItems={"center"}
       fontFamily={theme.fonts.main}
       fontWeight={500}
+      color={'white.0'}
     >
       <Text fontSize={"14px"} fontWeight={300}>
         Copyrightⓒ2022 <span style={{ fontWeight: 500 }}>LYDA</span>. All rights
