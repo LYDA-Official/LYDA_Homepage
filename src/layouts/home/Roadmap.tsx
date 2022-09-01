@@ -1,8 +1,8 @@
 import { Flex, Text, Image, Box } from "@chakra-ui/react";
 import React, { useState } from "react";
-import theme from "../theme";
-import bg from "../assets/bg2.png";
-import timeline from "../assets/timeline.png";
+import theme from "../../theme";
+import bg from "../../assets/bg2.png";
+import timeline from "../../assets/timeline.png";
 
 export const Roadmap = () => {
   const mapPoints = [

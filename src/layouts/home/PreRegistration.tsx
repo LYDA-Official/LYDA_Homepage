@@ -1,8 +1,8 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import bg from "../assets/bg.png";
-import theme from "../theme/index";
-import { BasicButton } from "../common/BasicButton";
+import bg from "../../assets/bg.png";
+import theme from "../../theme/index";
+import { BasicButton } from "../../common/BasicButton";
 
 export const PreRegistration = () => {
   return (
@@ -51,7 +51,7 @@ export const PreRegistration = () => {
           _hover={{
             background:
               "linear-gradient(134.5deg, #55C2FF -23.18%, #4361EE 94.24%)",
-            boxShadow: "0px 16px 56px rgba(19, 90, 95, 0.75)",
+              boxShadow: "0px 16px 56px rgba(3, 23, 115, 0.75)",
           }}
           bg={"purple.0"}
           color={'white.0'}
@@ -91,7 +91,8 @@ export const PreRegistration = () => {
           _hover={{
             background:
               "linear-gradient(139.33deg, #82FFB4 -57.9%, #07F1FF 98.53%)",
-            boxShadow: "0px 16px 56px rgba(3, 23, 115, 0.75)",
+              boxShadow: "0px 16px 56px rgba(19, 90, 95, 0.75)",
+           
           }}
         >
           <Text

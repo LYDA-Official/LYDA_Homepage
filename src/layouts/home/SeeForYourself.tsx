@@ -1,8 +1,8 @@
 import { Flex, Text, Box, Button, Image } from "@chakra-ui/react";
 import React from "react";
-import theme from "../theme";
-import Maskgroup from "../assets/Maskgroup.png";
-import PlayButton from "../assets/SVG/play.svg";
+import theme from "../../theme";
+import Maskgroup from "../../assets/Maskgroup.png";
+import PlayButton from "../../assets/SVG/play.svg";
 
 export const SeeForYourself = () => {
   window.onload = function () {

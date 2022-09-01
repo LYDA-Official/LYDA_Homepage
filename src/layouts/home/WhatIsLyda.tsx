@@ -1,8 +1,8 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
 import React from "react";
-import theme from "../theme/index";
-import { BasicButton } from "../common/BasicButton";
-import graph from "../assets/graph.png";
+import theme from "../../theme/index";
+import { BasicButton } from "../../common/BasicButton";
+import graph from "../../assets/graph.png";
 
 export const WhatIsLyda = () => {
   return (
