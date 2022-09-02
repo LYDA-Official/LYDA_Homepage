@@ -21,6 +21,7 @@ const colors = {
   },
   white: {
     0: "#ffffff",
+    100: '#f4f4ff'
   },
 };
 

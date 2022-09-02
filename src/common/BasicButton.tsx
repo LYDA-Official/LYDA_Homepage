@@ -45,10 +45,12 @@ export const BasicButton = (prop: BasicButtonPtop) => {
           bg={bg}
           mr={mr}
           borderRadius={0}
+          disabled={isDisabled}
           border={border}
           borderTopRightRadius={"20px"}
           fontWeight={500}
           color={color}
+          _disabled={{bg:'#C4C6CE',color:'white.0'}}
         >
           {text}
         </Button>
@@ -70,7 +72,9 @@ export const BasicButton = (prop: BasicButtonPtop) => {
       borderTopRightRadius={"20px"}
       fontWeight={500}
       color={color}
+      disabled={isDisabled}
       border={border}
+      _disabled={{bg:'#C4C6CE', color:'white.0'}}
     >
       {text}
     </Button>

@@ -2,8 +2,9 @@ import { Flex, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme/index";
 import bgSubPage from "../../assets/bgSubPage.png";
-import AboutLyda from '../../assets/SVG/ABOUTLYDA.svg'
-export const HeaderLayout = () => {
+
+export const RegisterHeaderLayout = (props: {image:any; height:string; width:string; title:string}) => {
+  const {image,height,width,title} = props
   return (
     <Flex
       h={"400px"}
@@ -27,9 +28,9 @@ export const HeaderLayout = () => {
         {" "}
         ABOUT LYDA
       </Text> */}
-      <Image  mt={"200px"} src={AboutLyda} w={'364.15px'} h={'44.24px'} mb={'36.5px'}/>
+      <Image  mt={"200px"} src={image} h={height} width={width} mb='25.6px'/>
       <Text fontFamily={theme.fonts.main} color={'white.0'}>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint
+       {title}
       </Text>
     </Flex>
   );

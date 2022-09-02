@@ -3,7 +3,8 @@ import { Header } from '../common/Header';
 import { Footer } from '../common/Footer';
 import { Home } from './Home';
 import { About } from './About';
-import { Register } from './Register';
+import { FansRegister } from './FansRegister';
+import {CreatorsRegister} from './CreatorsRegister'
 import { Routes, Route, Link } from "react-router-dom";
 export interface RouterProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -17,7 +18,8 @@ export const Router: FC<RouterProps> = () => {
                 <Routes>
                 <Route  path="/" element={<Home/>} />
         <Route  path="/about" element={<About/>} />
-        <Route  path='/register' element={<Register/>} />
+        <Route  path='/register/fans' element={<FansRegister/>} />
+        <Route  path='/register/creators' element={<CreatorsRegister/>} />
                 </Routes>
            
        

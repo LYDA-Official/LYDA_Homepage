@@ -1,4 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
+import { NavLink,useMatch } from "react-router-dom";
 import React from "react";
 import bg from "../../assets/bg.png";
 import theme from "../../theme/index";
@@ -42,6 +43,7 @@ export const PreRegistration = () => {
         </Text>
       </Flex>
       <Flex w={"100%"} justifyContent={"center"} fontFamily={theme.fonts.main}>
+        <NavLink to='/register/creators'>
         <Flex
           flexDir={"column"}
           h={"502px"}
@@ -78,7 +80,10 @@ export const PreRegistration = () => {
           </Text>
           <BasicButton text="BTN" color="white.0" bg="transparent" border="2px solid #ffffff"/>
         </Flex>
+        </NavLink>
+      
 
+        <NavLink to='/register/fans'>
         <Flex
           h={"502px"}
           px={"60px"}
@@ -116,6 +121,7 @@ export const PreRegistration = () => {
           </Text>
           <BasicButton text="BTN" color="blue.200" bg="transparent" border="2px solid #060B22"/>
         </Flex>
+        </NavLink>
       </Flex>
       </Flex>
      
