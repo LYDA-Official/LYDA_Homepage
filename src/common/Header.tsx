@@ -82,6 +82,7 @@ const NavBarContainer = ({ children, ...rest }: { children: any }) => {
       h={"52px"}
       pos="absolute"
       zIndex={1000}
+     
       fontFamily={theme.fonts.main}
       {...rest}
     >

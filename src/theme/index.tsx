@@ -41,6 +41,7 @@ const theme = extendTheme({
           return {
             body: {
               bgColor: mode('purple.0', 'purple.0')(props),
+              cursor:'url(Frame.png),auto !important',
             },
         }}},
   colors,

@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import theme from "../../theme";
 import bg from "../../assets/bg2.png";
 import timeline from "../../assets/timeline.png";
-
+import timeline2 from "../../assets/timeline2.png";
+import timeline1 from "../../assets/timeline1.png";
 export const Roadmap = () => {
   const mapPoints = [
     {
@@ -35,6 +36,36 @@ export const Roadmap = () => {
       left: "78%",
       rotated: true,
     },
+    {
+      title: "Amet minim mollit",
+      content:
+        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+      top: "6%",
+      left: "102%",
+    },
+    {
+      title: "Amet minim mollit",
+      content:
+        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+      top: "54%",
+      left: "130%",
+      rotated: true,
+    },
+    {
+      title: "Amet minim mollit",
+      content:
+        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+      top: "46%",
+      left: "157%",
+    },
+    {
+      title: "Amet minim mollit",
+      content:
+        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+      top: "41%",
+      left: "174%",
+      rotated: true,
+    },
   ];
 
   const RoadmapPoint = (props: {
@@ -48,7 +79,15 @@ export const Roadmap = () => {
     const [isHover, setIsHover] = useState(false);
 
     return rotated ? (
-      <Flex top={top} left={left} position="absolute" flexDir={'row'} alignItems='flex-end'>
+      <Flex
+        top={top}
+        left={left}
+        position="absolute"
+        flexDir={"row"}
+        alignItems="flex-end"
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
         <Flex h={"100%"} w={"89px"} mb={"150px"}>
           <Flex
             h={"88px"}
@@ -65,8 +104,6 @@ export const Roadmap = () => {
               w={"25px"}
               bg={"blue.100"}
               opacity={1}
-              onMouseEnter={() => setIsHover(true)}
-              onMouseLeave={() => setIsHover(false)}
               borderRadius={"50%"}
               zIndex={10000}
               // position='absolute'
@@ -83,7 +120,6 @@ export const Roadmap = () => {
         </Flex>
         <Flex
           position="relative"
-         
           left={"-12px"}
           color={isHover ? "blue.100" : "white"}
           flexDir="column"
@@ -102,7 +138,13 @@ export const Roadmap = () => {
         </Flex>
       </Flex>
     ) : (
-      <Flex top={top} left={left} position="absolute">
+      <Flex
+        top={top}
+        left={left}
+        position="absolute"
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
         <Flex h={"100%"} w={"89px"} mb={"150px"}>
           <Flex
             h={"88px"}
@@ -119,8 +161,6 @@ export const Roadmap = () => {
               w={"25px"}
               bg={"blue.100"}
               opacity={1}
-              onMouseEnter={() => setIsHover(true)}
-              onMouseLeave={() => setIsHover(false)}
               borderRadius={"50%"}
               zIndex={10000}
               // position='absolute'
@@ -165,9 +205,16 @@ export const Roadmap = () => {
       h={"970px"}
       justifyContent={"center"}
       zIndex={0}
+      overflowX="scroll"
+      style={{
+        cursor: `url(mouseCursor.png), default`,
+      }}
     >
       <Flex fontFamily={theme.fonts.main} mt={"120px"} flexDir={"column"}>
         <Flex
+          position="absolute"
+          // top='1893px'
+          // left={'789px'}
           alignItems={"center"}
           justifyContent={"center"}
           w={"100%"}
@@ -185,7 +232,6 @@ export const Roadmap = () => {
             fontWeight={400}
             w={"539px"}
             textAlign={"center"}
-            mb={"180px"}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Exercitation veniam consequat sunt nostrud amet. Amet
@@ -196,10 +242,16 @@ export const Roadmap = () => {
           alignItems="flex-start"
           flexDir={"column"}
           position="relative"
+          mt={"320px"}
         >
-          <Image src={timeline} w={"100%"} position="relative" />
-          {mapPoints.map((point: any) => (
+          <Flex w={"200%"}>
+            <Image src={timeline1} h={"341px"} />
+            {/* <Image src={timeline2} w={"100%"}/> */}
+          </Flex>
+
+          {mapPoints.map((point: any, index: number) => (
             <RoadmapPoint
+              key={index}
               title={point.title}
               content={point.content}
               top={point.top}
