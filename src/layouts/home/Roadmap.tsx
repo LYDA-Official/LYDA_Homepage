@@ -68,34 +68,49 @@ export const Roadmap = () => {
     },
   ];
 
-  // const scrolllogger = (e:any) => {
-  //   console.log('fgfd', e);
-    
-  //   // const scrollableElement = document.getElementById("scrooll");
-  //   window?.addEventListener("scroll", function () {
-  //     const st = window.scrollX || document.body.scrollLeft;
-  //     console.log("fffs");
-  
-  //     if (st > 0) {
-  //       console.log("hhii");
-  //     } else {
-  //       console.log("iiih");
-  //     }
-  //   });
-  // };
- 
-  const [offset, setOffset] = useState(0);
+  const [scrollDir, setScrollDir] = useState("right");
+  const [mouseDir, setMouseDir] = useState("right");
+  const [y, setY] = useState(0);
+  const [yy, setYy] = useState(0);
+  useEffect(() => {
+    const onScroll = (e: any) => {
+      const currentScroll = e.currentTarget.scrollLeft;
+      setY(currentScroll);
 
-    useEffect(() => {
-        const onScroll = () => setOffset(window.pageXOffset);
-        // clean up code
-        window.removeEventListener('scroll', onScroll);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
+      if (currentScroll > y) {
+        setScrollDir("right");
+      } else {
+        setScrollDir("left");
+      }
+    };
 
-    console.log(offset); 
+    document.getElementById("scrollCont")?.addEventListener("scroll", onScroll);
 
+    return () => {
+      document
+        .getElementById("scrollCont")
+        ?.removeEventListener("scroll", onScroll);
+    };
+  }, [y]);
+
+  useEffect(() => {
+    const onMove = (e: any) => {
+      setYy(e.pageX);
+
+      if (e.pageX > yy) {
+        setMouseDir("right");
+      } else if (e.pageX < yy) {
+        setMouseDir("left");
+      }
+    };
+    document
+      .getElementById("scrollCont")
+      ?.addEventListener("mousemove", onMove);
+    return () =>
+      document
+        .getElementById("scrollCont")
+        ?.removeEventListener("mousemove", onMove);
+  }, [yy]);
 
   const RoadmapPoint = (props: {
     title: string;
@@ -232,12 +247,16 @@ export const Roadmap = () => {
       backgroundImage={bg}
       backgroundSize={"100% 970px"}
       h={"970px"}
-    
+      // onScroll={detectScroll}
       justifyContent={"center"}
       zIndex={0}
       overflowX="scroll"
+      id="scrollCont"
       style={{
-        cursor: `url(mouseCursor.png), default`,
+        cursor:
+          scrollDir === "right" || mouseDir === "right"
+            ? `url(mouseCursorRight.png), default`
+            : `url(mouseCursorLeft.png), default`,
       }}
     >
       <Flex fontFamily={theme.fonts.main} mt={"120px"} flexDir={"column"}>
@@ -273,7 +292,6 @@ export const Roadmap = () => {
           flexDir={"column"}
           position="relative"
           mt={"320px"}
-       
           id={"scrooll"}
         >
           <Flex w={"200%"}>

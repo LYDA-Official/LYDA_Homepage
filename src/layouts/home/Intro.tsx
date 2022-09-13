@@ -10,7 +10,7 @@ export const Intro = () => {
       h={"983px"}
       justifyContent={"center"}
       style={{
-        cursor: `url(mouseCursor.png), default`,
+        cursor: `url(mouseCursorRight.png), default`,
       }}
     >
       <Flex>Info</Flex>
