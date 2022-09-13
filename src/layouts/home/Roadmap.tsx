@@ -1,5 +1,5 @@
 import { Flex, Text, Image, Box } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import theme from "../../theme";
 import bg from "../../assets/bg2.png";
 import timeline from "../../assets/timeline.png";
@@ -67,6 +67,35 @@ export const Roadmap = () => {
       rotated: true,
     },
   ];
+
+  // const scrolllogger = (e:any) => {
+  //   console.log('fgfd', e);
+    
+  //   // const scrollableElement = document.getElementById("scrooll");
+  //   window?.addEventListener("scroll", function () {
+  //     const st = window.scrollX || document.body.scrollLeft;
+  //     console.log("fffs");
+  
+  //     if (st > 0) {
+  //       console.log("hhii");
+  //     } else {
+  //       console.log("iiih");
+  //     }
+  //   });
+  // };
+ 
+  const [offset, setOffset] = useState(0);
+
+    useEffect(() => {
+        const onScroll = () => setOffset(window.pageXOffset);
+        // clean up code
+        window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
+
+    console.log(offset); 
+
 
   const RoadmapPoint = (props: {
     title: string;
@@ -203,6 +232,7 @@ export const Roadmap = () => {
       backgroundImage={bg}
       backgroundSize={"100% 970px"}
       h={"970px"}
+    
       justifyContent={"center"}
       zIndex={0}
       overflowX="scroll"
@@ -243,6 +273,8 @@ export const Roadmap = () => {
           flexDir={"column"}
           position="relative"
           mt={"320px"}
+       
+          id={"scrooll"}
         >
           <Flex w={"200%"}>
             <Image src={timeline1} h={"341px"} />
