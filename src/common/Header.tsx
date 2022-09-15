@@ -18,6 +18,7 @@ import theme from "../theme/index";
 import Discord from "../assets/icons/Discord.svg";
 import Twitter from "../assets/icons/Twitter.svg";
 import Telegram from "../assets/icons/Telegram.svg";
+import { HashLink } from 'react-router-hash-link';
 
 export const Header: React.FC = () => {
   const about = useMatch('/about');
@@ -47,14 +48,17 @@ export const Header: React.FC = () => {
           <Image src={LOGO} h={"36px"} w={"137px"} />
         </NavLink>
       </Flex>
-      <Flex w={"300px"} fontSize={"20px"} fontWeight={500}>
+      <Flex w={"301px"} fontSize={"20px"} fontWeight={500}>
         <NavLink to="/about" style={{ width: "90%" }}>
           <Text color={about?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>ABOUT</Text>
         </NavLink>
-        <NavLink to="/register" style={{ width: "100%" }}>
+        {/* <NavLink to="/register" style={{ width: "100%" }}>
         <Text color={register?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>PRE - REGISTER</Text>
           
-        </NavLink>
+        </NavLink> */}
+        <HashLink to='/#pre-registration' style={{ width: "90%" }}>
+        <Text color={register?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>PRE - REGISTER</Text>
+        </HashLink>
       </Flex>
       <Flex>
         {socialLinks.map((link: any, index: number) => (

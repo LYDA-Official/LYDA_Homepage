@@ -13,7 +13,7 @@ export const PreRegistration = () => {
       backgroundSize={"100% 1022px"}
       h={"1022px"}
       justifyContent={"center"}
-      id='some-id'
+      id='pre-registration'
      
     >
       <Flex  {...theme.LAYOUT_STYLE.layoutStyle()}

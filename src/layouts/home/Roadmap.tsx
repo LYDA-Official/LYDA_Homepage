@@ -11,7 +11,7 @@ export const Roadmap = () => {
       title: "Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "27%",
+      top: "31%",
       left: "3%",
     },
     {
@@ -25,7 +25,7 @@ export const Roadmap = () => {
       title: "Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "55%",
+      top: "57%",
       left: "57%",
     },
     {
@@ -40,14 +40,14 @@ export const Roadmap = () => {
       title: "Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "6%",
+      top: "7%",
       left: "102%",
     },
     {
       title: "Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "54%",
+      top: "51%",
       left: "130%",
       rotated: true,
     },
@@ -62,7 +62,7 @@ export const Roadmap = () => {
       title: "Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "41%",
+      top: "43%",
       left: "174%",
       rotated: true,
     },

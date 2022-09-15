@@ -24,11 +24,11 @@ export const CreatorsForm = () => {
   const [q3value, setQ3value] = useState("1");
 
   const radioStyle = `
-  .css-xnto68[aria-checked=true], .css-xnto68[data-checked] {
+  .css-125znku[aria-checked=true], .css-125znku[data-checked] {
     background: #4361ee;
     color: white;
   }
-  .css-xnto68[aria-checked=true]:hover, .css-xnto68[data-checked]:hover {
+  .css-125znku[aria-checked=true]:hover, .css-125znku[data-checked]:hover {
     background: #4361ee;
     color: white;
   }
@@ -56,7 +56,7 @@ export const CreatorsForm = () => {
               fontWeight={500}
               fontStyle={"normal"}
             >
-              1. First and foremost, please provide LYDA with links to your
+              First and foremost, please provide LYDA with links to your
               associated social media:
             </Text>
             <Grid
@@ -124,7 +124,7 @@ export const CreatorsForm = () => {
               fontWeight={500}
               fontStyle={"normal"}
             >
-              2. Are you interested in receiving financial support from your
+              Are you interested in receiving financial support from your
               fans via the sale of your own personal crypto social token?
             </Text>
             <style>{radioStyle}</style>
@@ -153,11 +153,11 @@ export const CreatorsForm = () => {
               fontWeight={500}
               fontStyle={"normal"}
             >
-              3. Are you willing to make content and complete activations that
+              Are you willing to make content and complete activations that
               will leverage said crypto token?
             </Text>
             <style>{radioStyle}</style>
-            <RadioGroup onChange={setQ3value} value={q2value} color={"#"}>
+            <RadioGroup onChange={setQ3value} value={q3value} color={"#"}>
               <Stack direction="row">
                 <Radio border={"1px solid #e3e3ee !important"} value={"1"}>
                   Yes
@@ -181,7 +181,7 @@ export const CreatorsForm = () => {
               fontWeight={500}
               fontStyle={"normal"}
             >
-              4. Please provide at least one example of content that could
+              Please provide at least one example of content that could
               leverage your LYDA platform creator token.
             </Text>
             <Text mb={"20px"}>
@@ -226,7 +226,7 @@ export const CreatorsForm = () => {
               fontStyle={"normal"}
               mb={"20px"}
             >
-             5. Please provide your email to receive updates on your acceptance into the LYDA Creator Coalition. 
+             Please provide your email to receive updates on your acceptance into the LYDA Creator Coalition. 
             </Text>
            
             <Input
