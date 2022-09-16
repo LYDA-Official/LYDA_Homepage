@@ -1,4 +1,4 @@
-import React, { FC, HTMLAttributes, useEffect, useState,useRef } from "react";
+import React, { FC, HTMLAttributes, useEffect, useState, useRef } from "react";
 import { Header } from "../common/Header";
 import { Footer } from "../common/Footer";
 import { Home } from "./Home";
@@ -17,9 +17,7 @@ export const Router: FC<RouterProps> = () => {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-      
       }}
-     
 
       //   style={{ cursor: 'url(Frame.png), default !important' }}
     >

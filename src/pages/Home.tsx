@@ -8,11 +8,7 @@ import { Roadmap } from "../layouts/home/Roadmap";
 
 export const Home = () => {
   return (
-    <Flex
-      flexDir={"column"}
-    
-    >
-      
+    <Flex flexDir={"column"}>
       <Intro />
       <WhatIsLyda />
       <Roadmap />

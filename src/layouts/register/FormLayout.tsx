@@ -1,6 +1,7 @@
 import { Flex, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { NavLink,useMatch } from "react-router-dom";
 
 import theme from "../../theme/index";
 import { FansForm } from "./FansForm";
@@ -20,14 +21,17 @@ export const FormLayout = (props: { type: string }) => {
     >
       {type === "fans" ? <FansForm /> : <CreatorsForm />}
       <Flex w="1100px" justifyContent={"space-between"} mb="259px">
+        <NavLink to={'/'}>
         <BasicButton
           text="Back"
           color="blue.200"
           bg="blue.0"
           h={"53px"}
           w={"170px"}
-          func={() => navigate("/")}
+        
         />
+        </NavLink>
+      
         <BasicButton
           text="Save"
           color="white.0"

@@ -6,7 +6,7 @@ import graph from "../../assets/graph.png";
 
 export const WhatIsLyda = () => {
   return (
-    <Flex bg={"white"} h={"790px"} justifyContent={"center"} px={"auto"}>
+    <Flex bg={"white"} h={"790px"} justifyContent={"center"} px={"auto"} zIndex={100}>
       <Flex alignItems={"center"} {...theme.LAYOUT_STYLE.layoutStyle()}>
         <Flex
           w={"100%"}
