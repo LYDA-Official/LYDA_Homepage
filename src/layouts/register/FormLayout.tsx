@@ -8,6 +8,7 @@ import { FansForm } from "./FansForm";
 import { CreatorsForm } from "./CreatorsForm";
 import { BasicButton } from "../../common/BasicButton";
 import saveData from "../../firebase/saveData";
+import fetchData from "../../firebase/fetchData";
 export const FormLayout = (props: { type: string }) => {
   const { type } = props;
   const navigate = useNavigate();
@@ -31,17 +32,7 @@ export const FormLayout = (props: { type: string }) => {
             w={"170px"}
           />
         </NavLink>
-        <Flex
-          onClick={() => {
-            console.log("go");
-            saveData({
-              refKey: "creator",
-              param: {
-                test: "test",
-              },
-            });
-          }}
-        >
+        <Flex onClick={() => {}}>
           <BasicButton
             text="Save"
             color="white.0"

@@ -1,13 +1,5 @@
 import { dataBase } from ".";
-import {
-  getDatabase,
-  ref,
-  set,
-  get,
-  push,
-  update,
-  child,
-} from "firebase/database";
+import { ref, push } from "firebase/database";
 
 async function saveData(params: { refKey: "creator" | "fan"; param: any }) {
   try {
