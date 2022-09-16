@@ -1,11 +1,15 @@
-import { Flex, Text, Box, Button, Image } from "@chakra-ui/react";
+import { Flex, Text, Box, Button, Image,useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme";
 import Maskgroup from "../../assets/Maskgroup.png";
 import PlayButton from "../../assets/SVG/play.svg";
 
 export const SeeForYourself = () => {
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+
   window.onload = function () {
+
+
     const video = document.getElementById(
       "video_background"
     ) as HTMLVideoElement | null;
@@ -18,25 +22,10 @@ export const SeeForYourself = () => {
           playButton.style.display = "none";
         }
       });
-
-      // videoContainer.addEventListener('mouseenter',
-      // function () {
-
-      //     playButton.style.display = "flex";
-
-      // }
-      // )
-      // videoContainer.addEventListener('mouseleave',
-      // function () {
-
-      //     playButton.style.display = "none";
-
-      // }
-      // )
     }
   };
   return (
-    <Flex bg={"white"} h={"1022px"} w={"100%"} justifyContent={"center"}>
+    <Flex bg={"white"} h={isSmallerThan1024? '864px':"1022px"} w={"100%"} justifyContent={"center"}>
       <Flex
         {...theme.LAYOUT_STYLE.layoutStyle()}
         fontFamily={theme.fonts.main}
@@ -58,7 +47,7 @@ export const SeeForYourself = () => {
             fontSize={"16px"}
             lineHeight={"25.18px"}
             textAlign='center'
-            mb={"64px"}
+            mb={isSmallerThan1024? '56px':"64px"}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Exercitation veniam consequat sunt nostrud amet. Amet
@@ -67,8 +56,8 @@ export const SeeForYourself = () => {
         <Flex
           id={"videoContainer"}
           borderTopRightRadius={"88px"}
-          h={"600px"}
-          w={"1100px"}
+          h={isSmallerThan1024? '514px':"600px"}
+          w={isSmallerThan1024?'944px': "1100px"}
           justifyContent={"center"}
           alignItems={"center"}
         >
@@ -93,8 +82,8 @@ export const SeeForYourself = () => {
             as="video"
             controls={true}
             muted
-            h={"600px"}
-            w={"1100px"}
+            h={isSmallerThan1024? '514px':"600px"}
+          w={isSmallerThan1024?'944px': "1100px"}
             src="zoom_0.mp4"
             data-setup="{}"
             poster={Maskgroup}

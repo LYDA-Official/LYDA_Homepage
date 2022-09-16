@@ -1,22 +1,24 @@
-import { Flex, Text, Image } from "@chakra-ui/react";
+import { Flex, Text, Image,useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme/index";
 import { BasicButton } from "../../common/BasicButton";
 import graph from "../../assets/graph.png";
 
 export const WhatIsLyda = () => {
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+
   return (
-    <Flex bg={"white"} h={"790px"} justifyContent={"center"} px={"auto"} zIndex={100}>
+    <Flex bg={"white"} h={isSmallerThan1024? '672px':"790px"} justifyContent={"center"} alignItems='center' px={"auto"} zIndex={100} p='auto'>
       <Flex alignItems={"center"} {...theme.LAYOUT_STYLE.layoutStyle()}>
         <Flex
-          w={"100%"}
+         
           flexDir="column"
           color={"blue.200"}
           fontFamily={theme.fonts.main}
           fontStyle="normal"
-          mr={"136px"}
+          mr={isSmallerThan1024? '48px':"136px"}
         >
-          <Text fontSize={"70px"} fontWeight={700} lineHeight={"70px"}>
+          <Text fontSize={isSmallerThan1024? '40px':"70px"} fontWeight={700} lineHeight={isSmallerThan1024? '62.96px': "70px"}>
             WHAT IS LYDA
           </Text>
           <Text
@@ -25,6 +27,7 @@ export const WhatIsLyda = () => {
             fontWeight={300}
             lineHeight={"25px"}
             mb={"50px"}
+            w={isSmallerThan1024? '400px':'437px'}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
@@ -47,7 +50,7 @@ export const WhatIsLyda = () => {
             />
           </Flex>
         </Flex>
-        <Image src={graph} h={"550px"} w={"550px"} />
+        <Image src={graph} h={isSmallerThan1024? '496px':"550px"} w={isSmallerThan1024? '496px':"550px"} />
       </Flex>
     </Flex>
   );
