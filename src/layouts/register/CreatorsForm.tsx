@@ -10,7 +10,7 @@ import {
   RadioGroup,
   Stack,
   Input,
-  Textarea
+  Textarea,
 } from "@chakra-ui/react";
 import theme from "../../theme";
 import { useState } from "react";
@@ -36,6 +36,7 @@ export const CreatorsForm = () => {
     margin-left: 44px
   }
   `;
+
   return (
     <Flex
       bg={"white.0"}
@@ -44,7 +45,7 @@ export const CreatorsForm = () => {
       borderTopRightRadius={"80px"}
       p={"48px"}
       fontFamily={theme.fonts.main}
-      mb={'48px'}
+      mb={"48px"}
     >
       <OrderedList m={"0px"}>
         <ListItem mb={"52px"}>
@@ -124,8 +125,8 @@ export const CreatorsForm = () => {
               fontWeight={500}
               fontStyle={"normal"}
             >
-              Are you interested in receiving financial support from your
-              fans via the sale of your own personal crypto social token?
+              Are you interested in receiving financial support from your fans
+              via the sale of your own personal crypto social token?
             </Text>
             <style>{radioStyle}</style>
             <RadioGroup onChange={setQ2value} value={q2value} color={"#"}>
@@ -153,8 +154,8 @@ export const CreatorsForm = () => {
               fontWeight={500}
               fontStyle={"normal"}
             >
-              Are you willing to make content and complete activations that
-              will leverage said crypto token?
+              Are you willing to make content and complete activations that will
+              leverage said crypto token?
             </Text>
             <style>{radioStyle}</style>
             <RadioGroup onChange={setQ3value} value={q3value} color={"#"}>
@@ -181,8 +182,8 @@ export const CreatorsForm = () => {
               fontWeight={500}
               fontStyle={"normal"}
             >
-              Please provide at least one example of content that could
-              leverage your LYDA platform creator token.
+              Please provide at least one example of content that could leverage
+              your LYDA platform creator token.
             </Text>
             <Text mb={"20px"}>
               {" "}
@@ -190,14 +191,14 @@ export const CreatorsForm = () => {
               already producing.)
             </Text>
             <Textarea
-            p={'11px 20px'}
+              p={"11px 20px"}
               border={"1px solid #e3e3ee !important"}
               outline="none"
               color={"blue.200"}
               borderRadius="4px"
-              fontSize={'14px'}
-              minHeight='70px'
-              h={'70px'}
+              fontSize={"14px"}
+              minHeight="70px"
+              h={"70px"}
               _active={{
                 outline: "none",
                 border: "1px solid #e3e3ee !important",
@@ -226,19 +227,20 @@ export const CreatorsForm = () => {
               fontStyle={"normal"}
               mb={"20px"}
             >
-             Please provide your email to receive updates on your acceptance into the LYDA Creator Coalition. 
+              Please provide your email to receive updates on your acceptance
+              into the LYDA Creator Coalition.
             </Text>
-           
+
             <Input
-            p={'11px 20px'}
+              p={"11px 20px"}
               border={"1px solid #e3e3ee !important"}
               outline="none"
               color={"blue.200"}
               borderRadius="4px"
-              type='email'
-              fontSize={'14px'}
-              minHeight='70px'
-              h={'70px'}
+              type="email"
+              fontSize={"14px"}
+              minHeight="70px"
+              h={"70px"}
               _active={{
                 outline: "none",
                 border: "1px solid #e3e3ee !important",
