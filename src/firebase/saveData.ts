@@ -11,9 +11,6 @@ import {
 
 async function saveData(params: { refKey: "creator" | "fan"; param: any }) {
   try {
-    console.log("go?");
-    console.log(params);
-    console.log(dataBase);
     const { refKey, param } = params;
     const db = dataBase;
     const result = await push(ref(db, `${refKey}/`), {
