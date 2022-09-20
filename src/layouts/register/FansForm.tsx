@@ -11,6 +11,7 @@ import {
   Stack,
   Input,
   Textarea,
+  useMediaQuery
 } from "@chakra-ui/react";
 import theme from "../../theme";
 import { useState } from "react";
@@ -24,6 +25,7 @@ export const FansForm = () => {
   const [q2value, setQ2value] = useState("1");
   const [q3value, setQ3value] = useState("1");
   const [q4value, setQ4value] = useState("1");
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
   const radioStyle = `
   .css-xnto68[aria-checked=true], .css-xnto68[data-checked] {
@@ -46,7 +48,7 @@ export const FansForm = () => {
     <Flex
       bg={"white.0"}
       flexDir={"column"}
-      w="1100px"
+      w={isSmallerThan1440?'944px' :"1100px"}
       borderTopRightRadius={"80px"}
       p={"48px"}
       fontFamily={theme.fonts.main}
@@ -69,7 +71,7 @@ export const FansForm = () => {
               templateColumns="repeat(2, 1fr)"
               templateRows="repeat(1, 1fr)"
             >
-              <GridItem mr={"84px"} mb={"10px"}>
+              <GridItem mr={isSmallerThan1440?'64px' :"84px"} mb={"10px"}>
                 <SocialInput
                   title="Twitter"
                   placeHolder="Twitter URL"

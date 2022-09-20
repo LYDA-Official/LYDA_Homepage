@@ -10,7 +10,8 @@ import {
   RadioGroup,
   Stack,
   Input,
-  Textarea
+  Textarea,
+  useMediaQuery
 } from "@chakra-ui/react";
 import theme from "../../theme";
 import { useState } from "react";
@@ -22,6 +23,7 @@ export const CreatorsForm = () => {
   const [facebook, setFacebook] = useState("");
   const [q2value, setQ2value] = useState("1");
   const [q3value, setQ3value] = useState("1");
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
   const radioStyle = `
   .css-125znku[aria-checked=true], .css-125znku[data-checked] {
@@ -40,9 +42,9 @@ export const CreatorsForm = () => {
     <Flex
       bg={"white.0"}
       flexDir={"column"}
-      w="1100px"
+      w={isSmallerThan1440? '944px':"1100px"}
       borderTopRightRadius={"80px"}
-      p={"48px"}
+      p={isSmallerThan1440? '40px':"48px"}
       fontFamily={theme.fonts.main}
       mb={'48px'}
     >
@@ -63,7 +65,7 @@ export const CreatorsForm = () => {
               templateColumns="repeat(2, 1fr)"
               templateRows="repeat(4, 1fr)"
             >
-              <GridItem mr={"84px"} mb={"10px"}>
+              <GridItem mr={isSmallerThan1440?'64px' :"84px"} mb={"10px"}>
                 <SocialInput
                   title="Twitter"
                   placeHolder="Twitter URL"
