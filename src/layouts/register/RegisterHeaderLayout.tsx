@@ -14,20 +14,6 @@ export const RegisterHeaderLayout = (props: {image:any; height:string; width:str
       backgroundSize={"100% 400px"}
       flexDir='column'
     >
-      {/* <Text
-       
-        fontSize="60px"
-        color={"transparent"}
-        lineHeight="94px"
-        fontStyle="normal"
-        style={{
-          WebkitTextStrokeWidth: 1,
-          WebkitTextStrokeColor: "white",
-        }}
-      >
-        {" "}
-        ABOUT LYDA
-      </Text> */}
       <Image  mt={"200px"} src={image} h={height} width={width} mb='25.6px'/>
       <Text fontFamily={theme.fonts.main} color={'white.0'}>
        {title}

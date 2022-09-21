@@ -81,7 +81,7 @@ const NavBarContainer = ({ children, ...rest }: { children: any }) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      px={"88px"}
+      px={"40px"}
       mt={"48px"}
       h={"52px"}
       pos="absolute"

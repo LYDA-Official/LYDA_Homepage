@@ -6,13 +6,15 @@ import { BasicButton } from "../../common/BasicButton";
 
 export const PreRegistration = () => {
  
-const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+// const [isSmallerThan1240] = useMediaQuery("(max-width: 1240px)");
+
   return (
     <Flex
       bg={"blue.400"}
       backgroundImage={bg}
-      backgroundSize={isSmallerThan1024 ? "120% 790px" : "100% 1022px"}
-      h={isSmallerThan1024 ? "790px" : "1022px"}
+      backgroundSize={isSmallerThan1440 ? "120% 790px" : "100% 1022px"}
+      h={isSmallerThan1440 ? "790px" : "1022px"}
       justifyContent={"center"}
       id="pre-registration"
     >
@@ -28,7 +30,7 @@ const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
           fontFamily={theme.fonts.main}
           fontStyle={"normal"}
           flexDir={"column"}
-          mb={isSmallerThan1024?'56px': "64px"}
+          mb={isSmallerThan1440?'56px': "64px"}
           color={"white.0"}
         >
           {" "}
@@ -53,10 +55,10 @@ const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
           <NavLink to="/register/creators">
             <Flex
               flexDir={"column"}
-              h={isSmallerThan1024? '440px':"502px"}
-              w={isSmallerThan1024?'472px': "600px"}
-              pt={isSmallerThan1024? '114px' :"160px"}
-              px={isSmallerThan1024? '40px':"60px"}
+              h={isSmallerThan1440? '440px':"502px"}
+              w={isSmallerThan1440?'472px': "600px"}
+              pt={isSmallerThan1440? '114px' :"160px"}
+              px={isSmallerThan1440? '40px':"60px"}
               _hover={{
                 background:
                   "linear-gradient(134.5deg, #55C2FF -23.18%, #4361EE 94.24%)",
@@ -75,11 +77,11 @@ const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
               </Text>
               <Text
                 fontWeight={400}
-                fontSize={isSmallerThan1024? '15px':"16px"}
+                fontSize={isSmallerThan1440? '15px':"16px"}
                 fontStyle={"normal"}
                 lineHeight={"25px"}
-                mb={isSmallerThan1024? '40px': "56px"}
-                h={isSmallerThan1024? '120px':"100px"}
+                mb={isSmallerThan1440? '40px': "56px"}
+                h={isSmallerThan1440? '120px':"100px"}
               >
                 Fuel your career by joining the LYDA Creator Coalition! Open a
                 new stream of revenue via branded tokens for fans, create new
@@ -99,10 +101,10 @@ const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
 
           <NavLink to="/register/fans">
             <Flex
-               h={isSmallerThan1024? '440px':"502px"}
-               w={isSmallerThan1024?'472px': "600px"}
-               pt={isSmallerThan1024? '114px' :"160px"}
-               px={isSmallerThan1024? '40px':"60px"}
+               h={isSmallerThan1440? '440px':"502px"}
+               w={isSmallerThan1440?'472px': "600px"}
+               pt={isSmallerThan1440? '114px' :"160px"}
+               px={isSmallerThan1440? '40px':"60px"}
               flexDir={"column"}
               bg={"blue.0"}
               borderTopRightRadius={"80px"}
@@ -123,11 +125,11 @@ const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
               </Text>
               <Text
                 fontWeight={400}
-                fontSize={isSmallerThan1024? '15px':"16px"}
-                h={isSmallerThan1024? '120px':"100px"}
+                fontSize={isSmallerThan1440? '15px':"16px"}
+                h={isSmallerThan1440? '120px':"100px"}
                 fontStyle={"normal"}
                 lineHeight={"25px"}
-                mb={isSmallerThan1024? '40px': "56px"}
+                mb={isSmallerThan1440? '40px': "56px"}
               >
                 Enjoy exclusive rewards and community privileges all while
                 supporting your favorite content creators. As token holders, get

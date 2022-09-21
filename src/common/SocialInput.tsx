@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Flex, Text, Input } from "@chakra-ui/react";
+import { Flex, Text, Input,useMediaQuery } from "@chakra-ui/react";
 import { Dispatch, SetStateAction, useEffect } from "react";
 export const SocialInput = (props: {
   title: string;
@@ -7,8 +7,10 @@ export const SocialInput = (props: {
   setValue?: Dispatch<SetStateAction<any>>;
 }) => {
   const { title, placeHolder, setValue } = props;
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+
   return (
-    <Flex w={"460px"} h={"44px"} alignItems="center" color={"blue.200"}>
+    <Flex w={isSmallerThan1440? '400px':"460px"} h={"44px"} alignItems="center" color={"blue.200"}>
       <Text w="100px" fontSize="15px" fontWeight={400} fontStyle={"normal"}>
         {title}
       </Text>

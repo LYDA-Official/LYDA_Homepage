@@ -5,7 +5,9 @@ import Maskgroup from "../../assets/Maskgroup.png";
 import PlayButton from "../../assets/SVG/play.svg";
 
 export const SeeForYourself = () => {
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+
+  // const [isSmallerThan1440] = useMediaQuery("(max-width: 1200px)");
 
   window.onload = function () {
 
@@ -25,7 +27,7 @@ export const SeeForYourself = () => {
     }
   };
   return (
-    <Flex bg={"white"} h={isSmallerThan1024? '864px':"1022px"} w={"100%"} justifyContent={"center"}>
+    <Flex bg={"white"} h={isSmallerThan1440? '864px':"1022px"} w={"100%"} justifyContent={"center"}>
       <Flex
         {...theme.LAYOUT_STYLE.layoutStyle()}
         fontFamily={theme.fonts.main}
@@ -47,7 +49,7 @@ export const SeeForYourself = () => {
             fontSize={"16px"}
             lineHeight={"25.18px"}
             textAlign='center'
-            mb={isSmallerThan1024? '56px':"64px"}
+            mb={isSmallerThan1440? '56px':"64px"}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Exercitation veniam consequat sunt nostrud amet. Amet
@@ -56,8 +58,8 @@ export const SeeForYourself = () => {
         <Flex
           id={"videoContainer"}
           borderTopRightRadius={"88px"}
-          h={isSmallerThan1024? '514px':"600px"}
-          w={isSmallerThan1024?'944px': "1100px"}
+          h={isSmallerThan1440? '514px':"600px"}
+          w={isSmallerThan1440?'944px': "1100px"}
           justifyContent={"center"}
           alignItems={"center"}
         >
@@ -82,8 +84,8 @@ export const SeeForYourself = () => {
             as="video"
             controls={true}
             muted
-            h={isSmallerThan1024? '514px':"600px"}
-          w={isSmallerThan1024?'944px': "1100px"}
+            h={isSmallerThan1440? '514px':"600px"}
+          w={isSmallerThan1440?'944px': "1100px"}
             src="zoom_0.mp4"
             data-setup="{}"
             poster={Maskgroup}

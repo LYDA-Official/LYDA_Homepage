@@ -5,10 +5,11 @@ import { BasicButton } from "../../common/BasicButton";
 import graph from "../../assets/graph.png";
 
 export const WhatIsLyda = () => {
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+
 
   return (
-    <Flex bg={"white"} h={isSmallerThan1024? '672px':"790px"} justifyContent={"center"} alignItems='center' px={"auto"} zIndex={100} p='auto'>
+    <Flex bg={"white"} h={isSmallerThan1440? '672px':"790px"} justifyContent={"center"} alignItems='center' px={"auto"} zIndex={100} p='auto'>
       <Flex alignItems={"center"} {...theme.LAYOUT_STYLE.layoutStyle()}>
         <Flex
          
@@ -16,9 +17,9 @@ export const WhatIsLyda = () => {
           color={"blue.200"}
           fontFamily={theme.fonts.main}
           fontStyle="normal"
-          mr={isSmallerThan1024? '48px':"136px"}
+          mr={isSmallerThan1440? '48px':"136px"}
         >
-          <Text fontSize={isSmallerThan1024? '40px':"70px"} fontWeight={700} lineHeight={isSmallerThan1024? '62.96px': "70px"}>
+          <Text fontSize={isSmallerThan1440? '40px':"70px"} fontWeight={700} lineHeight={isSmallerThan1440? '62.96px': "70px"}>
             WHAT IS LYDA
           </Text>
           <Text
@@ -27,7 +28,7 @@ export const WhatIsLyda = () => {
             fontWeight={300}
             lineHeight={"25px"}
             mb={"50px"}
-            w={isSmallerThan1024? '400px':'437px'}
+            maxW={isSmallerThan1440? '400px':'500px'}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
@@ -50,7 +51,7 @@ export const WhatIsLyda = () => {
             />
           </Flex>
         </Flex>
-        <Image src={graph} h={isSmallerThan1024? '496px':"550px"} w={isSmallerThan1024? '496px':"550px"} />
+        <Image src={graph} h={isSmallerThan1440? '496px':"550px"} w={isSmallerThan1440? '496px':"550px"} />
       </Flex>
     </Flex>
   );

@@ -1,4 +1,4 @@
-import { Flex, Text, Image } from "@chakra-ui/react";
+import { Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink, useMatch } from "react-router-dom";
@@ -12,6 +12,7 @@ import fetchData from "../../firebase/fetchData";
 export const FormLayout = (props: { type: string }) => {
   const { type } = props;
   const navigate = useNavigate();
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
   return (
     <Flex
@@ -22,7 +23,9 @@ export const FormLayout = (props: { type: string }) => {
       flexDir="column"
     >
       {type === "fans" ? <FansForm /> : <CreatorsForm />}
-      <Flex w="1100px" justifyContent={"space-between"} mb="259px">
+
+      <Flex w={isSmallerThan1440?'944px' :"1100px"} justifyContent={"space-between"} mb={isSmallerThan1440? '88px':"259px"}>
+
         <NavLink to={"/"}>
           <BasicButton
             text="Back"
@@ -32,6 +35,7 @@ export const FormLayout = (props: { type: string }) => {
             w={"170px"}
           />
         </NavLink>
+
         <Flex onClick={() => {}}>
           <BasicButton
             text="Save"
@@ -41,6 +45,7 @@ export const FormLayout = (props: { type: string }) => {
             w={"170px"}
           />
         </Flex>
+
       </Flex>
     </Flex>
   );
