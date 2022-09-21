@@ -1,5 +1,4 @@
-import { Button, Link } from "@chakra-ui/react";
-import theme from "../theme/index";
+import { Button } from "@chakra-ui/react";
 // import LYDA_whitepaper_EN from '/'
 type BasicButtonPtop = {
   text: string;
@@ -24,7 +23,6 @@ export const BasicButton = (prop: BasicButtonPtop) => {
     isDisabled,
     fontSize,
     func,
-    style,
     bg,
     link,
     color,

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Flex, Text, Input,useMediaQuery } from "@chakra-ui/react";
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction } from "react";
 export const SocialInput = (props: {
   title: string;
   placeHolder: string;

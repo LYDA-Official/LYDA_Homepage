@@ -1,9 +1,8 @@
-import { Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import { Flex, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { NavLink, useMatch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import theme from "../../theme/index";
 import { FansForm } from "./FansForm";
 import { CreatorsForm } from "./CreatorsForm";
 import { BasicButton } from "../../common/BasicButton";
@@ -11,7 +10,7 @@ import saveData from "../../firebase/saveData";
 import fetchData from "../../firebase/fetchData";
 export const FormLayout = (props: { type: string }) => {
   const { type } = props;
-  const navigate = useNavigate();
+
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
   return (
@@ -36,7 +35,7 @@ export const FormLayout = (props: { type: string }) => {
           />
         </NavLink>
 
-        <Flex onClick={() => {}}>
+        <Flex onClick={() => fetchData()}>
           <BasicButton
             text="Save"
             color="white.0"

@@ -1,5 +1,5 @@
 import {
-  Box,
+ 
   Flex,
   Image,
   Text,

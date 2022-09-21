@@ -1,28 +1,22 @@
 import {
-  Box,
   Flex,
-  Button,
-  Stack,
   Image,
-  useTheme,
-  CircularProgress,
-  useColorMode,
   Text,
   Link,
   // Tooltip,
 } from "@chakra-ui/react";
 import React from "react";
 import LOGO from "../assets/logo/LOGO.svg";
-import { NavLink,useMatch } from "react-router-dom";
+import { NavLink, useMatch } from "react-router-dom";
 import theme from "../theme/index";
 import Discord from "../assets/icons/Discord.svg";
 import Twitter from "../assets/icons/Twitter.svg";
 import Telegram from "../assets/icons/Telegram.svg";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 export const Header: React.FC = () => {
-  const about = useMatch('/about');
-  const register = useMatch('/register')
+  const about = useMatch("/about");
+  const register = useMatch("/register");
 
   const socialLinks = [
     {
@@ -50,14 +44,24 @@ export const Header: React.FC = () => {
       </Flex>
       <Flex w={"301px"} fontSize={"20px"} fontWeight={500}>
         <NavLink to="/about" style={{ width: "90%" }}>
-          <Text color={about?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>ABOUT</Text>
+          <Text
+            color={about ? "blue.100" : "white.0"}
+            _hover={{ color: "blue.100" }}
+          >
+            ABOUT
+          </Text>
         </NavLink>
         {/* <NavLink to="/register" style={{ width: "100%" }}>
         <Text color={register?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>PRE - REGISTER</Text>
           
         </NavLink> */}
-        <HashLink to='/#pre-registration' style={{ width: "90%" }}>
-        <Text color={register?'blue.100': 'white.0'} _hover={{color: 'blue.100'}}>PRE - REGISTER</Text>
+        <HashLink to="/#pre-registration" style={{ width: "90%" }}>
+          <Text
+            color={register ? "blue.100" : "white.0"}
+            _hover={{ color: "blue.100" }}
+          >
+            PRE - REGISTER
+          </Text>
         </HashLink>
       </Flex>
       <Flex>
@@ -72,8 +76,6 @@ export const Header: React.FC = () => {
 };
 
 const NavBarContainer = ({ children, ...rest }: { children: any }) => {
-
-
   return (
     <Flex
       as="nav"
@@ -86,7 +88,6 @@ const NavBarContainer = ({ children, ...rest }: { children: any }) => {
       h={"52px"}
       pos="absolute"
       zIndex={1000}
-     
       fontFamily={theme.fonts.main}
       {...rest}
     >

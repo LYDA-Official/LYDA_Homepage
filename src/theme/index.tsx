@@ -1,5 +1,5 @@
-import { extendTheme, useMediaQuery } from "@chakra-ui/react";
-import { createBreakpoints, mode } from "@chakra-ui/theme-tools";
+import { extendTheme } from "@chakra-ui/react";
+import {  mode } from "@chakra-ui/theme-tools";
 import "@fontsource/saira/500.css";
 import "@fontsource/saira/300.css";
 

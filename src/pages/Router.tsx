@@ -1,12 +1,11 @@
-import React, { FC, HTMLAttributes, useEffect, useState, useRef } from "react";
+import React, { FC, HTMLAttributes} from "react";
 import { Header } from "../common/Header";
 import { Footer } from "../common/Footer";
 import { Home } from "./Home";
 import { About } from "./About";
 import { FansRegister } from "./FansRegister";
 import { CreatorsRegister } from "./CreatorsRegister";
-import { Routes, Route, Link } from "react-router-dom";
-import logo from "./logo192.png";
+import { Routes, Route } from "react-router-dom";
 import "./router.css";
 export interface RouterProps extends HTMLAttributes<HTMLDivElement> {}
 

@@ -1,5 +1,5 @@
 import { Flex, Text,useMediaQuery } from "@chakra-ui/react";
-import { NavLink, useMatch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import bg from "../../assets/bg.png";
 import theme from "../../theme/index";
 import { BasicButton } from "../../common/BasicButton";

@@ -1,4 +1,4 @@
-import { Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import { Flex, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme/index";
 import bgSubPage from "../../assets/bgSubPage.png";

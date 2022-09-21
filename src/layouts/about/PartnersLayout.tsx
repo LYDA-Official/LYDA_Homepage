@@ -67,10 +67,7 @@ export const PartnersLayout = () => {
       >
         <Image src={ontherTablet} w="200px" h="33.6px" />
         <Text w='600px' fontSize={'14px'} fontWeight={400}>
-          Bio: Onther, standing for “On Ethereum,” is an Ethereum Layer-2
-          blockchain research and development company. Onther utilizes the
-          Tokamak Network to launch new projects via it’s TONstarter platform in
-          an effort to easily build trustless blockchain applications.{" "}
+        {bio}
         </Text>
       </Flex>
     );

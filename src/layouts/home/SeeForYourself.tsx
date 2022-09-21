@@ -1,4 +1,4 @@
-import { Flex, Text, Box, Button, Image,useMediaQuery } from "@chakra-ui/react";
+import { Flex, Text, Box, Image,useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme";
 import Maskgroup from "../../assets/Maskgroup.png";

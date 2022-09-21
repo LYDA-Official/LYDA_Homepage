@@ -98,7 +98,7 @@ export const CreatorsForm = () => {
                 <SocialInput
                   title="Discord"
                   placeHolder="Discord URL"
-                  setValue={setFacebook}
+                  setValue={setDiscord}
                 />
               </GridItem>
               <GridItem>

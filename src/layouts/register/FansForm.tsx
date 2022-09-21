@@ -83,7 +83,7 @@ export const FansForm = () => {
                 <SocialInput
                   title="Discord"
                   placeHolder="Discord URL"
-                  setValue={setFacebook}
+                  setValue={setDiscord}
                 />
               </GridItem>
             </Grid>
