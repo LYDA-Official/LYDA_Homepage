@@ -2,6 +2,7 @@ import { dataBase } from ".";
 import { ref, push } from "firebase/database";
 
 async function saveData(params: { refKey: "creator" | "fan"; param: any }) {
+ 
   try {
     const { refKey, param } = params;
     const db = dataBase;
