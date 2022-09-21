@@ -8,62 +8,62 @@ import timeline1 from "../../assets/timeline1.png";
 export const Roadmap = () => {
   const mapPoints = [
     {
-      title: "Amet minim mollit",
+      title: "1 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "31%",
-      left: "3%",
+      top: "35%",
+      left: "85px",
     },
     {
-      title: "Amet minim mollit",
+      title: "2 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "47.8%",
-      left: "32%",
+      top: "48%",
+      left: "614px",
     },
     {
-      title: "Amet minim mollit",
+      title: "3 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
       top: "57%",
-      left: "57%",
+      left: "1111px",
     },
     {
-      title: "Amet minim mollit",
+      title: "4 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "26%",
-      left: "78%",
+      top: "29%",
+      left: "1608px",
       rotated: true,
     },
     {
-      title: "Amet minim mollit",
+      title: "5 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "7%",
-      left: "102%",
+      top: "13%",
+      left: "2000px",
     },
     {
-      title: "Amet minim mollit",
+      title: "6 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "51%",
-      left: "130%",
+      top: "56%",
+      left: "2400px",
       rotated: true,
     },
     {
-      title: "Amet minim mollit",
+      title: "7 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "46%",
-      left: "157%",
+      top: "37%",
+      left: "2750px",
     },
     {
-      title: "Amet minim mollit",
+      title: "8 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
       top: "43%",
-      left: "174%",
+      left:"3400px",
       rotated: true,
     },
   ];
@@ -248,9 +248,10 @@ export const Roadmap = () => {
       backgroundSize={"100% 970px"}
       h={"970px"}
       // onScroll={detectScroll}
-      justifyContent={"center"}
+    
       zIndex={0}
       overflowX="scroll"
+      alignItems='flex-start'
       id="scrollCont"
       style={{
         cursor:
@@ -259,11 +260,12 @@ export const Roadmap = () => {
             : `url(mouseCursorLeft.png), default`,
       }}
     >
-      <Flex fontFamily={theme.fonts.main} mt={"120px"} flexDir={"column"}>
+      <Flex fontFamily={theme.fonts.main} mt={"120px"} flexDir={"column"} >
+       
         <Flex
           position="absolute"
           // top='1893px'
-          // left={'789px'}
+        
           alignItems={"center"}
           justifyContent={"center"}
           w={"100%"}
@@ -286,19 +288,37 @@ export const Roadmap = () => {
             sint. Exercitation veniam consequat sunt nostrud amet. Amet
           </Text>
         </Flex>
-        <Flex
+        <Flex w='3840px' position={'relative'}
+           mt={"320px"}>
+        <Image src={timeline1} h={"100%"} />
+        {mapPoints.map((point: any, index: number) => (
+            <RoadmapPoint
+              key={index}
+              title={point.title}
+              content={point.content}
+              top={point.top}
+              left={point.left}
+              rotated={point.rotated}
+            />
+          ))}
+           </Flex>
+        {/* <Flex
+          left={'800px'}
           justifyContent={"flex-start"}
           alignItems="flex-start"
           flexDir={"column"}
           position="relative"
           mt={"320px"}
           id={"scrooll"}
+          w='3840px'
+          border={'1px solid red'}
+       
         >
-          <Flex w={"200%"}>
+          <Flex >
             <Image src={timeline1} h={"341px"} />
-            {/* <Image src={timeline2} w={"100%"}/> */}
+         
           </Flex>
-
+       
           {mapPoints.map((point: any, index: number) => (
             <RoadmapPoint
               key={index}
@@ -309,7 +329,8 @@ export const Roadmap = () => {
               rotated={point.rotated}
             />
           ))}
-        </Flex>
+         
+        </Flex> */}
       </Flex>
     </Flex>
   );
