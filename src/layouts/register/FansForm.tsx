@@ -31,7 +31,7 @@ import { Navigate, NavLink,useNavigate } from "react-router-dom";
 import { BasicButton } from "../../common/BasicButton";
 import saveData from "../../firebase/saveData";
 import fetchData from "../../firebase/fetchData";
-import schema from "../../utilities/schema";
+import fansSchema  from "../../util../../utilities/fansSchema"
 type FansInput = {
   twitter: string;
   discord: string;
@@ -79,7 +79,7 @@ export const FansForm = () => {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={schema}
+      validationSchema={fansSchema}
       validateOnMount={true}
       onSubmit={async (data, { setSubmitting }) => {
         // setSubmitting(true);

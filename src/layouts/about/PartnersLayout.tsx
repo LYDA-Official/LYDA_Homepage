@@ -117,8 +117,8 @@ export const PartnersLayout = () => {
           h={"504px"}
           mb="64px"
         >
-          {partnersList.map((partner: any) => (
-            <PartnerCardTablet bio={partner.bio} image={partner.image} />
+          {partnersList.map((partner: any, index:number) => (
+            <PartnerCardTablet bio={partner.bio} image={partner.image} key={index}/>
           ))}
         </Flex>
       ) : (
@@ -127,8 +127,8 @@ export const PartnersLayout = () => {
           justifyContent={"space-between"}
           mb='120px'
         >
-          {partnersList.map((partner: any) => (
-            <PartnerCard bio={partner.bio} image={partner.image} />
+          {partnersList.map((partner: any, index:number) => (
+            <PartnerCard bio={partner.bio} image={partner.image} key={index} />
           ))}
         </Flex>
       )}
