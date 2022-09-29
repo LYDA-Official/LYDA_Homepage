@@ -1,4 +1,4 @@
-import { Flex, Text, Box, Image,useMediaQuery } from "@chakra-ui/react";
+import { Flex, Text, Box, Image, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme";
 import Maskgroup from "../../assets/Maskgroup.png";
@@ -6,12 +6,11 @@ import PlayButton from "../../assets/SVG/play.svg";
 
 export const SeeForYourself = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
 
   // const [isSmallerThan1440] = useMediaQuery("(max-width: 1200px)");
 
   window.onload = function () {
-
-
     const video = document.getElementById(
       "video_background"
     ) as HTMLVideoElement | null;
@@ -27,39 +26,44 @@ export const SeeForYourself = () => {
     }
   };
   return (
-    <Flex bg={"white"} h={isSmallerThan1440? '864px':"1022px"} w={"100%"} justifyContent={"center"}>
+    <Flex
+      bg={"white"}
+      h={["448px", "864px", "1022px"]}
+      w={"100%"}
+      justifyContent={"center"}
+    >
       <Flex
         {...theme.LAYOUT_STYLE.layoutStyle()}
         fontFamily={theme.fonts.main}
         flexDir={"column"}
       >
-        <Flex flexDir={"column"} color={"blue.200"} justifyContent='center'>
+        <Flex flexDir={"column"} color={"blue.200"} justifyContent="center">
           <Text
             fontWeight={600}
-            fontSize={"48px"}
+            fontSize={isSmallerThan1024 ? "28px" : "48px"}
             lineHeight={"48px"}
-            mb={"20px"}
-            textAlign='center'
+            mb={isSmallerThan1024 ? "16px" : "20px"}
+            textAlign="center"
           >
             See For Yourself
           </Text>
           <Text
-            w={"539px"}
+            w={isSmallerThan1024 ? "340px" : "539px"}
             fontWeight={400}
-            fontSize={"16px"}
-            lineHeight={"25.18px"}
-            textAlign='center'
-            mb={isSmallerThan1440? '56px':"64px"}
+            fontSize={isSmallerThan1024 ? "14px" : "16px"}
+            lineHeight={isSmallerThan1024 ? "22.04px" : "25.18px"}
+            textAlign="center"
+            mb={["32px", "56px", "64px"]}
           >
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Exercitation veniam consequat sunt nostrud amet. Amet
+            Amet minim mollit non deserunt ullamco est sit aliq dolor doamet
+            sint. Exercitation veniam consequat
           </Text>
         </Flex>
         <Flex
           id={"videoContainer"}
           borderTopRightRadius={"88px"}
-          h={isSmallerThan1440? '514px':"600px"}
-          w={isSmallerThan1440?'944px': "1100px"}
+          h={["200px", "514px", "600px"]}
+          w={["332px", "944px", "1100px"]}
           justifyContent={"center"}
           alignItems={"center"}
         >
@@ -70,6 +74,7 @@ export const SeeForYourself = () => {
             position={"absolute"}
             id="play-pause"
             _hover={{ cursor: "pointer" }}
+            height={isSmallerThan1024 ? "64px" : "100%"}
           />
           {/* <Button
           zIndex={10000}
@@ -84,8 +89,8 @@ export const SeeForYourself = () => {
             as="video"
             controls={true}
             muted
-            h={isSmallerThan1440? '514px':"600px"}
-          w={isSmallerThan1440?'944px': "1100px"}
+            h={["200px", "514px", "600px"]}
+            w={["332px", "944px", "1100px"]}
             src="zoom_0.mp4"
             data-setup="{}"
             poster={Maskgroup}

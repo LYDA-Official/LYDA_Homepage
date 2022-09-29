@@ -1,20 +1,19 @@
-import { Flex, Text,useMediaQuery } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import bg from "../../assets/bg.png";
 import theme from "../../theme/index";
 import { BasicButton } from "../../common/BasicButton";
 
 export const PreRegistration = () => {
- 
-const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
-// const [isSmallerThan1240] = useMediaQuery("(max-width: 1240px)");
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
 
   return (
     <Flex
       bg={"blue.400"}
       backgroundImage={bg}
       backgroundSize={isSmallerThan1440 ? "120% 790px" : "100% 1022px"}
-      h={isSmallerThan1440 ? "790px" : "1022px"}
+      h={["770px", "790px", "1022px"]}
       justifyContent={"center"}
       id="pre-registration"
     >
@@ -30,35 +29,42 @@ const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
           fontFamily={theme.fonts.main}
           fontStyle={"normal"}
           flexDir={"column"}
-          mb={isSmallerThan1440?'56px': "64px"}
+          mb={["32px", "56px", "64px"]}
           color={"white.0"}
         >
           {" "}
-          <Text fontWeight={600} fontSize={"48px"} mb={"20px"}>
+          <Text
+            fontWeight={600}
+            fontSize={isSmallerThan1024 ? "28px" : "48px"}
+            mb={isSmallerThan1024 ? "16px" : "20px"}
+          >
             Pre Registration
           </Text>
           <Text
-            fontSize={"16px"}
+            fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={400}
-            w={"539px"}
+            w={isSmallerThan1024 ? "340px" : "539px"}
             textAlign={"center"}
           >
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Exercitation veniam consequat sunt nostrud amet. Amet
+            Amet minim mollit non deserunt ullamco est sit aliq dolor doamet
+            sint. Exercitation veniam consequat
           </Text>
         </Flex>
         <Flex
           w={"100%"}
           justifyContent={"center"}
           fontFamily={theme.fonts.main}
+          flexDir={isSmallerThan1024 ? "column" : "row"}
+          alignItems="center"
         >
           <NavLink to="/register/creators">
             <Flex
+              borderTopRightRadius={isSmallerThan1024 ? "80px" : ""}
               flexDir={"column"}
-              h={isSmallerThan1440? '440px':"502px"}
-              w={isSmallerThan1440?'472px': "600px"}
-              pt={isSmallerThan1440? '114px' :"160px"}
-              px={isSmallerThan1440? '40px':"60px"}
+              h={["260px", "440px", "502px"]}
+              w={["332px", "472px", "600px"]}
+              pt={["33px", "114px", "160px"]}
+              px={["18px", "40px", "60px"]}
               _hover={{
                 background:
                   "linear-gradient(134.5deg, #55C2FF -23.18%, #4361EE 94.24%)",
@@ -69,19 +75,20 @@ const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
             >
               <Text
                 fontWeight={600}
-                fontSize={"40px"}
+                fontSize={isSmallerThan1024 ? "24px" : "40px"}
                 fontStyle={"normal"}
-                lineHeight={"63px"}
+                lineHeight={isSmallerThan1024 ? "37.78px" : "63px"}
+                mb={isSmallerThan1024 ? "12px" : ""}
               >
                 CREATORS
               </Text>
               <Text
                 fontWeight={400}
-                fontSize={isSmallerThan1440? '15px':"16px"}
+                fontSize={["12px", "15px", "16px"]}
                 fontStyle={"normal"}
-                lineHeight={"25px"}
-                mb={isSmallerThan1440? '40px': "56px"}
-                h={isSmallerThan1440? '120px':"100px"}
+                lineHeight={isSmallerThan1024 ? "18.89px" : "25px"}
+                mb={["20px", "40px", "56px"]}
+                h={["95px", "120px", "100px"]}
               >
                 Fuel your career by joining the LYDA Creator Coalition! Open a
                 new stream of revenue via branded tokens for fans, create new
@@ -90,8 +97,8 @@ const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
               </Text>
               <BasicButton
                 text="BTN"
-                h={'53px'}
-                w={'160px'}
+                h={isSmallerThan1024 ? "42px" : "53px"}
+                w={isSmallerThan1024 ? "120px" : "160px"}
                 color="white.0"
                 bg="transparent"
                 border="2px solid #ffffff"
@@ -101,13 +108,13 @@ const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
           <NavLink to="/register/fans">
             <Flex
-               h={isSmallerThan1440? '440px':"502px"}
-               w={isSmallerThan1440?'472px': "600px"}
-               pt={isSmallerThan1440? '114px' :"160px"}
-               px={isSmallerThan1440? '40px':"60px"}
               flexDir={"column"}
+              h={["260px", "440px", "502px"]}
+              w={["332px", "472px", "600px"]}
+              pt={["33px", "114px", "160px"]}
+              px={["18px", "40px", "60px"]}
               bg={"blue.0"}
-              borderTopRightRadius={"80px"}
+              borderTopRightRadius={isSmallerThan1024 ? "" : "80px"}
               color={theme.colors.blue[200]}
               _hover={{
                 background:
@@ -117,19 +124,20 @@ const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
             >
               <Text
                 fontWeight={600}
-                fontSize={"40px"}
+                fontSize={isSmallerThan1024 ? "24px" : "40px"}
                 fontStyle={"normal"}
-                lineHeight={"63px"}
+                lineHeight={isSmallerThan1024 ? "37.78px" : "63px"}
+                mb={isSmallerThan1024 ? "12px" : ""}
               >
                 FANS
               </Text>
               <Text
                 fontWeight={400}
-                fontSize={isSmallerThan1440? '15px':"16px"}
-                h={isSmallerThan1440? '120px':"100px"}
+                fontSize={["12px", "15px", "16px"]}
                 fontStyle={"normal"}
-                lineHeight={"25px"}
-                mb={isSmallerThan1440? '40px': "56px"}
+                lineHeight={isSmallerThan1024 ? "18.89px" : "25px"}
+                mb={["20px", "40px", "56px"]}
+                h={["76px", "120px", "100px"]}
               >
                 Enjoy exclusive rewards and community privileges all while
                 supporting your favorite content creators. As token holders, get
@@ -137,8 +145,8 @@ const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
               </Text>
               <BasicButton
                 text="BTN"
-                h={'53px'}
-                w={'160px'}
+                h={"53px"}
+                w={"160px"}
                 color="blue.200"
                 bg="transparent"
                 border="2px solid #060B22"

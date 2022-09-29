@@ -1,41 +1,56 @@
-import { Flex, Text, Image,useMediaQuery } from "@chakra-ui/react";
+import { Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme/index";
 import { BasicButton } from "../../common/BasicButton";
 import graph from "../../assets/graph.png";
 
 export const WhatIsLyda = () => {
-  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
-
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <Flex bg={"white"} h={isSmallerThan1440? '672px':"790px"} justifyContent={"center"} alignItems='center' px={"auto"} zIndex={100} p='auto'>
-      <Flex alignItems={"center"} {...theme.LAYOUT_STYLE.layoutStyle()}>
+    <Flex
+      bg={"white"}
+      h={["742px", "672px", "790px"]}
+      justifyContent={"center"}
+      alignItems="center"
+      px={"auto"}
+      zIndex={100}
+      p="auto"
+    >
+      <Flex
+        alignItems={"center"}
+        {...theme.LAYOUT_STYLE.layoutStyle()}
+        flexDir={isSmallerThan1024 ? "column" : "row"}
+      >
         <Flex
-         
           flexDir="column"
           color={"blue.200"}
           fontFamily={theme.fonts.main}
           fontStyle="normal"
-          mr={isSmallerThan1440? '48px':"136px"}
+          mr={["", "48px", "136px"]}
+          alignItems={isSmallerThan1024 ? "center" : ""}
         >
-          <Text fontSize={isSmallerThan1440? '40px':"70px"} fontWeight={700} lineHeight={isSmallerThan1440? '62.96px': "70px"}>
+          <Text
+            fontSize={["28px", "40px", "70px"]}
+            fontWeight={700}
+            lineHeight={["44px", "62.96px", "70px"]}
+          >
             WHAT IS LYDA
           </Text>
           <Text
-            mt={"32px"}
-            fontSize={"16px"}
+            mt={isSmallerThan1024 ? "16px" : "32px"}
+            fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={300}
             lineHeight={"25px"}
-            mb={"50px"}
-            maxW={isSmallerThan1440? '400px':'500px'}
+            mb={isSmallerThan1024 ? "32px" : "50px"}
+            maxW={["332px", "400px", "500px"]}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
             veniam consequat sunt nostrud amet. Amet minim mollit non deserunt
             ullamco est sit aliqua dolor.
           </Text>
-          <Flex>
+          <Flex mb={isSmallerThan1024 ? "48px" : ""}>
             <BasicButton
               text="Whitepaper (EN)"
               bg={"purple.0"}
@@ -51,7 +66,11 @@ export const WhatIsLyda = () => {
             />
           </Flex>
         </Flex>
-        <Image src={graph} h={isSmallerThan1440? '496px':"550px"} w={isSmallerThan1440? '496px':"550px"} />
+        <Image
+          src={graph}
+          h={["332px", "496px", "550px"]}
+          w={["332px", "496px", "550px"]}
+        />
       </Flex>
     </Flex>
   );

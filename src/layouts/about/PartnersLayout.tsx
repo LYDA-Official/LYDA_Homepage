@@ -7,6 +7,7 @@ import onther from "../../assets/onther.png";
 import ontherTablet from "../../assets/ontherTablet.png";
 export const PartnersLayout = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
 
   const partnersList = [
     {
@@ -28,23 +29,29 @@ export const PartnersLayout = () => {
 
     return (
       <Flex
-        h={"392px"}
-        w={"360px"}
+        h={isSmallerThan1024 ? "274px" : "392px"}
+        w={isSmallerThan1024 ? "332px" : "360px"}
         bg={"blue.500"}
         borderTopRightRadius={"40px"}
-        p={"64px 27px 40px"}
+        p={isSmallerThan1024 ? "32px 20px 24px" : "64px 27px 40px"}
         flexDir="column"
         alignItems={"center"}
         zIndex={100}
+        mb={isSmallerThan1024 ? "24px" : ""}
       >
-        <Image src={image} h={"104px"} w={"150px"} mb="40px"></Image>
+        <Image
+          src={image}
+          h={isSmallerThan1024 ? "80px" : "104px"}
+          w={isSmallerThan1024 ? "115.38px" : "150px"}
+          mb={isSmallerThan1024 ? "24px" : "40px"}
+        ></Image>
         <Text
           textAlign={"center"}
           color="white.0"
           fontFamily={theme.fonts.main}
-          fontSize="14px"
+          fontSize={isSmallerThan1024 ? "12px" : "14px"}
           fontWeight={400}
-          lineHeight="24px"
+          lineHeight={isSmallerThan1024 ? "18.89px" : "24px"}
         >
           {bio}
         </Text>
@@ -66,8 +73,8 @@ export const PartnersLayout = () => {
         justifyContent={"space-around"}
       >
         <Image src={ontherTablet} w="200px" h="33.6px" />
-        <Text w='600px' fontSize={'14px'} fontWeight={400}>
-        {bio}
+        <Text w="600px" fontSize={"14px"} fontWeight={400}>
+          {bio}
         </Text>
       </Flex>
     );
@@ -75,14 +82,19 @@ export const PartnersLayout = () => {
   return (
     <Flex
       bg={"blue.400"}
-      h={isSmallerThan1440 ? "854px" : "814px"}
+      h={["1118px", "854px", "814px"]}
       alignItems="center"
       color="white.0"
       fontFamily={theme.fonts.main}
       flexDir="column"
+      px={"14px"}
     >
-      <Flex position={"absolute"} width="100%" height={'inherit'}>
-        <Image src={isSmallerThan1440 ? bg4 : bg3} width="100%" height={'100%'}></Image>
+      <Flex position={"absolute"} width="100%" height={"inherit"}>
+        <Image
+          src={isSmallerThan1440 ? bg4 : bg3}
+          width="100%"
+          height={isSmallerThan1024 ? "50%" : "100%"}
+        ></Image>
       </Flex>
       <Flex
         position={"relative"}
@@ -90,66 +102,60 @@ export const PartnersLayout = () => {
         alignItems={"center"}
         justifyContent="center"
         h="100%"
+        mt={["56px", "88px", "120px"]}
       >
         <Text
           fontWeight={600}
-          fontSize="48px"
-          lineHeight={"48px"}
+          fontSize={isSmallerThan1024 ? "28px" : "48px"}
+          lineHeight={isSmallerThan1024 ? "44.07px" : "48px"}
           fontStyle="normal"
-          mb="20px"
+          mb={isSmallerThan1024 ? "16px" : "20px"}
         >
           Partners
         </Text>
         <Text
-          w={isSmallerThan1440 ? "100%" : "539px"}
+          w={["340px", "100%", "539px"]}
           fontWeight={400}
-          fontSize="16px"
-          mb="64px"
+          fontSize={isSmallerThan1024 ? "14px" : "16px"}
+          mb={isSmallerThan1024 ? "32px" : "64px"}
+          textAlign={"center"}
         >
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint. Exercitation veniam consequat sunt nostrud amet. Amet
+          Amet minim mollit non deserunt ullamco est sit aliq dolor doamet sint.
+          Exercitation veniam consequat
         </Text>
       </Flex>
-      {isSmallerThan1440 ? (
+      {isSmallerThan1024 ? (
+        <Flex w={"100%"} alignItems={"center"} mb="120px" flexDir={"column"}>
+          {partnersList.map((partner: any, index: number) => (
+            <PartnerCard bio={partner.bio} image={partner.image} key={index} />
+          ))}
+        </Flex>
+      ) : isSmallerThan1440 ? (
         <Flex
           flexDir={"column"}
           alignContent="space-between"
           h={"504px"}
           mb="64px"
         >
-          {partnersList.map((partner: any, index:number) => (
-            <PartnerCardTablet bio={partner.bio} image={partner.image} key={index}/>
+          {partnersList.map((partner: any, index: number) => (
+            <PartnerCardTablet
+              bio={partner.bio}
+              image={partner.image}
+              key={index}
+            />
           ))}
         </Flex>
       ) : (
         <Flex
           w={isSmallerThan1440 ? "100%" : "1200px"}
           justifyContent={"space-between"}
-          mb='120px'
+          mb="120px"
         >
-          {partnersList.map((partner: any, index:number) => (
+          {partnersList.map((partner: any, index: number) => (
             <PartnerCard bio={partner.bio} image={partner.image} key={index} />
           ))}
         </Flex>
       )}
-      {/* <Text
-        fontWeight={600}
-        fontSize="48px"
-        lineHeight={"48px"}
-        fontStyle="normal"
-        mb="20px"
-      >
-        Partners
-      </Text>
-      <Text w={isSmallerThan1440? '100%':"539px"} fontWeight={400} fontSize="16px" mb="64px">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Exercitation veniam consequat sunt nostrud amet. Amet
-      </Text>
-      <Flex w={isSmallerThan1440? '100%':'1200px'} justifyContent={'space-between'} flexDir={isSmallerThan1440?'column':'row'}>
-        {partnersList.map((partner:any)=> (
-            <PartnerCard bio={partner.bio} image={partner.image}/>
-        ))}
-      </Flex> */}
     </Flex>
   );
 };

@@ -25,6 +25,8 @@ const colors = {
   },
 };
 
+const breakpoints = ["0px", "1024px", "1440px"];
+
 export const LAYOUT_STYLE = {
   layoutStyle: ()=>({
     w: '1200px',
@@ -46,6 +48,7 @@ const theme = extendTheme({
         }}},
   colors,
   fonts,
+  breakpoints,
   LAYOUT_STYLE
 });
 export default theme;
