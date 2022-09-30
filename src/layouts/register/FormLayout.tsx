@@ -19,9 +19,11 @@ export const FormLayout = (props: { type: string }) => {
     <Flex
       bg={"white.100"}
       h="100%"
+      w={'100%'}
       alignItems={"center"}
-      pt={isSmallerThan1024? '40px':"80px"}
+      pt={isSmallerThan1024 ? "40px" : "80px"}
       flexDir="column"
+      px={["14px", "40px", ""]}
     >
       {isSmallerThan1024 ? (
         type === "fans" ? (

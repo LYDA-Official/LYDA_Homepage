@@ -25,11 +25,11 @@ export const RegisterHeaderLayout = (props: {
         mt={isSmallerThan1024? '90px':"200px"}
         src={image}
         h={height}
-        width={width}
+        maxW={width}
         mb={isSmallerThan1024 ? "8px" : "25.6px"}
       />
       <Text
-      w={isSmallerThan1024? '261px':'603px'}
+      w={'100%'}
         fontFamily={theme.fonts.main}
         textAlign='center'
         color={"white.0"}

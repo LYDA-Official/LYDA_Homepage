@@ -15,7 +15,7 @@ export const CreatorsRegister = () => {
       <RegisterHeaderLayout
         image={PreRegisterCreators}
         height={isSmallerThan1024? '44px':"56.9px"}
-        width={isSmallerThan1024? '300px':"634.2px"}
+        width={isSmallerThan1024?'300px':'634.18px'}
         title={
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. "
         }

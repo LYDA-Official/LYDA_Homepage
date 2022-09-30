@@ -1,10 +1,21 @@
-import { Flex, useTheme, Image, Text } from "@chakra-ui/react";
+import { Flex, useTheme, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import DistributingSocialCapital from "../../assets/SVG/DistributingSocialCapital.svg";
 import LYDATeam from "../../assets/LYDATeam.png";
 export const Intro = () => {
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+
   const theme = useTheme();
-  return (
+
+  return isSmallerThan1024 ? (
+    <Flex  w={"100%"}
+    id={"info"}
+    bg={"purple.0"}
+    h={"645px"}
+    px={"auto"}
+    // justifyContent={"center"}
+   ></Flex>
+  ) : (
     <Flex
       w={"100%"}
       id={"info"}

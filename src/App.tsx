@@ -13,7 +13,7 @@ import LOGO from './assets/logo/LOGO.svg'
 export const App = () => (
  
     <Box textAlign="center" fontSize="xl" mt={'132px'}>
-      <Grid minH="100vh" p={3}>
+      <Grid minH="100vh" >
         <VStack spacing={8}>
          <Image  src={LOGO}/>
          <Text >LYDA Homepage</Text>

@@ -173,6 +173,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           Yes
@@ -185,6 +186,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           No
@@ -226,6 +228,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           Yes
@@ -238,6 +241,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           No
@@ -285,6 +289,7 @@ export const CreatorsForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
+                          background: '#FFFFFF'
                         }}
                       />
                     </Flex>
@@ -313,6 +318,7 @@ export const CreatorsForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
+                          background: '#FFFFFF'
                         }}
                       />
                       <ErrorMessage

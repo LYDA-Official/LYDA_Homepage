@@ -13,13 +13,13 @@ export const SocialInput = (props: {
 
   return (
     <Flex
-      w={["332px", "400px", "460px"]}
+      w={["100%"]}
       h={"54px"}
       alignItems="center"
       color={"blue.200"}
     >
       <Text
-        w={isSmallerThan1024? '80px':"100px"}
+        w={ "100%"}
         fontSize={isSmallerThan1024 ? "12px" : "15px"}
         fontWeight={400}
         fontStyle={"normal"}
@@ -28,7 +28,7 @@ export const SocialInput = (props: {
       </Text>
       <Field
         style={{
-          width: isSmallerThan1024 ? "252px" : "300px",
+          width: isSmallerThan1024 ? "100%" : "100%",
           height: "44px",
           border: "1px solid #e3e3ee",
           borderRadius: "4px",

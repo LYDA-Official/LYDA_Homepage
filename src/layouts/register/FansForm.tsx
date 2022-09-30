@@ -185,6 +185,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           Yes
@@ -197,6 +198,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           No
@@ -239,6 +241,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           Yes
@@ -251,6 +254,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           No
@@ -294,6 +298,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           Yes
@@ -306,6 +311,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              background: '#FFFFFF'
                             }}
                           />
                           No
@@ -351,6 +357,7 @@ export const FansForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
+                          background: '#FFFFFF'
                         }}
                       />
                     </Flex>
@@ -381,6 +388,7 @@ export const FansForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
+                          background: '#FFFFFF'
                         }}
                       />
                     </Flex>
@@ -411,6 +419,7 @@ export const FansForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
+                          background: '#FFFFFF'
                         }}
                       />
                       <ErrorMessage

@@ -84,7 +84,7 @@ export const MobileFansForm = () => {
         return (
           <Form>
             <Flex
-              w={"332px"}
+              w={'100%'}
               flexDir="column"
               fontFamily={theme.fonts.main}
               bg="#f4f4ff"
@@ -420,7 +420,7 @@ export const MobileFansForm = () => {
                 </ListItem>
               </List>
               <Flex
-                w={"332px"}
+              
                 justifyContent={"space-between"}
                 mb={"56px"}
                 mt={"32px"}
