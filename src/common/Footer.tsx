@@ -4,6 +4,7 @@ import {
   Image,
   Text,
   Link,
+  useMediaQuery
   // Tooltip,
 } from "@chakra-ui/react";
 import React from "react";
@@ -13,6 +14,8 @@ import Twitter from "../assets/icons/Twitter.svg";
 import Telegram from "../assets/icons/Telegram.svg";
 
 export const Footer: React.FC = () => {
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+
   const socialLinks = [
     {
       title: "Twitter",
@@ -34,15 +37,17 @@ export const Footer: React.FC = () => {
     <Flex
       maxW={"full"}
       bg={theme.colors.blue[200]}
-      h={"80px"}
-      justifyContent={"space-between"}
+      h={isSmallerThan1024? '100px':"80px"}
+      justifyContent={isSmallerThan1024? 'center':"space-between"}
       px={"32px"}
+      flexDir={isSmallerThan1024? 'column':'row'}
       alignItems={"center"}
       fontFamily={theme.fonts.main}
       fontWeight={500}
       color={'white.0'}
+
     >
-      <Text fontSize={"14px"} fontWeight={300}>
+      <Text fontSize={isSmallerThan1024?'12px':"14px"} fontWeight={300} mb={isSmallerThan1024?'12px':''}>
         Copyrightⓒ2022 <span style={{ fontWeight: 500 }}>LYDA</span>. All rights
         reserved.
       </Text>

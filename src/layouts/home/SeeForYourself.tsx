@@ -74,7 +74,7 @@ export const SeeForYourself = () => {
             position={"absolute"}
             id="play-pause"
             _hover={{ cursor: "pointer" }}
-            height={isSmallerThan1024 ? "64px" : "100%"}
+            height={isSmallerThan1024 ? "64px" : "100px"}
           />
           {/* <Button
           zIndex={10000}

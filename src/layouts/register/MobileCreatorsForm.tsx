@@ -14,6 +14,7 @@ import {
   useMediaQuery,
   Button,
   FormControl,
+  List,
 } from "@chakra-ui/react";
 import theme from "../../theme";
 import { useState } from "react";
@@ -27,58 +28,73 @@ import {
   FieldProps,
   ErrorMessage,
 } from "formik";
-import { Navigate, NavLink,useNavigate } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { BasicButton } from "../../common/BasicButton";
 import saveData from "../../firebase/saveData";
 import fetchData from "../../firebase/fetchData";
-import fansSchema  from "../../util../../utilities/fansSchema"
-type FansInput = {
+import creatorsSchema from "../../utilities/creatorsSchema";
+
+type CreatorsInput = {
   twitter: string;
+  facebook: string;
+  twitch: string;
+  youTube: string;
   discord: string;
+  website: string;
+  other: string;
   support: string;
-  benefit: string;
-  earning: string;
-  creator: string;
+  willing: string;
   example: string;
   email: string;
 };
 
-export const FansForm = () => {
+export const MobileCreatorsForm = () => {
+  const socialInputs = [
+    "twitter",
+    "facebook",
+    "twitch",
+    "youTube",
+    "discord",
+    "website",
+    "other",
+  ];
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
-  const initialValues: FansInput = {
+  const initialValues: CreatorsInput = {
     twitter: "",
+    facebook: "",
+    twitch: "",
+    youTube: "",
     discord: "",
+    website: "",
+    other: "",
     support: "",
-    benefit: "",
-    earning: "",
-    creator: "",
+    willing: "",
     example: "",
     email: "",
   };
 
   const handleSubmit = (datas: any) => {
     // console.log(values,'values');
- Object.keys(datas).forEach((k, key) => {
-      if (k === "benefit" || k === "support" || k === 'earning') {
+    Object.keys(datas).forEach((k, key) => {
+      if (k === "willing" || k === "support") {
         if (datas[k] === "1") {
-           datas[k] = true
-        }
-        else {
-        datas[k]= false
+          datas[k] = true;
+        } else {
+          datas[k] = false;
         }
       }
     });
     saveData({
-      refKey:'fan',
-      param: datas
-    })
-   
+      refKey: "creator",
+      param: datas,
+    });
   };
+
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={fansSchema}
+      validationSchema={creatorsSchema}
       validateOnMount={true}
       onSubmit={async (data, { setSubmitting }) => {
         // setSubmitting(true);
@@ -88,92 +104,66 @@ export const FansForm = () => {
       {({ errors, touched, values }) => {
         return (
           <Form>
-            <Flex w={isSmallerThan1440 ? "944px" : "1100px"} flexDir="column">
-              <Flex
-                bg={"white.0"}
-                flexDir={"column"}
-                borderTopRightRadius={"80px"}
-                p={"48px"}
-                fontFamily={theme.fonts.main}
-                mb={"48px"}
-              >
-                <OrderedList m={"0px"}>
-                  <ListItem mb={"52px"}>
+            <Flex w={"332px"} flexDir="column" fontFamily={theme.fonts.main} bg='#f4f4ff'>
+              <List fontSize="14px" color={"blue.200"}>
+                <ListItem mb={"40px"}>
+                  <Flex color={"blue.200"} display="flex" flexDir={"column"}>
+                    <Text
+                      color={"blue.200"}
+                      mb={"14px"}
+                      fontSize="14px"
+                      fontWeight={500}
+                      fontStyle={"normal"}
+                    >
+                      1. First and foremost, please provide LYDA with links to
+                      your associated social media:
+                    </Text>
+                    <Grid templateColumns="repeat(1, 1fr)">
+                      {socialInputs.map((item: any, index: number) => {
+                        return (
+                          <GridItem
+                            key={index}
+                         
+                            mb={"6px"}
+                          >
+                            <SocialInput
+                              title={item}
+                              placeHolder={`${
+                                item.charAt(0).toUpperCase() + item.slice(1)
+                              } URL`}
+                            />
+
+                            <ErrorMessage
+                              name={item}
+                              render={() => (
+                                <div
+                                  style={{
+                                    color: "red",
+                                    fontSize: "12px",
+                                    verticalAlign: "center",
+                                  }}
+                                >
+                                  * Invalid URL
+                                </div>
+                              )}
+                            />
+                          </GridItem>
+
+                        );
+                      })}
+                    </Grid>
+                  </Flex>
+                </ListItem>
+                <ListItem mb={"40px"}>
                     <Flex color={"blue.200"} display="flex" flexDir={"column"}>
                       <Text
                         color={"blue.200"}
                         mb={"20px"}
-                        fontSize="17px"
+                        fontSize="14px"
                         fontWeight={500}
                         fontStyle={"normal"}
                       >
-                        First and foremost, please provide LYDA with links to
-                        your associated social media:
-                      </Text>
-                      <Grid
-                        templateColumns="repeat(2, 1fr)"
-                        templateRows="repeat(1, 1fr)"
-                      >
-                        <GridItem
-                          mr={isSmallerThan1440 ? "64px" : "84px"}
-                          mb={"10px"}
-                        >
-                          <SocialInput
-                            title="twitter"
-                            placeHolder="Twitter URL"
-                          />
-
-                          <ErrorMessage
-                            name="twitter"
-                            render={() => (
-                              <div
-                                style={{
-                                  color: "red",
-                                  fontSize: "12px",
-                                  verticalAlign: "center",
-                                }}
-                              >
-                                * Invalid URL
-                              </div>
-                            )}
-                          />
-                        </GridItem>
-
-                        <GridItem>
-                          <SocialInput
-                            title="discord"
-                            placeHolder="Discord URL"
-                          />
-                          <ErrorMessage
-                            name="discord"
-                            render={() => (
-                              <div
-                                style={{
-                                  color: "red",
-                                  fontSize: "12px",
-                                  verticalAlign: "center",
-                                }}
-                              >
-                                * Invalid URL
-                              </div>
-                            )}
-                          />
-                        </GridItem>
-                      </Grid>
-                    </Flex>
-                  </ListItem>
-                  <ListItem mb={"52px"}>
-                    <Flex color={"blue.200"} display="flex" flexDir={"column"}>
-                      <Text
-                        color={"blue.200"}
-                        mb={"20px"}
-                        fontSize="17px"
-                        fontWeight={500}
-                        fontStyle={"normal"}
-                      >
-                        Are you interested in directly supporting your favorite
-                        content creators by purchasing their custom crypto
-                        social token?
+                       2. Are you interested in receiving financial support from your fans via the sale of your own personal crypto social token?
                       </Text>
 
                       <Flex>
@@ -185,6 +175,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              color:'#f4f4ff'
                             }}
                           />
                           Yes
@@ -197,6 +188,7 @@ export const FansForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
+                              color:'#f4f4ff'
                             }}
                           />
                           No
@@ -218,23 +210,22 @@ export const FansForm = () => {
                       />
                     </Flex>
                   </ListItem>
-                  <ListItem mb={"52px"}>
+                  <ListItem mb={"40px"}>
                     <Flex color={"blue.200"} display="flex" flexDir={"column"}>
                       <Text
                         color={"blue.200"}
                         mb={"20px"}
-                        fontSize="17px"
+                        fontSize="14px"
                         fontWeight={500}
                         fontStyle={"normal"}
                       >
-                        Would you like to benefit from exclusive digital
-                        rewards, only accessible by being a social token holder?
+                       3. Are you willing to make content and complete activations that will leverage said crypto token?
                       </Text>
                       <Flex>
                         <label>
                           <Field
                             type="radio"
-                            name="benefit"
+                            name="willing"
                             value="1"
                             style={{
                               marginRight: "16px",
@@ -246,7 +237,7 @@ export const FansForm = () => {
                         <label style={{ marginLeft: "44px" }}>
                           <Field
                             type="radio"
-                            name="benefit"
+                            name="willing"
                             value="2"
                             style={{
                               marginRight: "16px",
@@ -257,7 +248,7 @@ export const FansForm = () => {
                         </label>
                       </Flex>
                       <ErrorMessage
-                        name="benefit"
+                        name="willing"
                         render={() => (
                           <div
                             style={{
@@ -272,101 +263,19 @@ export const FansForm = () => {
                       />
                     </Flex>
                   </ListItem>
-                  <ListItem mb={"52px"}>
+                  <ListItem mb={"40px"}>
                     <Flex color={"blue.200"} display="flex" flexDir={"column"}>
                       <Text
                         color={"blue.200"}
-                        mb={"20px"}
-                        fontSize="17px"
-                        fontWeight={500}
-                        fontStyle={"normal"}
-                      >
-                        Are you interested in passively earning your favorite
-                        creators social token by participating in their Discord
-                        community?
-                      </Text>
-                      <Flex>
-                        <label>
-                          <Field
-                            type="radio"
-                            name="earning"
-                            value="1"
-                            style={{
-                              marginRight: "16px",
-                              accentColor: "#4361EE",
-                            }}
-                          />
-                          Yes
-                        </label>
-                        <label style={{ marginLeft: "44px" }}>
-                          <Field
-                            type="radio"
-                            name="earning"
-                            value="2"
-                            style={{
-                              marginRight: "16px",
-                              accentColor: "#4361EE",
-                            }}
-                          />
-                          No
-                        </label>
-                      </Flex>
-                      <ErrorMessage
-                        name="earning"
-                        render={() => (
-                          <div
-                            style={{
-                              color: "red",
-                              fontSize: "12px",
-                              verticalAlign: "center",
-                            }}
-                          >
-                            * Required
-                          </div>
-                        )}
-                      />
-                    </Flex>
-                  </ListItem>
-                  <ListItem mb={"52px"}>
-                    <Flex color={"blue.200"} display="flex" flexDir={"column"}>
-                      <Text
-                        color={"blue.200"}
-                        fontSize="17px"
+                        fontSize="14px"
                         fontWeight={500}
                         fontStyle={"normal"}
                         mb={"20px"}
                       >
-                        Which creator referred you to pre-register for LYDA and
-                        their upcoming creator social tokens?
-                      </Text>
-                      <Field
-                        name="creator"
-                        type="text-area"
-                        style={{
-                          padding: "11px 20px",
-                          border: "1px solid #e3e3ee",
-                          minHeight: "70px",
-                          borderRadius: "4px",
-                          outline: "none",
-                          color: "#060B22",
-                          fontSize: "15px",
-                          fontWeight: "400",
-                        }}
-                      />
-                    </Flex>
-                  </ListItem>
-                  <ListItem mb={"52px"}>
-                    <Flex color={"blue.200"} display="flex" flexDir={"column"}>
-                      <Text
-                        color={"blue.200"}
-                        fontSize="17px"
-                        fontWeight={500}
-                        fontStyle={"normal"}
-                        mb={"20px"}
-                      >
-                        What is one example of a reward you would like to earn
-                        by participating in your favorite creators digital
-                        social token economy?
+                        4. Please provide at least one example of content that
+                        could leverage your LYDA platform creator token. (This
+                        can be theoretical new content, or tie into content
+                        you’re already producing.)
                       </Text>
 
                       <Field
@@ -381,6 +290,7 @@ export const FansForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
+                          background: '#FFFFFF'
                         }}
                       />
                     </Flex>
@@ -389,14 +299,13 @@ export const FansForm = () => {
                     <Flex color={"blue.200"} display="flex" flexDir={"column"}>
                       <Text
                         color={"blue.200"}
-                        fontSize="17px"
+                        fontSize="14px"
                         fontWeight={500}
                         fontStyle={"normal"}
                         mb={"20px"}
                       >
-                        Please provide your email for LYDA platform updates and
-                        information on when you’re eligible to redeem your
-                        pre-registration rewards.
+                        5. Please provide your email to receive updates on your
+                        acceptance into the LYDA Creator Coalition.
                       </Text>
 
                       <Field
@@ -411,6 +320,7 @@ export const FansForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
+                          background: '#FFFFFF'
                         }}
                       />
                       <ErrorMessage
@@ -429,20 +339,20 @@ export const FansForm = () => {
                       />
                     </Flex>
                   </ListItem>
-                </OrderedList>
-              </Flex>
+              </List>
               <Flex
-                w={isSmallerThan1440 ? "944px" : "1100px"}
+                w={"332px"}
                 justifyContent={"space-between"}
-                mb={isSmallerThan1440 ? "88px" : "259px"}
+                mb={'56px'}
+                mt={'32px'}
               >
                 <NavLink to={"/"}>
                   <BasicButton
                     text="Back"
                     color="blue.200"
                     bg="blue.0"
-                    h={"53px"}
-                    w={"170px"}
+                    h={"48px"}
+                    w={"160px"}
                   />
                 </NavLink>
                 <Button
@@ -452,8 +362,8 @@ export const FansForm = () => {
                   fontSize={"16px"}
                   color="white.0"
                   bg="purple.0"
-                  h={"53px"}
-                  w={"170px"}
+                  h={"48px"}
+                  w={"160px"}
                   borderRadius={0}
                   borderTopRightRadius={"20px"}
                   fontWeight={500}

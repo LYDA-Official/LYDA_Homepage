@@ -1,67 +1,69 @@
-import { Flex, Text, Image, Box } from "@chakra-ui/react";
+import { Flex, Text, Image, Box, useMediaQuery } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import theme from "../../theme";
 import bg from "../../assets/bg2.png";
 import timeline1 from "../../assets/timeline1.png";
 export const Roadmap = () => {
+  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+
   const mapPoints = [
     {
       title: "1 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "35%",
-      left: "85px",
+      top:isSmallerThan1024?'30%': "35%",
+      left:isSmallerThan1024?'31px': "85px",
     },
     {
       title: "2 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "48%",
-      left: "614px",
+      top: isSmallerThan1024? '47%': "48%",
+      left: isSmallerThan1024? '350px': "614px",
     },
     {
       title: "3 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "57%",
-      left: "1111px",
+        top: isSmallerThan1024? '50%': "48%",
+        left: isSmallerThan1024? '595px': "614px",
     },
     {
       title: "4 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "29%",
-      left: "1608px",
+      top: isSmallerThan1024? '0%':"29%",
+      left: isSmallerThan1024? '970px':"1608px",
       rotated: true,
     },
     {
       title: "5 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "13%",
-      left: "2000px",
+        top: isSmallerThan1024? '40%':"29%",
+        left: isSmallerThan1024? '1260px':"1608px",
     },
     {
       title: "6 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "56%",
-      left: "2400px",
-      rotated: true,
+        top: isSmallerThan1024? '40%':"29%",
+        left: isSmallerThan1024? '1540px':"1608px",
+      rotated: isSmallerThan1024? false:true,
     },
     {
       title: "7 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "37%",
-      left: "2750px",
+        top: isSmallerThan1024? '40%':"29%",
+        left: isSmallerThan1024? '1835px':"1608px",
     },
     {
       title: "8 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: "43%",
-      left:"3400px",
+        top: isSmallerThan1024? '25%':"29%",
+        left: isSmallerThan1024? '2065px':"1608px",
       rotated: true,
     },
   ];
@@ -130,10 +132,10 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={"89px"} mb={"150px"}>
+        <Flex h={"100%"} w={"49px"} mb={"150px"}>
           <Flex
-            h={"88px"}
-            w={"88px"}
+            h={isSmallerThan1024 ? "50px" : "88px"}
+            w={isSmallerThan1024 ? "50px" : "88px"}
             bg={isHover ? "rgba(113, 247, 255, 0.2)" : "transparent"}
             borderRadius={"50%"}
             // position='relative'
@@ -142,8 +144,8 @@ export const Roadmap = () => {
             border={isHover ? "3px dashed #71F7FF" : ""}
           >
             <Box
-              h={"25px"}
-              w={"25px"}
+             h={isSmallerThan1024 ? "19px" : "25px"}
+             w={isSmallerThan1024 ? "19px" : "25px"}
               bg={"blue.100"}
               opacity={1}
               borderRadius={"50%"}
@@ -151,7 +153,7 @@ export const Roadmap = () => {
               // position='absolute'
             ></Box>
             <Box
-              height={"200px"}
+             height={isSmallerThan1024 ? "160px" : "200px"}
               width="1px"
               bg={"blue.100"}
               position="absolute"
@@ -166,12 +168,16 @@ export const Roadmap = () => {
           color={isHover ? "blue.100" : "white"}
           flexDir="column"
         >
-          <Text fontSize={"20px"} fontWeight={600} fontStyle="normal">
+          <Text
+            fontSize={isSmallerThan1024 ? "14px" : "20px"}
+            fontWeight={600}
+            fontStyle="normal"
+          >
             {title}
           </Text>
           <Text
-            w={"300px"}
-            fontSize={"16px"}
+            w={isSmallerThan1024 ? "140px" : "300px"}
+            fontSize={isSmallerThan1024 ? "10px" : "16px"}
             fontWeight={"normal"}
             fontStyle="normal"
           >
@@ -187,10 +193,10 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={"89px"} mb={"150px"}>
+        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"} mb={"150px"}>
           <Flex
-            h={"88px"}
-            w={"88px"}
+            h={isSmallerThan1024 ? "50px" : "88px"}
+            w={isSmallerThan1024 ? "50px" : "88px"}
             bg={isHover ? "rgba(113, 247, 255, 0.2)" : "transparent"}
             borderRadius={"50%"}
             // position='relative'
@@ -199,8 +205,8 @@ export const Roadmap = () => {
             border={isHover ? "3px dashed #71F7FF" : ""}
           >
             <Box
-              h={"25px"}
-              w={"25px"}
+              h={isSmallerThan1024 ? "19px" : "25px"}
+              w={isSmallerThan1024 ? "19px" : "25px"}
               bg={"blue.100"}
               opacity={1}
               borderRadius={"50%"}
@@ -208,7 +214,7 @@ export const Roadmap = () => {
               // position='absolute'
             ></Box>
             <Box
-              height={"200px"}
+              height={isSmallerThan1024 ? "160px" : "200px"}
               width="1px"
               bg={"blue.100"}
               position="absolute"
@@ -224,12 +230,16 @@ export const Roadmap = () => {
           color={isHover ? "blue.100" : "white"}
           flexDir="column"
         >
-          <Text fontSize={"20px"} fontWeight={600} fontStyle="normal">
+          <Text
+            fontSize={isSmallerThan1024 ? "14px" : "20px"}
+            fontWeight={600}
+            fontStyle="normal"
+          >
             {title}
           </Text>
           <Text
-            w={"300px"}
-            fontSize={"16px"}
+            w={isSmallerThan1024 ? "140px" : "300px"}
+            fontSize={isSmallerThan1024 ? "10px" : "16px"}
             fontWeight={"normal"}
             fontStyle="normal"
           >
@@ -243,13 +253,13 @@ export const Roadmap = () => {
     <Flex
       bg={"blue.400"}
       backgroundImage={bg}
-      backgroundSize={"100% 970px"}
-      h={"970px"}
+      backgroundSize={isSmallerThan1024 ? "100% 590px" : "100% 970px"}
+      h={isSmallerThan1024 ? "590px" : "970px"}
       // onScroll={detectScroll}
-    
+
       zIndex={0}
       overflowX="scroll"
-      alignItems='flex-start'
+      alignItems="flex-start"
       id="scrollCont"
       style={{
         cursor:
@@ -258,12 +268,15 @@ export const Roadmap = () => {
             : `url(mouseCursorLeft.png), default`,
       }}
     >
-      <Flex fontFamily={theme.fonts.main} mt={"120px"} flexDir={"column"} >
-       
+      <Flex
+        fontFamily={theme.fonts.main}
+        mt={isSmallerThan1024 ? "56px" : "120px"}
+        flexDir={"column"}
+      >
         <Flex
           position="absolute"
           // top='1893px'
-        
+
           alignItems={"center"}
           justifyContent={"center"}
           w={"100%"}
@@ -273,23 +286,30 @@ export const Roadmap = () => {
           color={"white.0"}
         >
           {" "}
-          <Text fontWeight={600} fontSize={"48px"} mb={"20px"}>
+          <Text
+            fontWeight={600}
+            fontSize={isSmallerThan1024 ? "28px" : "48px"}
+            mb={isSmallerThan1024 ? "16px" : "20px"}
+          >
             LYDA Roadmap
           </Text>
           <Text
-            fontSize={"16px"}
+            fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={400}
-            w={"539px"}
+            w={isSmallerThan1024 ? "340px" : "539px"}
             textAlign={"center"}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Exercitation veniam consequat sunt nostrud amet. Amet
+            sint. Exercitation veniam consequat
           </Text>
         </Flex>
-        <Flex w='3840px' position={'relative'}
-           mt={"320px"}>
-        <Image src={timeline1} h={"100%"} />
-        {mapPoints.map((point: any, index: number) => (
+        <Flex
+          w={isSmallerThan1024?'2252px':"3840px"}
+          position={"relative"}
+          mt={isSmallerThan1024 ? "230px" : "300px"}
+        >
+          <Image src={timeline1} h={isSmallerThan1024 ? "200px" : "100%"} />
+          {mapPoints.map((point: any, index: number) => (
             <RoadmapPoint
               key={index}
               title={point.title}
@@ -299,7 +319,7 @@ export const Roadmap = () => {
               rotated={point.rotated}
             />
           ))}
-           </Flex>
+        </Flex>
         {/* <Flex
           left={'800px'}
           justifyContent={"flex-start"}
