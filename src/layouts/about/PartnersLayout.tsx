@@ -29,8 +29,8 @@ export const PartnersLayout = () => {
 
     return (
       <Flex
-        h={isSmallerThan1024 ? "274px" : "392px"}
-        w={isSmallerThan1024 ? "332px" : "360px"}
+        h={isSmallerThan1024 ? "100%" : "392px"}
+        w={isSmallerThan1024 ? "100%" : "360px"}
         bg={"blue.500"}
         borderTopRightRadius={"40px"}
         p={isSmallerThan1024 ? "32px 20px 24px" : "64px 27px 40px"}
@@ -63,7 +63,7 @@ export const PartnersLayout = () => {
     const { bio, image } = props;
     return (
       <Flex
-        w={"944px"}
+        w={"100%"}
         h={"152px"}
         zIndex={100}
         bg={"blue.500"}
@@ -71,18 +71,21 @@ export const PartnersLayout = () => {
         mb="24px"
         alignItems={"center"}
         justifyContent={"space-around"}
+        px={['14px', '40px','']}
       >
         <Image src={ontherTablet} w="200px" h="33.6px" />
-        <Text w="600px" fontSize={"14px"} fontWeight={400}>
+        <Text w="100%" fontSize={"14px"} ml={'40px'} fontWeight={400}>
           {bio}
         </Text>
       </Flex>
     );
   };
+
+
   return (
     <Flex
       bg={"blue.400"}
-      h={["1118px", "854px", "814px"]}
+      h={["", "854px", "814px"]}
       alignItems="center"
       color="white.0"
       fontFamily={theme.fonts.main}
@@ -93,7 +96,7 @@ export const PartnersLayout = () => {
         <Image
           src={isSmallerThan1440 ? bg4 : bg3}
           width="100%"
-          height={isSmallerThan1024 ? "50%" : "100%"}
+          height={isSmallerThan1024 ? "100%" : "100%"}
         ></Image>
       </Flex>
       <Flex
@@ -114,7 +117,7 @@ export const PartnersLayout = () => {
           Partners
         </Text>
         <Text
-          w={["340px", "100%", "539px"]}
+          w={ "100%"}
           fontWeight={400}
           fontSize={isSmallerThan1024 ? "14px" : "16px"}
           mb={isSmallerThan1024 ? "32px" : "64px"}
@@ -125,7 +128,7 @@ export const PartnersLayout = () => {
         </Text>
       </Flex>
       {isSmallerThan1024 ? (
-        <Flex w={"100%"} alignItems={"center"} mb="120px" flexDir={"column"}>
+        <Flex w={"100%"} alignItems={"center"} mb="56px" flexDir={"column"}>
           {partnersList.map((partner: any, index: number) => (
             <PartnerCard bio={partner.bio} image={partner.image} key={index} />
           ))}
@@ -135,7 +138,7 @@ export const PartnersLayout = () => {
           flexDir={"column"}
           alignContent="space-between"
           h={"504px"}
-          mb="64px"
+          mb="88px"
         >
           {partnersList.map((partner: any, index: number) => (
             <PartnerCardTablet
@@ -149,7 +152,7 @@ export const PartnersLayout = () => {
         <Flex
           w={isSmallerThan1440 ? "100%" : "1200px"}
           justifyContent={"space-between"}
-          mb="120px"
+          mb={"120px"}
         >
           {partnersList.map((partner: any, index: number) => (
             <PartnerCard bio={partner.bio} image={partner.image} key={index} />

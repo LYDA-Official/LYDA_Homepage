@@ -20,6 +20,7 @@ export const RegisterHeaderLayout = (props: {
       alignItems="center"
       backgroundSize={"100% 400px"}
       flexDir="column"
+      px={'50px'}
     >
       <Image
         mt={isSmallerThan1024? '90px':"200px"}

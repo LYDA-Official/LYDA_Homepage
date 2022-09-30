@@ -11,9 +11,9 @@ export const HeaderLayout = () => {
     <Flex
       h={isSmallerThan1024 ? "240px" : "400px"}
       alignItems="center"
-      justifyContent={"center"}
       flexDir="column"
       w={"auto"}
+      px={'50px'}
     >
       <Flex
         position={"absolute"}
@@ -23,7 +23,7 @@ export const HeaderLayout = () => {
       </Flex>
       <Flex position={"relative"} flexDir="column" alignItems={"center"}>
         <Image
-          mt={isSmallerThan1024 ? "10px" : "200px"}
+          mt={isSmallerThan1024 ? "90px" : "200px"}
           src={AboutLyda}
           w={isSmallerThan1024 ? "170px" : "364.15px"}
           h={"44.24px"}
@@ -32,9 +32,10 @@ export const HeaderLayout = () => {
         <Text
           fontFamily={theme.fonts.main}
           color={"white.0"}
-          w={isSmallerThan1024 ? "261px" : "100%"}
+          w={"100%"}
           fontSize={isSmallerThan1024 ? "14px" : "18px"}
           textAlign="center"
+          mb={"91px"}
         >
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint

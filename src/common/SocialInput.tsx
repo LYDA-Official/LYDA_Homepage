@@ -19,7 +19,7 @@ export const SocialInput = (props: {
       color={"blue.200"}
     >
       <Text
-        w={ "100%"}
+        w={ "90px"}
         fontSize={isSmallerThan1024 ? "12px" : "15px"}
         fontWeight={400}
         fontStyle={"normal"}
@@ -28,7 +28,7 @@ export const SocialInput = (props: {
       </Text>
       <Field
         style={{
-          width: isSmallerThan1024 ? "100%" : "100%",
+          width: "100%",
           height: "44px",
           border: "1px solid #e3e3ee",
           borderRadius: "4px",

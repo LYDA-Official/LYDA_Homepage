@@ -14,27 +14,29 @@ export const InfoLayout = () => {
       pt={["40px", "88px", "120px"]}
       pb={["56px", "88px", "120px"]}
       w="100%"
+      px='14px'
       fontFamily={theme.fonts.main}
       justifyContent="center"
     >
       <Flex
         flexDir={"column"}
-        w={isSmallerThan1024 ? "332px" : "100%"}
+        w={['100%','944px','1200px']}
         color={"blue.200"}
       >
         <Flex
           w={"100%"}
-          justifyContent={"space-evenly"}
+          // justifyContent={"space-evenly"}
           alignItems="center"
           mb={["48px", "88px", "120px"]}
           flexDir={isSmallerThan1024 ? "column" : "row"}
         >
           <Image
             src={LYDATeam}
-            h={["340px", "493px", "584px"]}
-            w={["332px", "480px", "568px"]}
+            // h={["340px", "493px", "584px"]}
+            w={["100%", "480px", "568px"]}
+            mr={['','64px','132px']}
           />
-          <Flex flexDir={"column"}>
+          <Flex flexDir={"column"} alignItems={isSmallerThan1024? 'center':''} >
             <Text
               fontSize={isSmallerThan1024 ? "28px" : "40px"}
               fontWeight={600}
@@ -44,7 +46,7 @@ export const InfoLayout = () => {
               Founded in 2022,
             </Text>
             <Text
-              w={["332px", "400px", "500px"]}
+              w={["100%", "400px", "500px"]}
               fontSize={["14px", "16px", "18px"]}
               fontStyle="normal"
               fontWeight={400}
@@ -66,8 +68,8 @@ export const InfoLayout = () => {
           </Flex>
         </Flex>
         <Flex
-          w={isSmallerThan1024 ? "332px" : "100%"}
-          justifyContent={"space-evenly"}
+         w={['100%','944px','1200px']}
+         
           alignItems="center"
           flexDir={isSmallerThan1024 ? "column-reverse" : "row"}
         >
@@ -83,13 +85,14 @@ export const InfoLayout = () => {
             <Text
               fontSize={"40px"}
               fontWeight={600}
+              alignItems={isSmallerThan1024? 'center':''} 
               mb={isSmallerThan1024 ? "8px" : "24px"}
               lineHeight="63px"
             >
               Seong Song
             </Text>
             <Text
-              w={["332px", "400px", "500px"]}
+               w={["100%", "400px", "500px"]}
               fontSize={["14px", "16px", "18px"]}
               fontStyle="normal"
               lineHeight={["22.04px", "25.18px", "32px"]}
@@ -104,8 +107,8 @@ export const InfoLayout = () => {
           </Flex>
           <Image
             src={Song}
-            h={["340px", "493px", "584px"]}
-            w={["332px", "480px", "568px"]}
+            w={["100%", "480px", "568px"]}
+            ml={['','64px','132px']}
           />
         </Flex>
       </Flex>
