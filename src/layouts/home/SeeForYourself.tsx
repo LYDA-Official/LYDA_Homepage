@@ -28,16 +28,17 @@ export const SeeForYourself = () => {
   return (
     <Flex
       bg={"white"}
-      h={["448px", "864px", "1022px"]}
+      h={["100%", "864px", "1022px"]}
       w={"100%"}
       justifyContent={"center"}
+      px={'14px'}
     >
       <Flex
         {...theme.LAYOUT_STYLE.layoutStyle()}
         fontFamily={theme.fonts.main}
         flexDir={"column"}
       >
-        <Flex flexDir={"column"} color={"blue.200"} justifyContent="center">
+        <Flex flexDir={"column"} color={"blue.200"} justifyContent="center" mt={isSmallerThan1024?'56px':""}>
           <Text
             fontWeight={600}
             fontSize={isSmallerThan1024 ? "28px" : "48px"}
@@ -48,7 +49,7 @@ export const SeeForYourself = () => {
             See For Yourself
           </Text>
           <Text
-            w={isSmallerThan1024 ? "340px" : "539px"}
+            w={ "100%" }
             fontWeight={400}
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
             lineHeight={isSmallerThan1024 ? "22.04px" : "25.18px"}
@@ -62,10 +63,12 @@ export const SeeForYourself = () => {
         <Flex
           id={"videoContainer"}
           borderTopRightRadius={"88px"}
-          h={["200px", "514px", "600px"]}
-          w={["332px", "944px", "1100px"]}
+          h={["100%", "514px", "600px"]}
+          w={["100%", "944px", "1100px"]}
           justifyContent={"center"}
           alignItems={"center"}
+          mb={['56px','','']}
+
         >
           <Image
             src={PlayButton}
@@ -89,8 +92,8 @@ export const SeeForYourself = () => {
             as="video"
             controls={true}
             muted
-            h={["200px", "514px", "600px"]}
-            w={["332px", "944px", "1100px"]}
+            h={["100%", "514px", "600px"]}
+            w={["100%", "944px", "1100px"]}
             src="zoom_0.mp4"
             data-setup="{}"
             poster={Maskgroup}

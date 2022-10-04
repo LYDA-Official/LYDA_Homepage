@@ -29,6 +29,7 @@ export const PartnersLayout = () => {
 
     return (
       <Flex
+      
         h={isSmallerThan1024 ? "100%" : "392px"}
         w={isSmallerThan1024 ? "100%" : "360px"}
         bg={"blue.500"}

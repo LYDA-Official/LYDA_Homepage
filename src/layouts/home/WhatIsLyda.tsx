@@ -10,12 +10,13 @@ export const WhatIsLyda = () => {
   return (
     <Flex
       bg={"white"}
-      h={["742px", "672px", "790px"]}
+      h={["100%", "672px", "790px"]}
       justifyContent={"center"}
       alignItems="center"
-      px={"auto"}
+      
       zIndex={100}
       p="auto"
+       px={'14px'}
     >
       <Flex
         alignItems={"center"}
@@ -28,6 +29,7 @@ export const WhatIsLyda = () => {
           fontFamily={theme.fonts.main}
           fontStyle="normal"
           mr={["", "48px", "136px"]}
+          mt={isSmallerThan1024? '56px':''}
           alignItems={isSmallerThan1024 ? "center" : ""}
         >
           <Text
@@ -42,8 +44,9 @@ export const WhatIsLyda = () => {
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={300}
             lineHeight={"25px"}
+            textAlign={isSmallerThan1024? 'center':'left'}
             mb={isSmallerThan1024 ? "32px" : "50px"}
-            maxW={["332px", "400px", "500px"]}
+            maxW={["100%", "400px", "500px"]}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
             sint. Velit officia consequat duis enim velit mollit. Exercitation
@@ -68,8 +71,9 @@ export const WhatIsLyda = () => {
         </Flex>
         <Image
           src={graph}
-          h={["332px", "496px", "550px"]}
-          w={["332px", "496px", "550px"]}
+          mb={isSmallerThan1024?'56px':''}
+          h={["92%", "496px", "550px"]}
+          w={["", "496px", "550px"]}
         />
       </Flex>
     </Flex>

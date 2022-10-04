@@ -132,7 +132,7 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={"49px"} mb={"150px"}>
+        <Flex h={"100%"} w={"49px"} mb={"150px"} >
           <Flex
             h={isSmallerThan1024 ? "50px" : "88px"}
             w={isSmallerThan1024 ? "50px" : "88px"}
@@ -276,7 +276,7 @@ export const Roadmap = () => {
         <Flex
           position="absolute"
           // top='1893px'
-
+          px={'14px'}
           alignItems={"center"}
           justifyContent={"center"}
           w={"100%"}
@@ -296,7 +296,7 @@ export const Roadmap = () => {
           <Text
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={400}
-            w={isSmallerThan1024 ? "340px" : "539px"}
+            w={isSmallerThan1024 ? "100%" : "539px"}
             textAlign={"center"}
           >
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet

@@ -12,8 +12,9 @@ export const PreRegistration = () => {
     <Flex
       bg={"blue.400"}
       backgroundImage={bg}
+      px={'14px'}
       backgroundSize={isSmallerThan1440 ? "120% 790px" : "100% 1022px"}
-      h={["770px", "790px", "1022px"]}
+      h={["100%", "790px", "1022px"]}
       justifyContent={"center"}
       id="pre-registration"
     >
@@ -31,6 +32,7 @@ export const PreRegistration = () => {
           flexDir={"column"}
           mb={["32px", "56px", "64px"]}
           color={"white.0"}
+          mt={isSmallerThan1024?'56px':""}
         >
           {" "}
           <Text
@@ -43,7 +45,7 @@ export const PreRegistration = () => {
           <Text
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={400}
-            w={isSmallerThan1024 ? "340px" : "539px"}
+            w={isSmallerThan1024 ? "100%" : "539px"}
             textAlign={"center"}
           >
             Amet minim mollit non deserunt ullamco est sit aliq dolor doamet
@@ -56,15 +58,17 @@ export const PreRegistration = () => {
           fontFamily={theme.fonts.main}
           flexDir={isSmallerThan1024 ? "column" : "row"}
           alignItems="center"
+          mb={isSmallerThan1024? '58px':''}
         >
           <NavLink to="/register/creators">
             <Flex
               borderTopRightRadius={isSmallerThan1024 ? "80px" : ""}
               flexDir={"column"}
-              h={["260px", "440px", "502px"]}
-              w={["332px", "472px", "600px"]}
+              h={["100%", "440px", "502px"]}
+              w={["100%", "472px", "600px"]}
               pt={["33px", "114px", "160px"]}
               px={["18px", "40px", "60px"]}
+              mb={isSmallerThan1024? '20px':''}
               _hover={{
                 background:
                   "linear-gradient(134.5deg, #55C2FF -23.18%, #4361EE 94.24%)",
@@ -88,7 +92,7 @@ export const PreRegistration = () => {
                 fontStyle={"normal"}
                 lineHeight={isSmallerThan1024 ? "18.89px" : "25px"}
                 mb={["20px", "40px", "56px"]}
-                h={["95px", "120px", "100px"]}
+                h={["", "120px", "100px"]}
               >
                 Fuel your career by joining the LYDA Creator Coalition! Open a
                 new stream of revenue via branded tokens for fans, create new
@@ -109,10 +113,11 @@ export const PreRegistration = () => {
           <NavLink to="/register/fans">
             <Flex
               flexDir={"column"}
-              h={["260px", "440px", "502px"]}
-              w={["332px", "472px", "600px"]}
+              h={["100%", "440px", "502px"]}
+              w={["100%", "472px", "600px"]}
               pt={["33px", "114px", "160px"]}
               px={["18px", "40px", "60px"]}
+              mb={isSmallerThan1024? '20px':''}
               bg={"blue.0"}
               borderTopRightRadius={isSmallerThan1024 ? "" : "80px"}
               color={theme.colors.blue[200]}
@@ -137,7 +142,7 @@ export const PreRegistration = () => {
                 fontStyle={"normal"}
                 lineHeight={isSmallerThan1024 ? "18.89px" : "25px"}
                 mb={["20px", "40px", "56px"]}
-                h={["76px", "120px", "100px"]}
+                h={["", "120px", "100px"]}
               >
                 Enjoy exclusive rewards and community privileges all while
                 supporting your favorite content creators. As token holders, get
