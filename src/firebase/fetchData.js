@@ -1,16 +1,24 @@
-import { dataBase } from ".";
-import { ref, onValue } from "firebase/database";
+const { dataBase } = require("./index");
+const { ref, onValue, get, child } = require("firebase/database");
+const { Module } = require("module");
 
 async function fetchData() {
   try {
+    if (!dataBase) return;
     const dbRef = ref(dataBase);
-    onValue(dbRef, (snapshot) => {
-      const data = snapshot.val();
-      return data;
+
+    const result = await get(child(ref(dataBase), "/")).then((snapshot) => {
+      if (snapshot) {
+        return snapshot.val();
+      }
+      return undefined;
     });
+
+    return result;
   } catch (e) {
+    console.log("**fetchData err**");
     console.log(e);
   }
 }
 
-export default fetchData;
+exports.fetchData = fetchData;
