@@ -100,7 +100,7 @@ export const PreRegistration = () => {
                 consistently contribute. What are you waiting for?
               </Text>
               <BasicButton
-                text="BTN"
+                text="CREATORS"
                 h={isSmallerThan1024 ? "42px" : "53px"}
                 w={isSmallerThan1024 ? "120px" : "160px"}
                 color="white.0"
@@ -149,9 +149,9 @@ export const PreRegistration = () => {
                 ready to participate in perpetuating social capital!
               </Text>
               <BasicButton
-                text="BTN"
-                h={"53px"}
-                w={"160px"}
+                text="FANS"
+                h={isSmallerThan1024 ? "42px" : "53px"}
+                w={isSmallerThan1024 ? "120px" : "160px"}
                 color="blue.200"
                 bg="transparent"
                 border="2px solid #060B22"

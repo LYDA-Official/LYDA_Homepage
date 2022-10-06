@@ -104,7 +104,7 @@ export const MobileCreatorsForm = () => {
       {({ errors, touched, values }) => {
         return (
           <Form>
-            <Flex w={'100%'} flexDir="column" fontFamily={theme.fonts.main} bg='#f4f4ff' border={'1px solid red'}>
+            <Flex w={'100%'} flexDir="column" fontFamily={theme.fonts.main} bg='#f4f4ff' >
               <List fontSize="14px" color={"blue.200"} >
                 <ListItem mb={"40px"}>
                   <Flex color={"blue.200"} display="flex" flexDir={"column"}>

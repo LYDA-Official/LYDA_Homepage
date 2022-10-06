@@ -25,45 +25,45 @@ export const Roadmap = () => {
       title: "3 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '50%': "48%",
-        left: isSmallerThan1024? '595px': "614px",
+        top: isSmallerThan1024? '50%': "59%",
+        left: isSmallerThan1024? '595px': "1170px",
     },
     {
       title: "4 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: isSmallerThan1024? '0%':"29%",
-      left: isSmallerThan1024? '970px':"1608px",
+      top: isSmallerThan1024? '0%':"23%",
+      left: isSmallerThan1024? '970px':"1680px",
       rotated: true,
     },
     {
       title: "5 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '40%':"29%",
-        left: isSmallerThan1024? '1260px':"1608px",
+        top: isSmallerThan1024? '40%':"30%",
+        left: isSmallerThan1024? '1260px':"2090px",
     },
     {
       title: "6 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '40%':"29%",
-        left: isSmallerThan1024? '1540px':"1608px",
+        top: isSmallerThan1024? '40%':"63%",
+        left: isSmallerThan1024? '1540px':"2608px",
       rotated: isSmallerThan1024? false:true,
     },
     {
       title: "7 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '40%':"29%",
-        left: isSmallerThan1024? '1835px':"1608px",
+        top: isSmallerThan1024? '40%':"45%",
+        left: isSmallerThan1024? '1835px':"3008px",
     },
     {
       title: "8 Amet minim mollit",
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '25%':"29%",
-        left: isSmallerThan1024? '2065px':"1608px",
+        top: isSmallerThan1024? '25%':"62%",
+        left: isSmallerThan1024? '2065px':"3408px",
       rotated: true,
     },
   ];
