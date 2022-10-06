@@ -1,5 +1,5 @@
 import { Flex, useMediaQuery } from "@chakra-ui/react";
-import React from "react";
+import React, {useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 
@@ -14,7 +14,9 @@ export const FormLayout = (props: { type: string }) => {
   const { type } = props;
 
   const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Flex
       bg={"white.100"}

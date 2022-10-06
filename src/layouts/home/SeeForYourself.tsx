@@ -94,7 +94,7 @@ export const SeeForYourself = () => {
             muted
             h={["100%", "514px", "600px"]}
             w={["100%", "944px", "1100px"]}
-            src="zoom_0.mp4"
+            src="LYDAVideo.mp4"
             data-setup="{}"
             poster={Maskgroup}
             objectFit="contain"

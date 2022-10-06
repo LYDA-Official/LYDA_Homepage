@@ -1,4 +1,4 @@
-import * as React from "react";
+import  React, {useEffect} from "react";
 import { Flex } from "@chakra-ui/react";
 import { Intro } from "../layouts/home/Intro";
 import { WhatIsLyda } from "../layouts/home/WhatIsLyda";
@@ -7,6 +7,10 @@ import { PreRegistration } from "../layouts/home/PreRegistration";
 import { Roadmap } from "../layouts/home/Roadmap";
 
 export const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Flex flexDir={"column"}>
       <Intro />
