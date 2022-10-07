@@ -2,7 +2,9 @@ import { Flex, Text, Image, Box, useMediaQuery } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import theme from "../../theme";
 import bg from "../../assets/bg2.png";
+import Mobilebg1 from '../../assets/Mobilebg1.png'
 import timeline1 from "../../assets/timeline1.png";
+
 export const Roadmap = () => {
   const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
 
@@ -19,7 +21,7 @@ export const Roadmap = () => {
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
       top: isSmallerThan1024? '47%': "48%",
-      left: isSmallerThan1024? '350px': "614px",
+      left: isSmallerThan1024? '300px': "614px",
     },
     {
       title: "3 Amet minim mollit",
@@ -252,7 +254,7 @@ export const Roadmap = () => {
   return (
     <Flex
       bg={"blue.400"}
-      backgroundImage={bg}
+      backgroundImage={isSmallerThan1024? Mobilebg1: bg}
       backgroundSize={isSmallerThan1024 ? "100% 590px" : "100% 970px"}
       h={isSmallerThan1024 ? "590px" : "970px"}
       // onScroll={detectScroll}

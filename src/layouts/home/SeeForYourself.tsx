@@ -62,7 +62,7 @@ export const SeeForYourself = () => {
         </Flex>
         <Flex
           id={"videoContainer"}
-          borderTopRightRadius={"88px"}
+          borderTopRightRadius={isSmallerThan1024?'80px':"88px"}
           h={["100%", "514px", "600px"]}
           w={["100%", "944px", "1100px"]}
           justifyContent={"center"}

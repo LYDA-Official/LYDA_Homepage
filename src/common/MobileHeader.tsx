@@ -97,7 +97,7 @@ export const MobileHeader: React.FC = () => {
               aria-label={`Close Navigation`}
               ml={"27px"}
               bg={"transparent"}
-              icon={<CloseIcon h={"32px"} w={"32px"} />}
+              icon={<CloseIcon h={"32px"} w={"32px"} color={'white.0'} />}
               _focus={{ bg: "transparent" }}
               _active={{ bg: "transparent" }}
             />

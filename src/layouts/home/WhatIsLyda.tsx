@@ -34,7 +34,7 @@ export const WhatIsLyda = () => {
         >
           <Text
             fontSize={["28px", "40px", "70px"]}
-            fontWeight={700}
+            fontWeight={isSmallerThan1024? 400:700}
             lineHeight={["44px", "62.96px", "70px"]}
           >
             WHAT IS LYDA
@@ -58,12 +58,16 @@ export const WhatIsLyda = () => {
               text="Whitepaper (EN)"
               bg={"purple.0"}
               color={"#ffffff"}
+              h={isSmallerThan1024?'48px':'53px'}
+              w={isSmallerThan1024?'148px':'180px'}
               mr={"24px"}
               link={"LYDA_Whitepaper_v1.1_220608_EN.docx.pdf"}
             />
             <BasicButton
               text="Whitepaper (KR)"
               bg={"blue.0"}
+              h={isSmallerThan1024?'48px':'53px'}
+              w={isSmallerThan1024?'148px':'180px'}
               color={"blue.200"}
               link={"LYDA_Whitepaper_KR.pdf"}
             />

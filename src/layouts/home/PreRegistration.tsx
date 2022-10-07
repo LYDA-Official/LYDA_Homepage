@@ -1,6 +1,7 @@
 import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import bg from "../../assets/bg.png";
+import Mobilebg2 from '../../assets/Mobilebg2.png'
 import theme from "../../theme/index";
 import { BasicButton } from "../../common/BasicButton";
 
@@ -11,9 +12,9 @@ export const PreRegistration = () => {
   return (
     <Flex
       bg={"blue.400"}
-      backgroundImage={bg}
+      backgroundImage={isSmallerThan1024?Mobilebg2:bg}
       px={'14px'}
-      backgroundSize={isSmallerThan1440 ? "120% 790px" : "100% 1022px"}
+      backgroundSize={isSmallerThan1440 ? "100% 790px" : "100% 1022px"}
       h={["100%", "790px", "1022px"]}
       justifyContent={"center"}
       id="pre-registration"
