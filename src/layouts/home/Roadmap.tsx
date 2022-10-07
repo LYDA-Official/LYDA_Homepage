@@ -303,15 +303,7 @@ export const Roadmap = () => {
           >
             LYDA Roadmap
           </Text>
-          <Text
-            fontSize={isSmallerThan1024 ? "14px" : "16px"}
-            fontWeight={400}
-            w={isSmallerThan1024 ? "100%" : "539px"}
-            textAlign={"center"}
-          >
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Exercitation veniam consequat
-          </Text>
+         
         </Flex>
         <Flex
           w={["1290px", "1920px", "fit-content"]}

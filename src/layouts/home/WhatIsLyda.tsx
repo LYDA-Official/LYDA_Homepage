@@ -13,10 +13,9 @@ export const WhatIsLyda = () => {
       h={["100%", "672px", "790px"]}
       justifyContent={"center"}
       alignItems="center"
-      
       zIndex={100}
       p="auto"
-       px={'14px'}
+      px={"14px"}
     >
       <Flex
         alignItems={"center"}
@@ -29,7 +28,7 @@ export const WhatIsLyda = () => {
           fontFamily={theme.fonts.main}
           fontStyle="normal"
           mr={["", "48px", "136px"]}
-          mt={isSmallerThan1024? '56px':''}
+          mt={isSmallerThan1024 ? "56px" : ""}
           alignItems={isSmallerThan1024 ? "center" : ""}
         >
           <Text
@@ -44,30 +43,33 @@ export const WhatIsLyda = () => {
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={400}
             lineHeight={"25px"}
-            textAlign={isSmallerThan1024? 'center':'left'}
+            textAlign={isSmallerThan1024 ? "center" : "left"}
             mb={isSmallerThan1024 ? "32px" : "50px"}
             maxW={["100%", "400px", "500px"]}
           >
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet. Amet minim mollit non deserunt
-            ullamco est sit aliqua dolor.
+            LYDA is a platform to launch social tokens to transform social
+            capitals in fandoms into economic benefits for creators and fans.
+            LYDA eliminated the early stage investment for fan token IDO's on
+            the technical side, and establish independent token economies for
+            creators. Launching fan token, creators are invited to 'LYDA
+            Platform' for full supports in token governance set-up, NFT trades,
+            and fan rewarding system implementation
           </Text>
           <Flex mb={isSmallerThan1024 ? "48px" : ""}>
             <BasicButton
               text="Whitepaper (EN)"
               bg={"purple.0"}
               color={"#ffffff"}
-              h={isSmallerThan1024?'48px':'53px'}
-              w={isSmallerThan1024?'148px':'180px'}
+              h={isSmallerThan1024 ? "48px" : "53px"}
+              w={isSmallerThan1024 ? "148px" : "180px"}
               mr={"24px"}
               link={"LYDA_Whitepaper_v1.1_220608_EN.docx.pdf"}
             />
             <BasicButton
               text="Whitepaper (KR)"
               bg={"blue.0"}
-              h={isSmallerThan1024?'48px':'53px'}
-              w={isSmallerThan1024?'148px':'180px'}
+              h={isSmallerThan1024 ? "48px" : "53px"}
+              w={isSmallerThan1024 ? "148px" : "180px"}
               color={"blue.200"}
               link={"LYDA_Whitepaper_KR.pdf"}
             />
@@ -75,7 +77,7 @@ export const WhatIsLyda = () => {
         </Flex>
         <Image
           src={graph}
-          mb={isSmallerThan1024?'56px':''}
+          mb={isSmallerThan1024 ? "56px" : ""}
           h={["92%", "496px", "550px"]}
           w={["", "496px", "550px"]}
         />

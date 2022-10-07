@@ -31,14 +31,19 @@ export const SeeForYourself = () => {
       h={["100%", "864px", "1022px"]}
       w={"100%"}
       justifyContent={"center"}
-      px={'14px'}
+      px={"14px"}
     >
       <Flex
         {...theme.LAYOUT_STYLE.layoutStyle()}
         fontFamily={theme.fonts.main}
         flexDir={"column"}
       >
-        <Flex flexDir={"column"} color={"blue.200"} justifyContent="center" mt={isSmallerThan1024?'56px':""}>
+        <Flex
+          flexDir={"column"}
+          color={"blue.200"}
+          justifyContent="center"
+          mt={isSmallerThan1024 ? "56px" : ""}
+        >
           <Text
             fontWeight={600}
             fontSize={isSmallerThan1024 ? "28px" : "48px"}
@@ -46,29 +51,28 @@ export const SeeForYourself = () => {
             mb={isSmallerThan1024 ? "16px" : "20px"}
             textAlign="center"
           >
-            See For Yourself
+            LYDA via Social Capital
           </Text>
           <Text
-            w={ "100%" }
+            w={"100%"}
             fontWeight={400}
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
             lineHeight={isSmallerThan1024 ? "22.04px" : "25.18px"}
             textAlign="center"
             mb={["32px", "56px", "64px"]}
           >
-            Amet minim mollit non deserunt ullamco est sit aliq dolor doamet
-            sint. Exercitation veniam consequat
+            Learn how LYDA realizes values for creators and fans in 6 minutes. 
+
           </Text>
         </Flex>
         <Flex
           id={"videoContainer"}
-          borderTopRightRadius={isSmallerThan1024?'80px':"88px"}
+          borderTopRightRadius={isSmallerThan1024 ? "80px" : "88px"}
           h={["100%", "514px", "600px"]}
           w={["100%", "944px", "1100px"]}
           justifyContent={"center"}
           alignItems={"center"}
-          mb={['56px','','']}
-
+          mb={["56px", "", ""]}
         >
           <Image
             src={PlayButton}
