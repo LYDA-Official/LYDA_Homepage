@@ -2,72 +2,78 @@ import { Flex, Text, Image, Box, useMediaQuery } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import theme from "../../theme";
 import bg from "../../assets/bg2.png";
-import Mobilebg1 from '../../assets/Mobilebg1.png'
+import Mobilebg1 from "../../assets/Mobilebg1.png";
 import timeline1 from "../../assets/timeline1.png";
-
+import timeline from "../../assets/timeline.png";
 export const Roadmap = () => {
   const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
   const mapPoints = [
     {
-      title: "1 Amet minim mollit",
+      title: "Pre-registration",
       content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top:isSmallerThan1024?'30%': "35%",
-      left:isSmallerThan1024?'31px': "85px",
+        "LYDA is open for all creators but requires high level of social capital to monetize. Pre-registered projects will be reviewed and selected for fan token launch.",
+      top: isSmallerThan1024 ? "21%" : "35%",
+      left: "2%",
+      height: "200px",
     },
     {
-      title: "2 Amet minim mollit",
+      title: "LYDA Platform & Marketplace",
       content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: isSmallerThan1024? '47%': "48%",
-      left: isSmallerThan1024? '350px': "614px",
+        "LYDA Platform will provide technical infrastructure for the full utilization of fan tokens. It is designed to  govern the token economy and fan engagements",
+      top: isSmallerThan1024 ? "38%" : "40%",
+      left: "45%",
+      height: "200px",
+     
     },
     {
-      title: "3 Amet minim mollit",
+      title: "Economic rewards",
       content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '50%': "59%",
-        left: isSmallerThan1024? '595px': "1170px",
+        "Creators obtain financial supports and token users are rewarded for both investments and non-monetary fan activities. As creators grow, return will be significant.",
+      top: isSmallerThan1024 ? "20%" : "79%",
+      left:  isSmallerThan1024 ?'80%':"65%",
+      height: "200px",
+      rotated: true
     },
-    {
-      title: "4 Amet minim mollit",
-      content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-      top: isSmallerThan1024? '0%':"23%",
-      left: isSmallerThan1024? '970px':"1680px",
-      rotated: true,
-    },
-    {
-      title: "5 Amet minim mollit",
-      content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '40%':"30%",
-        left: isSmallerThan1024? '1260px':"2090px",
-    },
-    {
-      title: "6 Amet minim mollit",
-      content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '40%':"63%",
-        left: isSmallerThan1024? '1540px':"2608px",
-      rotated: isSmallerThan1024? false:true,
-    },
-    {
-      title: "7 Amet minim mollit",
-      content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '40%':"45%",
-        left: isSmallerThan1024? '1835px':"3008px",
-    },
-    {
-      title: "8 Amet minim mollit",
-      content:
-        "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-        top: isSmallerThan1024? '25%':"62%",
-        left: isSmallerThan1024? '2065px':"3408px",
-      rotated: true,
-    },
+    // {
+    //   title: "4 Amet minim mollit",
+    //   content:
+    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+    //   top: isSmallerThan1024? '0%':"23%",
+    //   left: isSmallerThan1024? '970px':"1680px",
+    //   rotated: true,
+    // },
+    // {
+    //   title: "5 Amet minim mollit",
+    //   content:
+    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+    //     top: isSmallerThan1024? '40%':"30%",
+    //     left: isSmallerThan1024? '1260px':"2090px",
+    // },
+    // {
+    //   title: "6 Amet minim mollit",
+    //   content:
+    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+    //     top: isSmallerThan1024? '40%':"63%",
+    //     left: isSmallerThan1024? '1540px':"2608px",
+    //   rotated: isSmallerThan1024? false:true,
+    // },
+    // {
+    //   title: "7 Amet minim mollit",
+    //   content:
+    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+    //     top: isSmallerThan1024? '40%':"45%",
+    //     left: isSmallerThan1024? '1835px':"3008px",
+    // },
+    // {
+    //   title: "8 Amet minim mollit",
+    //   content:
+    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
+    //     top: isSmallerThan1024? '25%':"62%",
+    //     left: isSmallerThan1024? '2065px':"3408px",
+    //   rotated: true,
+    // },
   ];
 
   const [scrollDir, setScrollDir] = useState("right");
@@ -120,8 +126,9 @@ export const Roadmap = () => {
     top: string;
     left: string;
     rotated?: boolean;
+    height: string;
   }) => {
-    const { title, content, top, left, rotated } = props;
+    const { title, content, top, left, rotated, height } = props;
     const [isHover, setIsHover] = useState(false);
 
     return rotated ? (
@@ -134,7 +141,7 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={"49px"} mb={"150px"} >
+        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"} mb={"150px"}>
           <Flex
             h={isSmallerThan1024 ? "50px" : "88px"}
             w={isSmallerThan1024 ? "50px" : "88px"}
@@ -146,8 +153,8 @@ export const Roadmap = () => {
             border={isHover ? "3px dashed #71F7FF" : ""}
           >
             <Box
-             h={isSmallerThan1024 ? "19px" : "25px"}
-             w={isSmallerThan1024 ? "19px" : "25px"}
+              h={isSmallerThan1024 ? "19px" : "25px"}
+              w={isSmallerThan1024 ? "19px" : "25px"}
               bg={"blue.100"}
               opacity={1}
               borderRadius={"50%"}
@@ -155,7 +162,7 @@ export const Roadmap = () => {
               // position='absolute'
             ></Box>
             <Box
-             height={isSmallerThan1024 ? "160px" : "200px"}
+              height={isSmallerThan1024 ? "160px" : height}
               width="1px"
               bg={"blue.100"}
               position="absolute"
@@ -178,7 +185,7 @@ export const Roadmap = () => {
             {title}
           </Text>
           <Text
-            w={isSmallerThan1024 ? "140px" : "300px"}
+            w={isSmallerThan1024 ? "180px" : "400px"}
             fontSize={isSmallerThan1024 ? "10px" : "16px"}
             fontWeight={"normal"}
             fontStyle="normal"
@@ -216,7 +223,7 @@ export const Roadmap = () => {
               // position='absolute'
             ></Box>
             <Box
-              height={isSmallerThan1024 ? "160px" : "200px"}
+              height={isSmallerThan1024 ? "160px" : height}
               width="1px"
               bg={"blue.100"}
               position="absolute"
@@ -240,10 +247,11 @@ export const Roadmap = () => {
             {title}
           </Text>
           <Text
-            w={isSmallerThan1024 ? "140px" : "300px"}
-            fontSize={isSmallerThan1024 ? "10px" : "16px"}
+            w={isSmallerThan1024 ? "180px" : "400px"}
+            fontSize={isSmallerThan1024 ? "10px" : "14px"}
             fontWeight={"normal"}
             fontStyle="normal"
+            mt={"8px"}
           >
             {content}
           </Text>
@@ -254,7 +262,7 @@ export const Roadmap = () => {
   return (
     <Flex
       bg={"blue.400"}
-      backgroundImage={isSmallerThan1024? Mobilebg1: bg}
+      backgroundImage={isSmallerThan1024 ? Mobilebg1 : bg}
       backgroundSize={isSmallerThan1024 ? "100% 590px" : "100% 970px"}
       h={isSmallerThan1024 ? "590px" : "970px"}
       // onScroll={detectScroll}
@@ -278,7 +286,7 @@ export const Roadmap = () => {
         <Flex
           position="absolute"
           // top='1893px'
-          px={'14px'}
+          px={"14px"}
           alignItems={"center"}
           justifyContent={"center"}
           w={"100%"}
@@ -306,11 +314,16 @@ export const Roadmap = () => {
           </Text>
         </Flex>
         <Flex
-          w={isSmallerThan1024?'2252px':"3840px"}
+          w={["1290px", "1920px", "fit-content"]}
+          // overflow='hidden'
           position={"relative"}
           mt={isSmallerThan1024 ? "230px" : "300px"}
         >
-          <Image src={timeline1} h={isSmallerThan1024 ? "200px" : "100%"} />
+          <Image
+            src={timeline}
+            h={isSmallerThan1024 ? "200px" : "100%"}
+            w={"100%"}
+          />
           {mapPoints.map((point: any, index: number) => (
             <RoadmapPoint
               key={index}
@@ -319,6 +332,7 @@ export const Roadmap = () => {
               top={point.top}
               left={point.left}
               rotated={point.rotated}
+              height={point.height}
             />
           ))}
         </Flex>
