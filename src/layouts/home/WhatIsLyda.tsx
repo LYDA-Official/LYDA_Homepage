@@ -34,7 +34,7 @@ export const WhatIsLyda = () => {
         >
           <Text
             fontSize={["28px", "40px", "70px"]}
-            fontWeight={isSmallerThan1024? 400:700}
+            fontWeight={700}
             lineHeight={["44px", "62.96px", "70px"]}
           >
             WHAT IS LYDA
@@ -42,7 +42,7 @@ export const WhatIsLyda = () => {
           <Text
             mt={isSmallerThan1024 ? "16px" : "32px"}
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
-            fontWeight={300}
+            fontWeight={400}
             lineHeight={"25px"}
             textAlign={isSmallerThan1024? 'center':'left'}
             mb={isSmallerThan1024 ? "32px" : "50px"}

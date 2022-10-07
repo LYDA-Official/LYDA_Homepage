@@ -13,14 +13,14 @@ export const Intro = () => {
   const [mainIndex, setMainIndex] = useState(0);
   const theme = useTheme();
 
-  const items = [
-    <Flex flexDir={"column"}    fontFamily={theme.fonts.main}>
+  const itemsMobile = [
+    <Flex flexDir={"column"} fontFamily={theme.fonts.main}>
       {" "}
       <Image src={LYDATeam} />
-      <Flex flexDir={"column"} color="#ffffff" mt={'-22px'}>
+      <Flex flexDir={"column"} color="#ffffff" mt={"-22px"}>
         <Text fontSize={"28px"}>OnSla2ers</Text>
         <Text fontSize={"16px"}>Professional Valorant Team</Text>
-        <Text fontSize={"12px"} fontWeight={300} fontStyle='normal'>
+        <Text fontSize={"12px"} fontWeight={300} fontStyle="normal">
           OnSla2ers is a professional Valorant team competing in Valorant
           Challengers Korea. Featuring young talents, they are a team to keep an
           eye on!
@@ -28,32 +28,38 @@ export const Intro = () => {
       </Flex>
     </Flex>,
 
-<Flex flexDir={"column"}  fontFamily={theme.fonts.main}>
-{" "}
-<Image src={LYDATeam} />
-<Flex flexDir={"column"} color="#ffffff" mt={'-22px'}>
-  <Text fontSize={"28px"}>fast5</Text>
-  <Text fontSize={"16px"}>Professional Valorant Team</Text>
-  <Text fontSize={"12px"}>
-    OnSla2ers is a professional Valorant team competing in Valorant
-    Challengers Korea. Featuring young talents, they are a team to keep an
-    eye on!
-  </Text>
-</Flex>
-</Flex>,
-    <Flex flexDir={"column"}  fontFamily={theme.fonts.main}>
-    {" "}
-    <Image src={LYDATeam} />
-    <Flex flexDir={"column"} color="#ffffff"mt={'-22px'}>
-      <Text fontSize={"28px"}>se7en</Text>
-      <Text fontSize={"16px"}>Professional Valorant Team</Text>
-      <Text fontSize={"12px"}>
-        OnSla2ers is a professional Valorant team competing in Valorant
-        Challengers Korea. Featuring young talents, they are a team to keep an
-        eye on!
-      </Text>
-    </Flex>
-  </Flex>,
+    <Flex flexDir={"column"} fontFamily={theme.fonts.main}>
+      {" "}
+      <Image src={LYDATeam} />
+      <Flex flexDir={"column"} color="#ffffff" mt={"-22px"}>
+        <Text fontSize={"28px"}>fast5</Text>
+        <Text fontSize={"16px"}>Professional Valorant Team</Text>
+        <Text fontSize={"12px"}>
+          OnSla2ers is a professional Valorant team competing in Valorant
+          Challengers Korea. Featuring young talents, they are a team to keep an
+          eye on!
+        </Text>
+      </Flex>
+    </Flex>,
+    <Flex flexDir={"column"} fontFamily={theme.fonts.main}>
+      {" "}
+      <Image src={LYDATeam} />
+      <Flex flexDir={"column"} color="#ffffff" mt={"-22px"}>
+        <Text fontSize={"28px"}>se7en</Text>
+        <Text fontSize={"16px"}>Professional Valorant Team</Text>
+        <Text fontSize={"12px"}>
+          OnSla2ers is a professional Valorant team competing in Valorant
+          Challengers Korea. Featuring young talents, they are a team to keep an
+          eye on!
+        </Text>
+      </Flex>
+    </Flex>,
+  ];
+
+  const itemsDesktop = [
+    <Flex flexDir={"column"} fontFamily={theme.fonts.main}>
+      
+    </Flex>,
   ];
 
   const syncThumbs = (e: any) => {
@@ -69,7 +75,7 @@ export const Intro = () => {
       <div
         // className="thumb"
         onClick={() => (setThumbIndex(i), setThumbAnimation(true))}
-        style={{ width: "296px" }}
+        style={{ width:isSmallerThan1024? "296px" :"600px"}}
       >
         {item}
       </div>
@@ -77,7 +83,7 @@ export const Intro = () => {
   };
 
   const [thumbs] = useState(
-    thumbItems(items, [setThumbIndex, setThumbAnimation])
+    thumbItems(itemsMobile, [setThumbIndex, setThumbAnimation])
   );
 
   const carasoulStyles = `
@@ -97,31 +103,33 @@ export const Intro = () => {
       id={"info"}
       bg={"purple.0"}
       h={"645px"}
-     flexDir='column'
+      flexDir="column"
       // justifyContent={"center"}
-    > <Image
-    src={DistributingSocialCapital}
-    w={"253px"}
-    h={"100px"}
-    zIndex={100}
-    mt="90px"
-    ml={'14px'}
-  ></Image>
-  <Flex mt={'-17px'}>
-      <style>{carasoulStyles}</style>
-      <AliceCarousel
-        items={thumbs}
-        autoWidth
-        disableDotsControls
-        disableButtonsControls
-        activeIndex={thumbIndex}
-        infinite={true}
-        paddingLeft={0}
-        paddingRight={0}
-        onSlideChanged={syncThumbs}
-        mouseTracking={false}
-        touchTracking={!mainAnimation}
-      />
+    >
+      {" "}
+      <Image
+        src={DistributingSocialCapital}
+        w={"253px"}
+        h={"100px"}
+        zIndex={100}
+        mt="90px"
+        ml={"14px"}
+      ></Image>
+      <Flex mt={"-17px"}>
+        <style>{carasoulStyles}</style>
+        <AliceCarousel
+          items={thumbs}
+          autoWidth
+          disableDotsControls
+          disableButtonsControls
+          activeIndex={thumbIndex}
+          infinite={true}
+          paddingLeft={0}
+          paddingRight={0}
+          onSlideChanged={syncThumbs}
+          mouseTracking={false}
+          touchTracking={!mainAnimation}
+        />
       </Flex>
     </Flex>
   ) : (
@@ -131,12 +139,14 @@ export const Intro = () => {
       bg={"purple.0"}
       h={"983px"}
       px={"auto"}
+      justifyContent="center"
+      alignItems={"center"}
       // justifyContent={"center"}
       style={{
         cursor: `url(mouseCursorRight.png), default`,
       }}
     >
-      <Flex
+      {/* <Flex
         alignItems={"center"}
         // justifyContent='space-between'
         fontFamily={theme.fonts.main}
@@ -145,28 +155,6 @@ export const Intro = () => {
         flexDir="column"
         overflow={"hidden"}
       >
-        <Flex
-          w="100%"
-          h="349px"
-          justifyContent={"flex-end"}
-          overflow="hidden"
-          position={"relative"}
-          style={{ filter: "blur(10px" }}
-          right={"-195px"}
-        >
-          <Image
-            overflow={"hidden"}
-            src={LYDATeam}
-            w={"600px"}
-            h={"640px"}
-            m={"30px"}
-            opacity={0.5}
-            top={"-191px"}
-            right={"-60px"}
-            boxShadow={"1px 1px 1px 1px rgba(67, 97, 238, 0.14)"}
-            position="absolute"
-          ></Image>
-        </Flex>
         <Flex
           justifyContent={"center"}
           w={"100%"}
@@ -201,24 +189,30 @@ export const Intro = () => {
             </Text>
           </Flex>
         </Flex>
-        <Flex
-          w="100%"
-          h="300px"
-          justifyContent={"flex-start"}
-          overflow="hidden"
-          zIndex={1}
-          style={{ filter: "blur(10px" }}
-        >
-          <Image
-            src={LYDATeam}
-            left={"-195px"}
-            opacity={0.5}
-            w={"31.3%"}
-            boxShadow={"1px 1px 1px 1px rgba(67, 97, 238, 0.14)"}
-            position="absolute"
-          ></Image>
-        </Flex>
-      </Flex>
+      </Flex> */}
+    <Flex flexDir={'column'} w='100%'>
+       <Image
+              src={DistributingSocialCapital}
+              w={"442px"}
+              h={"200px"}
+              zIndex={100}
+              mt="20px"
+            ></Image>
+             <style>{carasoulStyles}</style>
+        <AliceCarousel
+          items={thumbs}
+          autoWidth
+          disableDotsControls
+          disableButtonsControls
+          activeIndex={thumbIndex}
+          infinite={true}
+          paddingLeft={0}
+          paddingRight={0}
+          onSlideChanged={syncThumbs}
+          mouseTracking={false}
+          touchTracking={!mainAnimation}
+        />
+  </Flex>
     </Flex>
   );
 };

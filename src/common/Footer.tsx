@@ -45,6 +45,7 @@ export const Footer: React.FC = () => {
       fontFamily={theme.fonts.main}
       fontWeight={500}
       color={'white.0'}
+      zIndex={100}
 
     >
       <Text fontSize={isSmallerThan1024?'12px':"14px"} fontWeight={300} mb={isSmallerThan1024?'12px':''}>

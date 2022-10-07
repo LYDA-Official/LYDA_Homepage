@@ -1,7 +1,7 @@
-import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery, Image } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import bg from "../../assets/bg.png";
-import Mobilebg2 from '../../assets/Mobilebg2.png'
+import Mobilebg2 from "../../assets/Mobilebg2.png";
 import theme from "../../theme/index";
 import { BasicButton } from "../../common/BasicButton";
 
@@ -12,17 +12,30 @@ export const PreRegistration = () => {
   return (
     <Flex
       bg={"blue.400"}
-      backgroundImage={isSmallerThan1024?Mobilebg2:bg}
-      px={'14px'}
-      backgroundSize={isSmallerThan1440 ? "100% 790px" : "100% 1022px"}
+      // backgroundImage={isSmallerThan1024?Mobilebg2:bg}
+
+      // blendMode='color-dodge'
+      // backgroundSize={isSmallerThan1440 ? "100% 790px" : "100% 1022px"}
       h={["100%", "790px", "1022px"]}
       justifyContent={"center"}
       id="pre-registration"
     >
       <Flex
+        position={"absolute"}
+        blendMode="color-dodge"
+        w={"100%"}
+    height={'-webkit-fill-available'}
+        // height={isSmallerThan1024 ? "790px" : "400px"}
+      >
+        <Image src={isSmallerThan1440?Mobilebg2:bg} h={'100%'}  w={"100%"}></Image>
+      </Flex>
+
+      <Flex
+        px={"14px"}
         {...theme.LAYOUT_STYLE.layoutStyle()}
         fontFamily={theme.fonts.main}
         flexDir={"column"}
+        zIndex={100}
       >
         <Flex
           alignItems={"center"}
@@ -33,7 +46,7 @@ export const PreRegistration = () => {
           flexDir={"column"}
           mb={["32px", "56px", "64px"]}
           color={"white.0"}
-          mt={isSmallerThan1024?'56px':""}
+          mt={isSmallerThan1024 ? "56px" : ""}
         >
           {" "}
           <Text
@@ -59,7 +72,7 @@ export const PreRegistration = () => {
           fontFamily={theme.fonts.main}
           flexDir={isSmallerThan1024 ? "column" : "row"}
           alignItems="center"
-          mb={isSmallerThan1024? '58px':''}
+          mb={isSmallerThan1024 ? "58px" : ""}
         >
           <NavLink to="/register/creators">
             <Flex
@@ -69,13 +82,17 @@ export const PreRegistration = () => {
               w={["100%", "472px", "600px"]}
               pt={["33px", "114px", "160px"]}
               px={["18px", "40px", "60px"]}
-              mb={isSmallerThan1024? '20px':''}
+              mb={isSmallerThan1024 ? "20px" : ""}
               _hover={{
                 background:
                   "linear-gradient(134.5deg, #55C2FF -23.18%, #4361EE 94.24%)",
                 boxShadow: "0px 16px 56px rgba(3, 23, 115, 0.75)",
               }}
-              bg={"purple.0"}
+              bg={
+                isSmallerThan1440
+                  ? "linear-gradient(134.5deg, #55C2FF -23.18%, #4361EE 94.24%)"
+                  : "purple.0"
+              }
               color={"white.0"}
             >
               <Text
@@ -118,8 +135,12 @@ export const PreRegistration = () => {
               w={["100%", "472px", "600px"]}
               pt={["33px", "114px", "160px"]}
               px={["18px", "40px", "60px"]}
-              mb={isSmallerThan1024? '20px':''}
-              bg={"blue.0"}
+              mb={isSmallerThan1024 ? "20px" : ""}
+              bg={
+                isSmallerThan1440
+                  ? "linear-gradient(139.33deg, #82FFB4 -57.9%, #07F1FF 98.53%)"
+                  : "blue.0"
+              }
               borderTopRightRadius={isSmallerThan1024 ? "" : "80px"}
               color={theme.colors.blue[200]}
               _hover={{

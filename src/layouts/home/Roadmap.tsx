@@ -21,7 +21,7 @@ export const Roadmap = () => {
       content:
         "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
       top: isSmallerThan1024? '47%': "48%",
-      left: isSmallerThan1024? '300px': "614px",
+      left: isSmallerThan1024? '350px': "614px",
     },
     {
       title: "3 Amet minim mollit",
