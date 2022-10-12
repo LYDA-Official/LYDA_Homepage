@@ -189,9 +189,12 @@ export const Intro = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 2,
+    slidesToShow: 1.5,
     speed: 500,
-    focusOnSelect: true
+    focusOnSelect: true,
+    slidesToScroll: 1,
+
+    nextArrow: <></>
   };
 
   const carasoulStyles = `
@@ -302,13 +305,14 @@ export const Intro = () => {
           />
         </Flex> */}
         <Slider {...settings}>
-          <Flex display={'flex'} flexDir={'row'} fontFamily={theme.fonts.main} w={"100%"}>
+          <Flex display={'flex !important'} flexDir={'row'} fontFamily={theme.fonts.main} w={"100%"}>
             {" "}
             <Image src={LYDATeam} w={isSmallerThan1024 ? "296px" : "600px"} />
             <Flex
               flexDir={"column"}
               color="#ffffff"
-              mt={isSmallerThan1024 ? "-22px" : ""}
+          
+            justifyContent='flex-end'
               // display={thumbIndex === 0 ? "flex" : "none"}
             >
               <Text fontSize={"28px"}>OnSla2ers</Text>
@@ -325,13 +329,13 @@ export const Intro = () => {
               </Text>
             </Flex>
           </Flex>
-          <Flex flexDir={"row"} fontFamily={theme.fonts.main} w={"100%"}>
+          <Flex display={'flex !important'} flexDir={'row'} fontFamily={theme.fonts.main} w={"100%"}>
             {" "}
             <Image src={LYDATeam} w={isSmallerThan1024 ? "296px" : "600px"} />
             <Flex
               flexDir={"column"}
               color="#ffffff"
-              mt={isSmallerThan1024 ? "-22px" : ""}
+              justifyContent='flex-end'
               // display={thumbIndex === 0 ? "flex" : "none"}
             >
               <Text fontSize={"28px"}>OnSla2ers</Text>
@@ -348,13 +352,13 @@ export const Intro = () => {
               </Text>
             </Flex>
           </Flex>
-          <Flex flexDir={"row"} fontFamily={theme.fonts.main} w={"100%"}>
+          <Flex display={'flex !important'} flexDir={'row'} fontFamily={theme.fonts.main} w={"100%"}>
             {" "}
             <Image src={LYDATeam} w={isSmallerThan1024 ? "296px" : "600px"} />
             <Flex
               flexDir={"column"}
               color="#ffffff"
-              mt={isSmallerThan1024 ? "-22px" : ""}
+              justifyContent='flex-end'
               // display={thumbIndex === 0 ? "flex" : "none"}
             >
               <Text fontSize={"28px"}>OnSla2ers</Text>

@@ -1,8 +1,15 @@
-import { Flex, Text, Image, useMediaQuery } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Image,
+  useMediaQuery,
+  List,
+  ListItem,
+} from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme/index";
 import LYDATeam from "../../assets/LYDATeam.png";
-import Song from "../../assets/Song.png";
+import Seong from '../../assets/seong.png'
 export const InfoLayout = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
   const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
@@ -14,13 +21,13 @@ export const InfoLayout = () => {
       pt={["40px", "88px", "120px"]}
       pb={["56px", "88px", "120px"]}
       w="100%"
-      px='14px'
+      px="14px"
       fontFamily={theme.fonts.main}
       justifyContent="center"
     >
       <Flex
         flexDir={"column"}
-        w={['100%','944px','1200px']}
+        w={["100%", "944px", "1200px"]}
         color={"blue.200"}
       >
         <Flex
@@ -34,9 +41,12 @@ export const InfoLayout = () => {
             src={LYDATeam}
             // h={["340px", "493px", "584px"]}
             w={["100%", "480px", "568px"]}
-            mr={['','64px','132px']}
+            mr={["", "64px", "132px"]}
           />
-          <Flex flexDir={"column"} alignItems={isSmallerThan1024? 'center':''} >
+          <Flex
+            flexDir={"column"}
+            alignItems={isSmallerThan1024 ? "center" : ""}
+          >
             <Text
               fontSize={isSmallerThan1024 ? "28px" : "40px"}
               fontWeight={600}
@@ -68,12 +78,11 @@ export const InfoLayout = () => {
           </Flex>
         </Flex>
         <Flex
-         w={['100%','944px','1200px']}
-         
+          w={["100%", "944px", "1200px"]}
           alignItems="center"
           flexDir={isSmallerThan1024 ? "column-reverse" : "row"}
         >
-          <Flex flexDir={"column"} mt={isSmallerThan1024 ? "24px" : ""}>
+          <Flex flexDir={"column"} mt={isSmallerThan1024 ? "24px" : ""}  alignItems={isSmallerThan1024 ? "center" : ""}>
             <Text
               color="#666d8b"
               fontSize={isSmallerThan1024 ? "16px" : "18px"}
@@ -85,30 +94,67 @@ export const InfoLayout = () => {
             <Text
               fontSize={"40px"}
               fontWeight={600}
-              alignItems={isSmallerThan1024? 'center':''} 
+              alignItems={isSmallerThan1024 ? "center" : ""}
               mb={isSmallerThan1024 ? "8px" : "24px"}
               lineHeight="63px"
             >
               Seong Song
             </Text>
             <Text
-               w={["100%", "400px", "500px"]}
+              w={["100%", "400px", "500px"]}
               fontSize={["14px", "16px", "18px"]}
               fontStyle="normal"
               lineHeight={["22.04px", "25.18px", "32px"]}
               fontWeight={400}
+              textAlign={isSmallerThan1024? 'center':'left'}
             >
-              Bio: Onther, standing for “On Ethereum,” is an Ethereum Layer-2
-              blockchain research and development company. Onther utilizes the
-              Tokamak Network to launch new projects via it’s TONstarter
-              platform in an effort to easily build trustless blockchain
-              applications.{" "}
+              Among the various aspects of each crypto projects, Seong most
+              values realization of user ecosystem based on its own intended
+              utility.
             </Text>
+            <List>
+              <ListItem
+                w={["100%", "400px", "500px"]}
+                fontSize={["14px", "16px", "18px"]}
+                fontStyle="normal"
+                lineHeight={["22.04px", "25.18px", "32px"]}
+                fontWeight={400}
+              >
+                - CGO, Onther Inc
+              </ListItem>
+              <ListItem
+                w={["100%", "400px", "500px"]}
+                fontSize={["14px", "16px", "18px"]}
+                fontStyle="normal"
+                lineHeight={["22.04px", "25.18px", "32px"]}
+                fontWeight={400}
+              >
+                - CEO, ESportsConnected
+              </ListItem>
+              <ListItem
+                w={["100%", "400px", "500px"]}
+                fontSize={["14px", "16px", "18px"]}
+                fontStyle="normal"
+                lineHeight={["22.04px", "25.18px", "32px"]}
+                fontWeight={400}
+              >
+                - Sr. Manager, PwC
+              </ListItem>
+              <ListItem
+                w={["100%", "400px", "500px"]}
+                fontSize={["14px", "16px", "18px"]}
+                fontStyle="normal"
+                lineHeight={["22.04px", "25.18px", "32px"]}
+                fontWeight={400}
+              >
+                - UCLA, Business Economics
+              </ListItem>
+            </List>
           </Flex>
           <Image
-            src={Song}
+            src={Seong}
             w={["100%", "480px", "568px"]}
-            ml={['','64px','132px']}
+            ml={["", "64px", "132px"]}
           />
         </Flex>
       </Flex>

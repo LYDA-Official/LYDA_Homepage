@@ -24,10 +24,14 @@ export const PreRegistration = () => {
         position={"absolute"}
         blendMode="color-dodge"
         w={"100%"}
-    height={'-webkit-fill-available'}
+        height={"-webkit-fill-available"}
         // height={isSmallerThan1024 ? "790px" : "400px"}
       >
-        <Image src={isSmallerThan1440?Mobilebg2:bg} h={'100%'}  w={"100%"}></Image>
+        <Image
+          src={isSmallerThan1440 ? Mobilebg2 : bg}
+          h={"100%"}
+          w={"100%"}
+        ></Image>
       </Flex>
 
       <Flex
@@ -59,11 +63,12 @@ export const PreRegistration = () => {
           <Text
             fontSize={isSmallerThan1024 ? "14px" : "16px"}
             fontWeight={400}
-            w={isSmallerThan1024 ? "100%" : "539px"}
+            w={isSmallerThan1024 ? "100%" : "826px"}
             textAlign={"center"}
           >
-            Amet minim mollit non deserunt ullamco est sit aliq dolor doamet
-            sint. Exercitation veniam consequat
+            Apply for LYDA is easy but selective, for the best interest of our
+            users. Once selected for on-boarding, LYDA platform will provide
+            full guidance to implement your fan token community.
           </Text>
         </Flex>
         <Flex

@@ -3,6 +3,9 @@ import React from "react";
 import theme from "../../theme/index";
 import bg3 from "../../assets/bg3.png";
 import bg4 from "../../assets/bg4.png";
+import PartnersBGM from '../../assets/PartnersBGM.png'
+import PartnersBGT from '../../assets/PartnersBGT.png';
+import PartnersBGD from '../../assets/PartnersBGD.png';
 import onther from "../../assets/onther.png";
 import ontherTablet from "../../assets/ontherTablet.png";
 export const PartnersLayout = () => {
@@ -11,17 +14,10 @@ export const PartnersLayout = () => {
 
   const partnersList = [
     {
-      bio: "Bio: Onther, standing for “On Ethereum,” is an Ethereum Layer-2 blockchain research and development company. Onther utilizes the Tokamak Network to launch new projects via it’s TONstarter platform in an effort to easily build trustless blockchain applications. ",
+      bio:'Onther, standing for “On Ethereum,” is an Ethereum Layer-2 blockchain research and development company. Onther utilizes the Tokamak Network to launch new projects via it’s TONstarter platform in an effort to easily build trustless blockchain applications. ',
       image: onther,
     },
-    {
-      bio: "Bio: Onther, standing for “On Ethereum,” is an Ethereum Layer-2 blockchain research and development company. Onther utilizes the Tokamak Network to launch new projects via it’s TONstarter platform in an effort to easily build trustless blockchain applications. ",
-      image: onther,
-    },
-    {
-      bio: "Bio: Onther, standing for “On Ethereum,” is an Ethereum Layer-2 blockchain research and development company. Onther utilizes the Tokamak Network to launch new projects via it’s TONstarter platform in an effort to easily build trustless blockchain applications. ",
-      image: onther,
-    },
+   
   ];
 
   const PartnerCard = (props: { bio: string; image: any }) => {
@@ -72,10 +68,10 @@ export const PartnersLayout = () => {
         mb="24px"
         alignItems={"center"}
         justifyContent={"space-around"}
-        px={['14px', '40px','']}
+        px={['64px']}
       >
         <Image src={ontherTablet} w="200px" h="33.6px" />
-        <Text w="100%" fontSize={"14px"} ml={'40px'} fontWeight={400}>
+        <Text w="600px" fontSize={"14px"} ml={'40px'} fontWeight={400}>
           {bio}
         </Text>
       </Flex>
@@ -86,18 +82,18 @@ export const PartnersLayout = () => {
   return (
     <Flex
       bg={"blue.400"}
-      h={["", "854px", "814px"]}
+      h={["100%", "432px", "504px"]}
       alignItems="center"
       color="white.0"
       fontFamily={theme.fonts.main}
       flexDir="column"
       px={"14px"}
     >
-      <Flex position={"absolute"} width="100%" height={"inherit"}>
+      <Flex position={"absolute"} width="100%"   h={["100%", "432px", "504px"]}    blendMode="color-dodge">
         <Image
-          src={isSmallerThan1440 ? bg4 : bg3}
+          src={isSmallerThan1024? PartnersBGM: isSmallerThan1440? PartnersBGT : PartnersBGD}
           width="100%"
-          height={isSmallerThan1024 ? "100%" : "100%"}
+          height={isSmallerThan1024 ? "432px" : "100%"}
         ></Image>
       </Flex>
       <Flex
@@ -113,20 +109,11 @@ export const PartnersLayout = () => {
           fontSize={isSmallerThan1024 ? "28px" : "48px"}
           lineHeight={isSmallerThan1024 ? "44.07px" : "48px"}
           fontStyle="normal"
-          mb={isSmallerThan1024 ? "16px" : "20px"}
+          mb={ ["16px", "56px", '64px']}
         >
           Partners
         </Text>
-        <Text
-          w={ "100%"}
-          fontWeight={400}
-          fontSize={isSmallerThan1024 ? "14px" : "16px"}
-          mb={isSmallerThan1024 ? "32px" : "64px"}
-          textAlign={"center"}
-        >
-          Amet minim mollit non deserunt ullamco est sit aliq dolor doamet sint.
-          Exercitation veniam consequat
-        </Text>
+       
       </Flex>
       {isSmallerThan1024 ? (
         <Flex w={"100%"} alignItems={"center"} mb="56px" flexDir={"column"}>
@@ -134,29 +121,14 @@ export const PartnersLayout = () => {
             <PartnerCard bio={partner.bio} image={partner.image} key={index} />
           ))}
         </Flex>
-      ) : isSmallerThan1440 ? (
-        <Flex
-          flexDir={"column"}
-          alignContent="space-between"
-          h={"504px"}
-          mb="88px"
-        >
-          {partnersList.map((partner: any, index: number) => (
-            <PartnerCardTablet
-              bio={partner.bio}
-              image={partner.image}
-              key={index}
-            />
-          ))}
-        </Flex>
       ) : (
         <Flex
-          w={isSmallerThan1440 ? "100%" : "1200px"}
+          w={isSmallerThan1024 ? "100%" : "944px"}
           justifyContent={"space-between"}
           mb={"120px"}
         >
           {partnersList.map((partner: any, index: number) => (
-            <PartnerCard bio={partner.bio} image={partner.image} key={index} />
+            <PartnerCardTablet bio={partner.bio} image={partner.image} key={index} />
           ))}
         </Flex>
       )}

@@ -48,7 +48,15 @@ type CreatorsInput = {
 
 export const CreatorsForm = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
-  const socialInputs = ['twitter', 'facebook', 'twitch', 'youTube', 'discord', 'website', 'other']
+  const socialInputs = [
+    "twitter",
+    "facebook",
+    "twitch",
+    "youTube",
+    "discord",
+    "website",
+    "other",
+  ];
   const initialValues: CreatorsInput = {
     twitter: "",
     facebook: "",
@@ -66,7 +74,7 @@ export const CreatorsForm = () => {
   const handleSubmit = (datas: any) => {
     // console.log(values,'values');
     Object.keys(datas).forEach((k, key) => {
-      if (k === "willing" || k === "support" ) {
+      if (k === "willing" || k === "support") {
         if (datas[k] === "1") {
           datas[k] = true;
         } else {
@@ -118,18 +126,20 @@ export const CreatorsForm = () => {
                         templateColumns="repeat(2, 1fr)"
                         templateRows="repeat(4, 1fr)"
                       >
-                        {socialInputs.map((item:any, index:number) =>  {
-                            return (
-                              <GridItem
+                        {socialInputs.map((item: any, index: number) => {
+                          return (
+                            <GridItem
                               key={index}
                               mr={isSmallerThan1440 ? "64px" : "84px"}
                               mb={"10px"}
                             >
                               <SocialInput
                                 title={item}
-                                placeHolder={`${item.charAt(0).toUpperCase() + item.slice(1)} URL`}
+                                placeHolder={`${
+                                  item.charAt(0).toUpperCase() + item.slice(1)
+                                } URL`}
                               />
-    
+
                               <ErrorMessage
                                 name={item}
                                 render={() => (
@@ -145,10 +155,8 @@ export const CreatorsForm = () => {
                                 )}
                               />
                             </GridItem>
-                            )
-                                  })
-                        }
-                    
+                          );
+                        })}
                       </Grid>
                     </Flex>
                   </ListItem>
@@ -161,7 +169,9 @@ export const CreatorsForm = () => {
                         fontWeight={500}
                         fontStyle={"normal"}
                       >
-                        Are you interested in receiving financial support from your fans via the sale of your own personal crypto social token?
+                        Are you interested in receiving financial support from
+                        your fans via the sale of your own personal crypto
+                        social token?
                       </Text>
 
                       <Flex>
@@ -173,7 +183,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
-                              background: '#FFFFFF'
+                              background: "#FFFFFF",
                             }}
                           />
                           Yes
@@ -186,7 +196,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
-                              background: '#FFFFFF'
+                              background: "#FFFFFF",
                             }}
                           />
                           No
@@ -217,7 +227,8 @@ export const CreatorsForm = () => {
                         fontWeight={500}
                         fontStyle={"normal"}
                       >
-                       Are you willing to make content and complete activations that will leverage said crypto token?
+                        Are you willing to make content and complete activations
+                        that will leverage said crypto token?
                       </Text>
                       <Flex>
                         <label>
@@ -228,7 +239,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
-                              background: '#FFFFFF'
+                              background: "#FFFFFF",
                             }}
                           />
                           Yes
@@ -241,7 +252,7 @@ export const CreatorsForm = () => {
                             style={{
                               marginRight: "16px",
                               accentColor: "#4361EE",
-                              background: '#FFFFFF'
+                              background: "#FFFFFF",
                             }}
                           />
                           No
@@ -263,7 +274,7 @@ export const CreatorsForm = () => {
                       />
                     </Flex>
                   </ListItem>
-                
+
                   <ListItem mb={"52px"}>
                     <Flex color={"blue.200"} display="flex" flexDir={"column"}>
                       <Text
@@ -273,8 +284,10 @@ export const CreatorsForm = () => {
                         fontStyle={"normal"}
                         mb={"20px"}
                       >
-                       Please provide at least one example of content that could leverage your LYDA platform creator token.
-(This can be theoretical new content, or tie into content you’re already producing.)
+                        Please provide at least one example of content that
+                        could leverage your LYDA platform creator token. (This
+                        can be theoretical new content, or tie into content
+                        you’re already producing.)
                       </Text>
 
                       <Field
@@ -289,7 +302,7 @@ export const CreatorsForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
-                          background: '#FFFFFF'
+                          background: "#FFFFFF",
                         }}
                       />
                     </Flex>
@@ -303,7 +316,8 @@ export const CreatorsForm = () => {
                         fontStyle={"normal"}
                         mb={"20px"}
                       >
-                      Please provide your email to receive updates on your acceptance into the LYDA Creator Coalition. 
+                        Please provide your email to receive updates on your
+                        acceptance into the LYDA Creator Coalition.
                       </Text>
 
                       <Field
@@ -318,7 +332,7 @@ export const CreatorsForm = () => {
                           color: "#060B22",
                           fontSize: "15px",
                           fontWeight: "400",
-                          background: '#FFFFFF'
+                          background: "#FFFFFF",
                         }}
                       />
                       <ErrorMessage

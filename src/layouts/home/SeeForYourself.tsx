@@ -2,6 +2,7 @@ import { Flex, Text, Box, Image, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
 import theme from "../../theme";
 import Maskgroup from "../../assets/Maskgroup.png";
+import slide from '../../assets/Slide.png'
 import PlayButton from "../../assets/SVG/play.svg";
 
 export const SeeForYourself = () => {
@@ -83,14 +84,7 @@ export const SeeForYourself = () => {
             _hover={{ cursor: "pointer" }}
             height={isSmallerThan1024 ? "64px" : "100px"}
           />
-          {/* <Button
-          zIndex={10000}
-          color={"red"}
-          position={"absolute"}
-          id="play-pause"
-        >
-          ▶︎
-        </Button> */}
+         
           <Box
             id="video_background"
             as="video"
@@ -100,7 +94,7 @@ export const SeeForYourself = () => {
             w={["100%", "944px", "1100px"]}
             src="LYDAVideo.mp4"
             data-setup="{}"
-            poster={Maskgroup}
+            poster={slide}
             objectFit="contain"
             sx={{
               aspectRatio: "16/9",

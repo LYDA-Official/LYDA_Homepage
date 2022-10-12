@@ -17,7 +17,7 @@ export const CreatorsRegister = () => {
         height={isSmallerThan1024? '44px':"56.9px"}
         width={isSmallerThan1024?'300px':'634.18px'}
         title={
-          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. "
+          "Assessment a level of social capital that you have earned in the fandom"
         }
       />
       <FormLayout type="creators" />

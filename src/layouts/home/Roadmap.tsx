@@ -7,34 +7,34 @@ import timeline1 from "../../assets/timeline1.png";
 import timeline from "../../assets/timeline.png";
 export const Roadmap = () => {
   const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
-  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
+  const [isSmallerThan1640] = useMediaQuery("(max-width: 1640px)");
 
   const mapPoints = [
     {
       title: "Pre-registration",
       content:
         "LYDA is open for all creators but requires high level of social capital to monetize. Pre-registered projects will be reviewed and selected for fan token launch.",
-      top: isSmallerThan1024 ? "21%" : "35%",
+      top: isSmallerThan1024 ? "21%" : "22%",
       left: "2%",
-      height: "200px",
+      height: 200,
     },
     {
       title: "LYDA Platform & Marketplace",
       content:
         "LYDA Platform will provide technical infrastructure for the full utilization of fan tokens. It is designed to  govern the token economy and fan engagements",
-      top: isSmallerThan1024 ? "38%" : "40%",
-      left: "45%",
-      height: "200px",
+      top: isSmallerThan1024 ? "38%" :isSmallerThan1640? "36%":'39%',
+      left: "40%",
+      height: 300,
      
     },
     {
       title: "Economic rewards",
       content:
         "Creators obtain financial supports and token users are rewarded for both investments and non-monetary fan activities. As creators grow, return will be significant.",
-      top: isSmallerThan1024 ? "20%" : "79%",
-      left:  isSmallerThan1024 ?'80%':"65%",
-      height: "200px",
-      rotated: true
+      top: isSmallerThan1024 ? "20%" : "40%",
+      left:  isSmallerThan1024 ?'80%':isSmallerThan1640? "73%":'75%',
+      height: 200,
+      
     },
     // {
     //   title: "4 Amet minim mollit",
@@ -126,7 +126,7 @@ export const Roadmap = () => {
     top: string;
     left: string;
     rotated?: boolean;
-    height: string;
+    height: number;
   }) => {
     const { title, content, top, left, rotated, height } = props;
     const [isHover, setIsHover] = useState(false);
@@ -185,7 +185,7 @@ export const Roadmap = () => {
             {title}
           </Text>
           <Text
-            w={isSmallerThan1024 ? "180px" : "400px"}
+            w={isSmallerThan1024 ? "180px" : "300px"}
             fontSize={isSmallerThan1024 ? "10px" : "16px"}
             fontWeight={"normal"}
             fontStyle="normal"
@@ -202,7 +202,7 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"} mb={"150px"}>
+        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"} mb={height+50}>
           <Flex
             h={isSmallerThan1024 ? "50px" : "88px"}
             w={isSmallerThan1024 ? "50px" : "88px"}
@@ -227,14 +227,14 @@ export const Roadmap = () => {
               width="1px"
               bg={"blue.100"}
               position="absolute"
-              mb={"175px"}
+              mb={isSmallerThan1024? '165px':height-25}
               opacity={isHover ? 1 : 0.3}
             ></Box>
           </Flex>
         </Flex>
         <Flex
           position="relative"
-          top={"-143px"}
+          top={isSmallerThan1024? '-143px':-height+57}
           left={"-12px"}
           color={isHover ? "blue.100" : "white"}
           flexDir="column"
@@ -247,7 +247,7 @@ export const Roadmap = () => {
             {title}
           </Text>
           <Text
-            w={isSmallerThan1024 ? "180px" : "400px"}
+            w={isSmallerThan1024 ? "180px" : "300px"}
             fontSize={isSmallerThan1024 ? "10px" : "14px"}
             fontWeight={"normal"}
             fontStyle="normal"

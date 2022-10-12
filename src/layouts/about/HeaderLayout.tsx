@@ -13,11 +13,12 @@ export const HeaderLayout = () => {
       alignItems="center"
       flexDir="column"
       w={"auto"}
-      px={'50px'}
+      px={"50px"}
     >
       <Flex
         position={"absolute"}
         height={isSmallerThan1024 ? "240px" : "400px"}
+        blendMode="color-dodge"
       >
         <Image src={bgSubPage}></Image>
       </Flex>
@@ -37,8 +38,8 @@ export const HeaderLayout = () => {
           textAlign="center"
           mb={"91px"}
         >
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-          sint
+          Transforming value of fandom to economic transactions with social
+          capital within.
         </Text>
       </Flex>
     </Flex>

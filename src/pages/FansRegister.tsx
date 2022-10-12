@@ -18,7 +18,7 @@ export const FansRegister = () => {
         height={isSmallerThan1024? '44px':"56.9px"}
         width={isSmallerThan1024? '300px':"634.2px"}
         title={
-          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. "
+          "Learn our potential fan token users to maximize the rewards"
         }
       />
       <FormLayout type="fans" />

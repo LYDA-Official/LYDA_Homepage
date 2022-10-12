@@ -104,8 +104,13 @@ export const MobileCreatorsForm = () => {
       {({ errors, touched, values }) => {
         return (
           <Form>
-            <Flex w={'100%'} flexDir="column" fontFamily={theme.fonts.main} bg='#f4f4ff' >
-              <List fontSize="14px" color={"blue.200"} >
+            <Flex
+              w={"100%"}
+              flexDir="column"
+              fontFamily={theme.fonts.main}
+              bg="#f4f4ff"
+            >
+              <List fontSize="14px" color={"blue.200"}>
                 <ListItem mb={"40px"}>
                   <Flex color={"blue.200"} display="flex" flexDir={"column"}>
                     <Text
@@ -121,11 +126,7 @@ export const MobileCreatorsForm = () => {
                     <Grid templateColumns="repeat(1, 1fr)">
                       {socialInputs.map((item: any, index: number) => {
                         return (
-                          <GridItem
-                            key={index}
-                         
-                            mb={"6px"}
-                          >
+                          <GridItem key={index} mb={"6px"}>
                             <SocialInput
                               title={item}
                               placeHolder={`${
@@ -148,204 +149,201 @@ export const MobileCreatorsForm = () => {
                               )}
                             />
                           </GridItem>
-
                         );
                       })}
                     </Grid>
                   </Flex>
                 </ListItem>
                 <ListItem mb={"40px"}>
-                    <Flex color={"blue.200"} display="flex" flexDir={"column"}>
-                      <Text
-                        color={"blue.200"}
-                        mb={"20px"}
-                        fontSize="14px"
-                        fontWeight={500}
-                        fontStyle={"normal"}
-                      >
-                       2. Are you interested in receiving financial support from your fans via the sale of your own personal crypto social token?
-                      </Text>
+                  <Flex color={"blue.200"} display="flex" flexDir={"column"}>
+                    <Text
+                      color={"blue.200"}
+                      mb={"20px"}
+                      fontSize="14px"
+                      fontWeight={500}
+                      fontStyle={"normal"}
+                    >
+                      2. Are you interested in receiving financial support from
+                      your fans via the sale of your own personal crypto social
+                      token?
+                    </Text>
 
-                      <Flex>
-                        <label>
-                          <Field
-                            type="radio"
-                            name="support"
-                            value="1"
-                            style={{
-                              marginRight: "16px",
-                              accentColor: "#4361EE",
-                              color:'#f4f4ff'
-                            }}
-                          />
-                          Yes
-                        </label>
-                        <label style={{ marginLeft: "44px" }}>
-                          <Field
-                            type="radio"
-                            name="support"
-                            value="2"
-                            style={{
-                              marginRight: "16px",
-                              accentColor: "#4361EE",
-                              color:'#f4f4ff'
-                            }}
-                          />
-                          No
-                        </label>
-                      </Flex>
-                      <ErrorMessage
-                        name="support"
-                        render={() => (
-                          <div
-                            style={{
-                              color: "red",
-                              fontSize: "12px",
-                              verticalAlign: "center",
-                            }}
-                          >
-                            * Required
-                          </div>
-                        )}
-                      />
+                    <Flex>
+                      <label>
+                        <Field
+                          type="radio"
+                          name="support"
+                          value="1"
+                          style={{
+                            marginRight: "16px",
+                            accentColor: "#4361EE",
+                            color: "#f4f4ff",
+                          }}
+                        />
+                        Yes
+                      </label>
+                      <label style={{ marginLeft: "44px" }}>
+                        <Field
+                          type="radio"
+                          name="support"
+                          value="2"
+                          style={{
+                            marginRight: "16px",
+                            accentColor: "#4361EE",
+                            color: "#f4f4ff",
+                          }}
+                        />
+                        No
+                      </label>
                     </Flex>
-                  </ListItem>
-                  <ListItem mb={"40px"}>
-                    <Flex color={"blue.200"} display="flex" flexDir={"column"}>
-                      <Text
-                        color={"blue.200"}
-                        mb={"20px"}
-                        fontSize="14px"
-                        fontWeight={500}
-                        fontStyle={"normal"}
-                      >
-                       3. Are you willing to make content and complete activations that will leverage said crypto token?
-                      </Text>
-                      <Flex>
-                        <label>
-                          <Field
-                            type="radio"
-                            name="willing"
-                            value="1"
-                            style={{
-                              marginRight: "16px",
-                              accentColor: "#4361EE",
-                            }}
-                          />
-                          Yes
-                        </label>
-                        <label style={{ marginLeft: "44px" }}>
-                          <Field
-                            type="radio"
-                            name="willing"
-                            value="2"
-                            style={{
-                              marginRight: "16px",
-                              accentColor: "#4361EE",
-                            }}
-                          />
-                          No
-                        </label>
-                      </Flex>
-                      <ErrorMessage
-                        name="willing"
-                        render={() => (
-                          <div
-                            style={{
-                              color: "red",
-                              fontSize: "12px",
-                              verticalAlign: "center",
-                            }}
-                          >
-                            * Required
-                          </div>
-                        )}
-                      />
+                    <ErrorMessage
+                      name="support"
+                      render={() => (
+                        <div
+                          style={{
+                            color: "red",
+                            fontSize: "12px",
+                            verticalAlign: "center",
+                          }}
+                        >
+                          * Required
+                        </div>
+                      )}
+                    />
+                  </Flex>
+                </ListItem>
+                <ListItem mb={"40px"}>
+                  <Flex color={"blue.200"} display="flex" flexDir={"column"}>
+                    <Text
+                      color={"blue.200"}
+                      mb={"20px"}
+                      fontSize="14px"
+                      fontWeight={500}
+                      fontStyle={"normal"}
+                    >
+                      3. Are you willing to make content and complete
+                      activations that will leverage said crypto token?
+                    </Text>
+                    <Flex>
+                      <label>
+                        <Field
+                          type="radio"
+                          name="willing"
+                          value="1"
+                          style={{
+                            marginRight: "16px",
+                            accentColor: "#4361EE",
+                          }}
+                        />
+                        Yes
+                      </label>
+                      <label style={{ marginLeft: "44px" }}>
+                        <Field
+                          type="radio"
+                          name="willing"
+                          value="2"
+                          style={{
+                            marginRight: "16px",
+                            accentColor: "#4361EE",
+                          }}
+                        />
+                        No
+                      </label>
                     </Flex>
-                  </ListItem>
-                  <ListItem mb={"40px"}>
-                    <Flex color={"blue.200"} display="flex" flexDir={"column"}>
-                      <Text
-                        color={"blue.200"}
-                        fontSize="14px"
-                        fontWeight={500}
-                        fontStyle={"normal"}
-                        mb={"20px"}
-                      >
-                        4. Please provide at least one example of content that
-                        could leverage your LYDA platform creator token. (This
-                        can be theoretical new content, or tie into content
-                        you’re already producing.)
-                      </Text>
+                    <ErrorMessage
+                      name="willing"
+                      render={() => (
+                        <div
+                          style={{
+                            color: "red",
+                            fontSize: "12px",
+                            verticalAlign: "center",
+                          }}
+                        >
+                          * Required
+                        </div>
+                      )}
+                    />
+                  </Flex>
+                </ListItem>
+                <ListItem mb={"40px"}>
+                  <Flex color={"blue.200"} display="flex" flexDir={"column"}>
+                    <Text
+                      color={"blue.200"}
+                      fontSize="14px"
+                      fontWeight={500}
+                      fontStyle={"normal"}
+                      mb={"20px"}
+                    >
+                      4. Please provide at least one example of content that
+                      could leverage your LYDA platform creator token. (This can
+                      be theoretical new content, or tie into content you’re
+                      already producing.)
+                    </Text>
 
-                      <Field
-                        name="example"
-                        type="text-area"
-                        style={{
-                          padding: "11px 20px",
-                          border: "1px solid #e3e3ee",
-                          minHeight: "70px",
-                          borderRadius: "4px",
-                          outline: "none",
-                          color: "#060B22",
-                          fontSize: "15px",
-                          fontWeight: "400",
-                          background: '#FFFFFF'
-                        }}
-                      />
-                    </Flex>
-                  </ListItem>
-                  <ListItem>
-                    <Flex color={"blue.200"} display="flex" flexDir={"column"}>
-                      <Text
-                        color={"blue.200"}
-                        fontSize="14px"
-                        fontWeight={500}
-                        fontStyle={"normal"}
-                        mb={"20px"}
-                      >
-                        5. Please provide your email to receive updates on your
-                        acceptance into the LYDA Creator Coalition.
-                      </Text>
+                    <Field
+                      name="example"
+                      type="text-area"
+                      style={{
+                        padding: "11px 20px",
+                        border: "1px solid #e3e3ee",
+                        minHeight: "70px",
+                        borderRadius: "4px",
+                        outline: "none",
+                        color: "#060B22",
+                        fontSize: "15px",
+                        fontWeight: "400",
+                        background: "#FFFFFF",
+                      }}
+                    />
+                  </Flex>
+                </ListItem>
+                <ListItem>
+                  <Flex color={"blue.200"} display="flex" flexDir={"column"}>
+                    <Text
+                      color={"blue.200"}
+                      fontSize="14px"
+                      fontWeight={500}
+                      fontStyle={"normal"}
+                      mb={"20px"}
+                    >
+                      5. Please provide your email to receive updates on your
+                      acceptance into the LYDA Creator Coalition.
+                    </Text>
 
-                      <Field
-                        name="email"
-                        type="email"
-                        style={{
-                          padding: "11px 20px",
-                          border: "1px solid #e3e3ee",
-                          minHeight: "70px",
-                          borderRadius: "4px",
-                          outline: "none",
-                          color: "#060B22",
-                          fontSize: "15px",
-                          fontWeight: "400",
-                          background: '#FFFFFF'
-                        }}
-                      />
-                      <ErrorMessage
-                        name="email"
-                        render={() => (
-                          <div
-                            style={{
-                              color: "red",
-                              fontSize: "12px",
-                              verticalAlign: "center",
-                            }}
-                          >
-                            * invalid email
-                          </div>
-                        )}
-                      />
-                    </Flex>
-                  </ListItem>
+                    <Field
+                      name="email"
+                      type="email"
+                      style={{
+                        padding: "11px 20px",
+                        border: "1px solid #e3e3ee",
+                        minHeight: "70px",
+                        borderRadius: "4px",
+                        outline: "none",
+                        color: "#060B22",
+                        fontSize: "15px",
+                        fontWeight: "400",
+                        background: "#FFFFFF",
+                      }}
+                    />
+                    <ErrorMessage
+                      name="email"
+                      render={() => (
+                        <div
+                          style={{
+                            color: "red",
+                            fontSize: "12px",
+                            verticalAlign: "center",
+                          }}
+                        >
+                          * invalid email
+                        </div>
+                      )}
+                    />
+                  </Flex>
+                </ListItem>
               </List>
-              <Flex
-                
-                justifyContent={"space-between"}
-                mb={'56px'}
-                mt={'32px'}
-              >
+              <Flex justifyContent={"space-between"} mb={"56px"} mt={"32px"}>
                 <NavLink to={"/"}>
                   <BasicButton
                     text="Back"

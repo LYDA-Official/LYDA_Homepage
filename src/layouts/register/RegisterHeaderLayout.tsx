@@ -21,6 +21,7 @@ export const RegisterHeaderLayout = (props: {
       backgroundSize={"100% 400px"}
       flexDir="column"
       px={'50px'}
+      blendMode="color-dodge"
     >
       <Image
         mt={isSmallerThan1024? '90px':"200px"}
