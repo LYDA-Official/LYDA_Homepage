@@ -12,10 +12,6 @@ export const PreRegistration = () => {
   return (
     <Flex
       bg={"blue.400"}
-      // backgroundImage={isSmallerThan1024?Mobilebg2:bg}
-
-      // blendMode='color-dodge'
-      // backgroundSize={isSmallerThan1440 ? "100% 790px" : "100% 1022px"}
       h={["100%", "790px", "1022px"]}
       justifyContent={"center"}
       id="pre-registration"

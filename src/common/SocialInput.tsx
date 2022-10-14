@@ -14,9 +14,10 @@ export const SocialInput = (props: {
   return (
     <Flex
       w={["100%"]}
-      h={"54px"}
+      // h={"54px"}
       alignItems="center"
       color={"blue.200"}
+     
     >
       <Text
         w={ "90px"}
@@ -29,7 +30,7 @@ export const SocialInput = (props: {
       <Field
         style={{
           width: "100%",
-          height: "44px",
+          height:isSmallerThan1024? "38px": '44px',
           border: "1px solid #e3e3ee",
           borderRadius: "4px",
           paddingLeft: "20px",
@@ -39,8 +40,9 @@ export const SocialInput = (props: {
           background: "#FFFFFF",
           fontSize: "15px",
           display: "flex",
-          justfiyContent: "center",
+          justifyContent: "center",
           alignItems: "center",
+          marginBottom: isSmallerThan1024?'6px': '10px'
         }}
         name={title}
         placeholder={placeHolder}

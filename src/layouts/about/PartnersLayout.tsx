@@ -82,14 +82,14 @@ export const PartnersLayout = () => {
   return (
     <Flex
       bg={"blue.400"}
-      h={["100%", "432px", "504px"]}
+      h={["", "432px", "504px"]}
       alignItems="center"
       color="white.0"
       fontFamily={theme.fonts.main}
       flexDir="column"
       px={"14px"}
     >
-      <Flex position={"absolute"} width="100%"   h={["100%", "432px", "504px"]}    blendMode="color-dodge">
+      <Flex position={"absolute"} width="100%"   h={["", "432px", "504px"]}    blendMode="color-dodge">
         <Image
           src={isSmallerThan1024? PartnersBGM: isSmallerThan1440? PartnersBGT : PartnersBGD}
           width="100%"

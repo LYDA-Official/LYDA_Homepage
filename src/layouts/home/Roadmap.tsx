@@ -8,6 +8,7 @@ import timeline from "../../assets/timeline.png";
 export const Roadmap = () => {
   const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
   const [isSmallerThan1640] = useMediaQuery("(max-width: 1640px)");
+  const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
   const mapPoints = [
     {
@@ -22,8 +23,8 @@ export const Roadmap = () => {
       title: "LYDA Platform & Marketplace",
       content:
         "LYDA Platform will provide technical infrastructure for the full utilization of fan tokens. It is designed to  govern the token economy and fan engagements",
-      top: isSmallerThan1024 ? "38%" :isSmallerThan1640? "36%":'39%',
-      left: "40%",
+      top: isSmallerThan1024 ? "48%" :isSmallerThan1440? "126px":'35%',
+      left: isSmallerThan1024? '30%':"40%",
       height: 300,
      
     },
@@ -31,49 +32,12 @@ export const Roadmap = () => {
       title: "Economic rewards",
       content:
         "Creators obtain financial supports and token users are rewarded for both investments and non-monetary fan activities. As creators grow, return will be significant.",
-      top: isSmallerThan1024 ? "20%" : "40%",
-      left:  isSmallerThan1024 ?'80%':isSmallerThan1640? "73%":'75%',
+      top: isSmallerThan1024 ? "40%" :isSmallerThan1440? '146px': "40%",
+      left:  isSmallerThan1024 ?'75%':'73%',
       height: 200,
       
     },
-    // {
-    //   title: "4 Amet minim mollit",
-    //   content:
-    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-    //   top: isSmallerThan1024? '0%':"23%",
-    //   left: isSmallerThan1024? '970px':"1680px",
-    //   rotated: true,
-    // },
-    // {
-    //   title: "5 Amet minim mollit",
-    //   content:
-    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-    //     top: isSmallerThan1024? '40%':"30%",
-    //     left: isSmallerThan1024? '1260px':"2090px",
-    // },
-    // {
-    //   title: "6 Amet minim mollit",
-    //   content:
-    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-    //     top: isSmallerThan1024? '40%':"63%",
-    //     left: isSmallerThan1024? '1540px':"2608px",
-    //   rotated: isSmallerThan1024? false:true,
-    // },
-    // {
-    //   title: "7 Amet minim mollit",
-    //   content:
-    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-    //     top: isSmallerThan1024? '40%':"45%",
-    //     left: isSmallerThan1024? '1835px':"3008px",
-    // },
-    // {
-    //   title: "8 Amet minim mollit",
-    //   content:
-    //     "on deserunt ullamco est sit aliqua dolor do amet sint.  Velit officia consequat duis ",
-    //     top: isSmallerThan1024? '25%':"62%",
-    //     left: isSmallerThan1024? '2065px':"3408px",
-    //   rotated: true,
-    // },
+  
   ];
 
   const [scrollDir, setScrollDir] = useState("right");
@@ -202,7 +166,7 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"} mb={height+50}>
+        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"}>
           <Flex
             h={isSmallerThan1024 ? "50px" : "88px"}
             w={isSmallerThan1024 ? "50px" : "88px"}
