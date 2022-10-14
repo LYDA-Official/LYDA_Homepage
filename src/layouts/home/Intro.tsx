@@ -122,12 +122,10 @@ export const Intro = () => {
             {" "}
             <Image src={item.image} w='296px' h={'316px'} opacity={currentSlide === index ?1:0.3}/>
             <Flex flexDir={"column"} color="#ffffff" mt={"-60px"}    display={currentSlide === index ? "flex" : "none"}>
-              <Text fontSize={"28px"}>OnSla2ers</Text>
-              <Text fontSize={"16px"}>Professional Valorant Team</Text>
+              <Text fontSize={"28px"}>{item.name}</Text>
+              <Text fontSize={"16px"}>{item.title}</Text>
               <Text fontSize={"12px"} fontWeight={300} fontStyle="normal" w={'296px'} mt='8px'>
-                OnSla2ers is a professional Valorant team competing in Valorant
-                Challengers Korea. Featuring young talents, they are a team to keep an
-                eye on!
+               {item.description}
               </Text>
             </Flex>
           </Flex>
