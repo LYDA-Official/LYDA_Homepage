@@ -93,8 +93,6 @@ export const Intro = () => {
     margin-right:16px !important
   }
   `
-  console.log(currentSlide);
-
   return isSmallerThan1024 ? (
     <Flex
       w={"100%"}

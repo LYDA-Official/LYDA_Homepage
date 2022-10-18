@@ -25,7 +25,7 @@ const colors = {
   },
 };
 
-const breakpoints = ["0px", "1024px", "1440px"];
+const breakpoints = ["0px", "1025px", "1441px"];
 
 export const LAYOUT_STYLE = {
   layoutStyle: ()=>({
