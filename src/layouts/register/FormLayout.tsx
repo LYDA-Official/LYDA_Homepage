@@ -13,7 +13,7 @@ import fetchData from "../../firebase/fetchData";
 export const FormLayout = (props: { type: string }) => {
   const { type } = props;
 
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -23,11 +23,11 @@ export const FormLayout = (props: { type: string }) => {
       h="100%"
       w={'100%'}
       alignItems={"center"}
-      pt={isSmallerThan1024 ? "40px" : "80px"}
+      pt={isSmallerThan1023 ? "40px" : "80px"}
       flexDir="column"
       px={["14px", "40px", ""]}
     >
-      {isSmallerThan1024 ? (
+      {isSmallerThan1023 ? (
         type === "fans" ? (
           <MobileFansForm />
         ) : (

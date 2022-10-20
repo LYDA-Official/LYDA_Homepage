@@ -5,7 +5,7 @@ import { FormLayout } from "../layouts/register/FormLayout";
 import PreRegisterFans from "../assets/SVG/PreRegisterFans.svg";
 
 export const FansRegister = () => {
-    const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+    const [isSmallerThan1023] = useMediaQuery("(max-width: 1024px)");
 
   return (
     <Flex
@@ -15,8 +15,8 @@ export const FansRegister = () => {
     >
       <RegisterHeaderLayout
         image={PreRegisterFans}
-        height={isSmallerThan1024? '44px':"56.9px"}
-        width={isSmallerThan1024? '300px':"634.2px"}
+        height={isSmallerThan1023? '44px':"56.9px"}
+        width={isSmallerThan1023? '300px':"634.2px"}
         title={
           "Learn our potential fan token users to maximize the rewards"
         }

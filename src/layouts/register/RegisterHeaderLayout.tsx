@@ -10,11 +10,11 @@ export const RegisterHeaderLayout = (props: {
   title: string;
 }) => {
   const { image, height, width, title } = props;
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
 
   return (
     <Flex
-      h={isSmallerThan1024? '240px':"400px"}
+      h={isSmallerThan1023? '240px':"400px"}
       bg={"linear-gradient(276.99deg, #55C2FF -5.6%, #4361EE 56.85%)"}
       backgroundImage={bgSubPage}
       alignItems="center"
@@ -24,11 +24,11 @@ export const RegisterHeaderLayout = (props: {
       blendMode="color-dodge"
     >
       <Image
-        mt={isSmallerThan1024? '90px':"200px"}
+        mt={isSmallerThan1023? '90px':"200px"}
         src={image}
         h={height}
         maxW={width}
-        mb={isSmallerThan1024 ? "8px" : "25.6px"}
+        mb={isSmallerThan1023 ? "8px" : "25.6px"}
       />
       <Text
       w={'100%'}

@@ -5,7 +5,7 @@ import { BasicButton } from "../../common/BasicButton";
 import graph from "../../assets/graph.png";
 
 export const WhatIsLyda = () => {
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
 
   return (
     <Flex
@@ -20,7 +20,7 @@ export const WhatIsLyda = () => {
       <Flex
         alignItems={"center"}
         {...theme.LAYOUT_STYLE.layoutStyle()}
-        flexDir={isSmallerThan1024 ? "column" : "row"}
+        flexDir={isSmallerThan1023 ? "column" : "row"}
       >
         <Flex
           flexDir="column"
@@ -28,8 +28,8 @@ export const WhatIsLyda = () => {
           fontFamily={theme.fonts.main}
           fontStyle="normal"
           mr={["", "48px", "136px"]}
-          mt={isSmallerThan1024 ? "56px" : ""}
-          alignItems={isSmallerThan1024 ? "center" : ""}
+          mt={isSmallerThan1023 ? "56px" : ""}
+          alignItems={isSmallerThan1023 ? "center" : ""}
         >
           <Text
             fontSize={["28px", "40px", "70px"]}
@@ -39,12 +39,12 @@ export const WhatIsLyda = () => {
             WHAT IS LYDA
           </Text>
           <Text
-            mt={isSmallerThan1024 ? "16px" : "32px"}
-            fontSize={isSmallerThan1024 ? "14px" : "16px"}
+            mt={isSmallerThan1023 ? "16px" : "32px"}
+            fontSize={isSmallerThan1023 ? "14px" : "16px"}
             fontWeight={400}
             lineHeight={"25px"}
-            textAlign={isSmallerThan1024 ? "center" : "left"}
-            mb={isSmallerThan1024 ? "32px" : "50px"}
+            textAlign={isSmallerThan1023 ? "center" : "left"}
+            mb={isSmallerThan1023 ? "32px" : "50px"}
             maxW={["100%", "400px", "500px"]}
           >
             LYDA is a platform to launch social tokens to transform social
@@ -55,21 +55,21 @@ export const WhatIsLyda = () => {
             Platform' for full supports in token governance set-up, NFT trades,
             and fan rewarding system implementation
           </Text>
-          <Flex mb={isSmallerThan1024 ? "48px" : ""}>
+          <Flex mb={isSmallerThan1023 ? "48px" : ""}>
             <BasicButton
               text="Whitepaper (EN)"
               bg={"purple.0"}
               color={"#ffffff"}
-              h={isSmallerThan1024 ? "48px" : "53px"}
-              w={isSmallerThan1024 ? "148px" : "180px"}
+              h={isSmallerThan1023 ? "48px" : "53px"}
+              w={isSmallerThan1023 ? "148px" : "180px"}
               mr={"24px"}
               link={"LYDA_Whitepaper_v1.1_220608_EN.docx.pdf"}
             />
             <BasicButton
               text="Whitepaper (KR)"
               bg={"blue.0"}
-              h={isSmallerThan1024 ? "48px" : "53px"}
-              w={isSmallerThan1024 ? "148px" : "180px"}
+              h={isSmallerThan1023 ? "48px" : "53px"}
+              w={isSmallerThan1023 ? "148px" : "180px"}
               color={"blue.200"}
               link={"LYDA_Whitepaper_KR.pdf"}
             />
@@ -77,7 +77,7 @@ export const WhatIsLyda = () => {
         </Flex>
         <Image
           src={graph}
-          mb={isSmallerThan1024 ? "56px" : ""}
+          mb={isSmallerThan1023 ? "56px" : ""}
           h={["92%", "496px", "550px"]}
           w={["", "496px", "550px"]}
         />

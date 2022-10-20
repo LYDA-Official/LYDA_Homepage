@@ -5,7 +5,7 @@ import PreRegisterCreators from "../assets/SVG/PreRegisterCreators.svg";
 import { FormLayout } from "../layouts/register/FormLayout";
 
 export const CreatorsRegister = () => {
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
 
   return (
     <Flex
@@ -14,8 +14,8 @@ export const CreatorsRegister = () => {
     >
       <RegisterHeaderLayout
         image={PreRegisterCreators}
-        height={isSmallerThan1024? '44px':"56.9px"}
-        width={isSmallerThan1024?'300px':'634.18px'}
+        height={isSmallerThan1023? '44px':"56.9px"}
+        width={isSmallerThan1023?'300px':'634.18px'}
         title={
           "Assessment a level of social capital that you have earned in the fandom"
         }

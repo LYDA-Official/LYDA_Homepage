@@ -12,7 +12,7 @@ import LYDATeam from "../../assets/LYDATeam.png";
 import Seong from '../../assets/seong.png'
 export const InfoLayout = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
 
   return (
     <Flex
@@ -35,7 +35,7 @@ export const InfoLayout = () => {
           // justifyContent={"space-evenly"}
           alignItems="center"
           mb={["48px", "88px", "120px"]}
-          flexDir={isSmallerThan1024 ? "column" : "row"}
+          flexDir={isSmallerThan1023 ? "column" : "row"}
         >
           <Image
             src={LYDATeam}
@@ -45,13 +45,13 @@ export const InfoLayout = () => {
           />
           <Flex
             flexDir={"column"}
-            alignItems={isSmallerThan1024 ? "center" : ""}
+            alignItems={isSmallerThan1023 ? "center" : ""}
           >
             <Text
-              fontSize={isSmallerThan1024 ? "28px" : "40px"}
+              fontSize={isSmallerThan1023 ? "28px" : "40px"}
               fontWeight={600}
               mb={["8px", "16px", "24px"]}
-              mt={isSmallerThan1024 ? "24px" : ""}
+              mt={isSmallerThan1023 ? "24px" : ""}
             >
               Founded in 2022,
             </Text>
@@ -80,12 +80,12 @@ export const InfoLayout = () => {
         <Flex
           w={["100%", "944px", "1200px"]}
           alignItems="center"
-          flexDir={isSmallerThan1024 ? "column-reverse" : "row"}
+          flexDir={isSmallerThan1023 ? "column-reverse" : "row"}
         >
-          <Flex flexDir={"column"} mt={isSmallerThan1024 ? "24px" : ""}  alignItems={isSmallerThan1024 ? "center" : ""}>
+          <Flex flexDir={"column"} mt={isSmallerThan1023 ? "24px" : ""}  alignItems={isSmallerThan1023 ? "center" : ""}>
             <Text
               color="#666d8b"
-              fontSize={isSmallerThan1024 ? "16px" : "18px"}
+              fontSize={isSmallerThan1023 ? "16px" : "18px"}
               fontStyle="normal"
               fontWeight={600}
             >
@@ -94,8 +94,8 @@ export const InfoLayout = () => {
             <Text
               fontSize={"40px"}
               fontWeight={600}
-              alignItems={isSmallerThan1024 ? "center" : ""}
-              mb={isSmallerThan1024 ? "8px" : "24px"}
+              alignItems={isSmallerThan1023 ? "center" : ""}
+              mb={isSmallerThan1023 ? "8px" : "24px"}
               lineHeight="63px"
             >
               Seong Song
@@ -106,7 +106,7 @@ export const InfoLayout = () => {
               fontStyle="normal"
               lineHeight={["22.04px", "25.18px", "32px"]}
               fontWeight={400}
-              textAlign={isSmallerThan1024? 'center':'left'}
+              textAlign={isSmallerThan1023? 'center':'left'}
             >
               Among the various aspects of each crypto projects, Seong most
               values realization of user ecosystem based on its own intended

@@ -7,7 +7,7 @@ import PlayButton from "../../assets/SVG/play.svg";
 
 export const SeeForYourself = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
 
   // const [isSmallerThan1440] = useMediaQuery("(max-width: 1200px)");
 
@@ -43,13 +43,13 @@ export const SeeForYourself = () => {
           flexDir={"column"}
           color={"blue.200"}
           justifyContent="center"
-          mt={isSmallerThan1024 ? "56px" : ""}
+          mt={isSmallerThan1023 ? "56px" : ""}
         >
           <Text
             fontWeight={600}
-            fontSize={isSmallerThan1024 ? "28px" : "48px"}
+            fontSize={isSmallerThan1023 ? "28px" : "48px"}
             lineHeight={"48px"}
-            mb={isSmallerThan1024 ? "16px" : "20px"}
+            mb={isSmallerThan1023 ? "16px" : "20px"}
             textAlign="center"
           >
             LYDA via Social Capital
@@ -57,8 +57,8 @@ export const SeeForYourself = () => {
           <Text
             w={"100%"}
             fontWeight={400}
-            fontSize={isSmallerThan1024 ? "14px" : "16px"}
-            lineHeight={isSmallerThan1024 ? "22.04px" : "25.18px"}
+            fontSize={isSmallerThan1023 ? "14px" : "16px"}
+            lineHeight={isSmallerThan1023 ? "22.04px" : "25.18px"}
             textAlign="center"
             mb={["32px", "56px", "64px"]}
           >
@@ -68,21 +68,21 @@ export const SeeForYourself = () => {
         </Flex>
         <Flex
           id={"videoContainer"}
-          borderTopRightRadius={isSmallerThan1024 ? "80px" : "88px"}
+          borderTopRightRadius={isSmallerThan1023 ? "80px" : "88px"}
           h={["100%", "514px", "600px"]}
           w={["100%", "944px", "1100px"]}
           justifyContent={"center"}
           alignItems={"center"}
           mb={["56px", "", ""]}
         >
-         {!isSmallerThan1024 && <Image
+         {!isSmallerThan1023 && <Image
             src={PlayButton}
             zIndex={10000}
             display="flex"
             position={"absolute"}
             id="play-pause"
             _hover={{ cursor: "pointer" }}
-            height={isSmallerThan1024 ? "64px" : "100px"}
+            height={isSmallerThan1023 ? "64px" : "100px"}
           />}
          
           <Box

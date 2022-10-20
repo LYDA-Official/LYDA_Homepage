@@ -6,7 +6,7 @@ import Mobilebg1 from "../../assets/Mobilebg1.png";
 import timeline1 from "../../assets/timeline1.png";
 import timeline from "../../assets/timeline.png";
 export const Roadmap = () => {
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
   const [isSmallerThan1640] = useMediaQuery("(max-width: 1640px)");
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
 
@@ -15,7 +15,7 @@ export const Roadmap = () => {
       title: "Pre-registration",
       content:
         "LYDA is open for all creators but requires high level of social capital to monetize. Pre-registered projects will be reviewed and selected for fan token launch.",
-      top: isSmallerThan1024 ? "21%" : "22%",
+      top: isSmallerThan1023 ? "21%" : "22%",
       left: "2%",
       height: 200,
     },
@@ -23,8 +23,8 @@ export const Roadmap = () => {
       title: "LYDA Platform & Marketplace",
       content:
         "LYDA Platform will provide technical infrastructure for the full utilization of fan tokens. It is designed to  govern the token economy and fan engagements",
-      top: isSmallerThan1024 ? "48%" :isSmallerThan1440? "126px":'35%',
-      left: isSmallerThan1024? '30%':"40%",
+      top: isSmallerThan1023 ? "48%" :isSmallerThan1440? "126px":'35%',
+      left: isSmallerThan1023? '30%':"40%",
       height: 300,
      
     },
@@ -32,8 +32,8 @@ export const Roadmap = () => {
       title: "Economic rewards",
       content:
         "Creators obtain financial supports and token users are rewarded for both investments and non-monetary fan activities. As creators grow, return will be significant.",
-      top: isSmallerThan1024 ? "40%" :isSmallerThan1440? '146px': "40%",
-      left:  isSmallerThan1024 ?'75%':'73%',
+      top: isSmallerThan1023 ? "40%" :isSmallerThan1440? '146px': "40%",
+      left:  isSmallerThan1023 ?'75%':'73%',
       height: 200,
       
     },
@@ -105,10 +105,10 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"} mb={"150px"}>
+        <Flex h={"100%"} w={isSmallerThan1023 ? "49px" : "89px"} mb={"150px"}>
           <Flex
-            h={isSmallerThan1024 ? "50px" : "88px"}
-            w={isSmallerThan1024 ? "50px" : "88px"}
+            h={isSmallerThan1023 ? "50px" : "88px"}
+            w={isSmallerThan1023 ? "50px" : "88px"}
             bg={isHover ? "rgba(113, 247, 255, 0.2)" : "transparent"}
             borderRadius={"50%"}
             // position='relative'
@@ -117,8 +117,8 @@ export const Roadmap = () => {
             border={isHover ? "3px dashed #71F7FF" : ""}
           >
             <Box
-              h={isSmallerThan1024 ? "19px" : "25px"}
-              w={isSmallerThan1024 ? "19px" : "25px"}
+              h={isSmallerThan1023 ? "19px" : "25px"}
+              w={isSmallerThan1023 ? "19px" : "25px"}
               bg={"blue.100"}
               opacity={1}
               borderRadius={"50%"}
@@ -126,7 +126,7 @@ export const Roadmap = () => {
               // position='absolute'
             ></Box>
             <Box
-              height={isSmallerThan1024 ? "160px" : height}
+              height={isSmallerThan1023 ? "160px" : height}
               width="1px"
               bg={"blue.100"}
               position="absolute"
@@ -142,15 +142,15 @@ export const Roadmap = () => {
           flexDir="column"
         >
           <Text
-            fontSize={isSmallerThan1024 ? "14px" : "20px"}
+            fontSize={isSmallerThan1023 ? "14px" : "20px"}
             fontWeight={600}
             fontStyle="normal"
           >
             {title}
           </Text>
           <Text
-            w={isSmallerThan1024 ? "180px" : "300px"}
-            fontSize={isSmallerThan1024 ? "10px" : "16px"}
+            w={isSmallerThan1023 ? "180px" : "300px"}
+            fontSize={isSmallerThan1023 ? "10px" : "16px"}
             fontWeight={"normal"}
             fontStyle="normal"
           >
@@ -166,10 +166,10 @@ export const Roadmap = () => {
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
-        <Flex h={"100%"} w={isSmallerThan1024 ? "49px" : "89px"}>
+        <Flex h={"100%"} w={isSmallerThan1023 ? "49px" : "89px"}>
           <Flex
-            h={isSmallerThan1024 ? "50px" : "88px"}
-            w={isSmallerThan1024 ? "50px" : "88px"}
+            h={isSmallerThan1023 ? "50px" : "88px"}
+            w={isSmallerThan1023 ? "50px" : "88px"}
             bg={isHover ? "rgba(113, 247, 255, 0.2)" : "transparent"}
             borderRadius={"50%"}
             // position='relative'
@@ -178,8 +178,8 @@ export const Roadmap = () => {
             border={isHover ? "3px dashed #71F7FF" : ""}
           >
             <Box
-              h={isSmallerThan1024 ? "19px" : "25px"}
-              w={isSmallerThan1024 ? "19px" : "25px"}
+              h={isSmallerThan1023 ? "19px" : "25px"}
+              w={isSmallerThan1023 ? "19px" : "25px"}
               bg={"blue.100"}
               opacity={1}
               borderRadius={"50%"}
@@ -187,32 +187,32 @@ export const Roadmap = () => {
               // position='absolute'
             ></Box>
             <Box
-              height={isSmallerThan1024 ? "160px" : height}
+              height={isSmallerThan1023 ? "160px" : height}
               width="1px"
               bg={"blue.100"}
               position="absolute"
-              mb={isSmallerThan1024? '165px':height-25}
+              mb={isSmallerThan1023? '165px':height-25}
               opacity={isHover ? 1 : 0.3}
             ></Box>
           </Flex>
         </Flex>
         <Flex
           position="relative"
-          top={isSmallerThan1024? '-143px':-height+57}
+          top={isSmallerThan1023? '-143px':-height+57}
           left={"-12px"}
           color={isHover ? "blue.100" : "white"}
           flexDir="column"
         >
           <Text
-            fontSize={isSmallerThan1024 ? "14px" : "20px"}
+            fontSize={isSmallerThan1023 ? "14px" : "20px"}
             fontWeight={600}
             fontStyle="normal"
           >
             {title}
           </Text>
           <Text
-            w={isSmallerThan1024 ? "180px" : "300px"}
-            fontSize={isSmallerThan1024 ? "10px" : "14px"}
+            w={isSmallerThan1023 ? "180px" : "300px"}
+            fontSize={isSmallerThan1023 ? "10px" : "14px"}
             fontWeight={"normal"}
             fontStyle="normal"
             mt={"8px"}
@@ -226,9 +226,9 @@ export const Roadmap = () => {
   return (
     <Flex
       bg={"blue.400"}
-      backgroundImage={isSmallerThan1024 ? Mobilebg1 : bg}
-      backgroundSize={isSmallerThan1024 ? "100% 590px" : "100% 970px"}
-      h={isSmallerThan1024 ? "590px" : "970px"}
+      backgroundImage={isSmallerThan1023 ? Mobilebg1 : bg}
+      backgroundSize={isSmallerThan1023 ? "100% 590px" : "100% 970px"}
+      h={isSmallerThan1023 ? "590px" : "970px"}
       // onScroll={detectScroll}
 
       zIndex={0}
@@ -244,7 +244,7 @@ export const Roadmap = () => {
     >
       <Flex
         fontFamily={theme.fonts.main}
-        mt={isSmallerThan1024 ? "56px" : "120px"}
+        mt={isSmallerThan1023 ? "56px" : "120px"}
         flexDir={"column"}
       >
         <Flex
@@ -262,8 +262,8 @@ export const Roadmap = () => {
           {" "}
           <Text
             fontWeight={600}
-            fontSize={isSmallerThan1024 ? "28px" : "48px"}
-            mb={isSmallerThan1024 ? "16px" : "20px"}
+            fontSize={isSmallerThan1023 ? "28px" : "48px"}
+            mb={isSmallerThan1023 ? "16px" : "20px"}
           >
             LYDA Roadmap
           </Text>
@@ -273,11 +273,11 @@ export const Roadmap = () => {
           w={["1290px", "1920px", "fit-content"]}
           // overflow='hidden'
           position={"relative"}
-          mt={isSmallerThan1024 ? "230px" : "300px"}
+          mt={isSmallerThan1023 ? "230px" : "300px"}
         >
           <Image
             src={timeline}
-            h={isSmallerThan1024 ? "200px" : "100%"}
+            h={isSmallerThan1023 ? "200px" : "100%"}
             w={"100%"}
           />
           {mapPoints.map((point: any, index: number) => (

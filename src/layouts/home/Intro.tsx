@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 export const Intro = () => {
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
   const [isSmallerThan1480] = useMediaQuery("(max-width: 1480px)");
   const [isSmallerThan653] = useMediaQuery("(max-width: 653px)");
   const [mainAnimation, setMainAnimation] = useState(false);
@@ -93,7 +93,7 @@ export const Intro = () => {
     margin-right:16px !important
   }
   `
-  return isSmallerThan1024 ? (
+  return isSmallerThan1023 ? (
     <Flex
       w={"100%"}
       id={"info"}
@@ -175,8 +175,8 @@ export const Intro = () => {
               {" "}
               <Image
                 src={item.image}
-                w={isSmallerThan1024 ? "296px" : "600px"}
-                h={isSmallerThan1024 ? "" : "640px"}
+                w={isSmallerThan1023 ? "296px" : "600px"}
+                h={isSmallerThan1023 ? "" : "640px"}
                 filter={currentSlide === index ? "blur(0px)" : "blur(20px)"}
                 opacity={currentSlide === index ? 1 : 0.5}
               />
@@ -198,8 +198,8 @@ export const Intro = () => {
                   {item.title}
                 </Text>
                 <Text
-                  fontSize={isSmallerThan1024 ? "12px" : "14px"}
-                  fontWeight={isSmallerThan1024 ? 300 : 400}
+                  fontSize={isSmallerThan1023 ? "12px" : "14px"}
+                  fontWeight={isSmallerThan1023 ? 300 : 400}
                   fontStyle="normal"
                   w={"360px"}
                   zIndex={100}

@@ -7,7 +7,7 @@ import { BasicButton } from "../../common/BasicButton";
 
 export const PreRegistration = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
 
   return (
     <Flex
@@ -21,7 +21,7 @@ export const PreRegistration = () => {
         blendMode="color-dodge"
         w={"100%"}
         height={"-webkit-fill-available"}
-        // height={isSmallerThan1024 ? "790px" : "400px"}
+        // height={isSmallerThan1023 ? "790px" : "400px"}
       >
         <Image
           src={isSmallerThan1440 ? Mobilebg2 : bg}
@@ -46,20 +46,20 @@ export const PreRegistration = () => {
           flexDir={"column"}
           mb={["32px", "56px", "64px"]}
           color={"white.0"}
-          mt={isSmallerThan1024 ? "56px" : ""}
+          mt={isSmallerThan1023 ? "56px" : ""}
         >
           {" "}
           <Text
             fontWeight={600}
-            fontSize={isSmallerThan1024 ? "28px" : "48px"}
-            mb={isSmallerThan1024 ? "16px" : "20px"}
+            fontSize={isSmallerThan1023 ? "28px" : "48px"}
+            mb={isSmallerThan1023 ? "16px" : "20px"}
           >
             Pre Registration
           </Text>
           <Text
-            fontSize={isSmallerThan1024 ? "14px" : "16px"}
+            fontSize={isSmallerThan1023 ? "14px" : "16px"}
             fontWeight={400}
-            w={isSmallerThan1024 ? "100%" : "826px"}
+            w={isSmallerThan1023 ? "100%" : "826px"}
             textAlign={"center"}
           >
             Apply for LYDA is easy but selective, for the best interest of our
@@ -71,19 +71,19 @@ export const PreRegistration = () => {
           w={"100%"}
           justifyContent={"center"}
           fontFamily={theme.fonts.main}
-          flexDir={isSmallerThan1024 ? "column" : "row"}
+          flexDir={isSmallerThan1023 ? "column" : "row"}
           alignItems="center"
-          mb={isSmallerThan1024 ? "58px" : ""}
+          mb={isSmallerThan1023 ? "58px" : ""}
         >
           <NavLink to="/register/creators">
             <Flex
-              borderTopRightRadius={isSmallerThan1024 ? "80px" : ""}
+              borderTopRightRadius={isSmallerThan1023 ? "80px" : ""}
               flexDir={"column"}
               h={["100%", "440px", "502px"]}
               w={["100%", "472px", "600px"]}
               pt={["33px", "114px", "160px"]}
               px={["18px", "40px", "60px"]}
-              mb={isSmallerThan1024 ? "20px" : ""}
+              mb={isSmallerThan1023 ? "20px" : ""}
               _hover={{
                 background:
                   "linear-gradient(134.5deg, #55C2FF -23.18%, #4361EE 94.24%)",
@@ -98,10 +98,10 @@ export const PreRegistration = () => {
             >
               <Text
                 fontWeight={600}
-                fontSize={isSmallerThan1024 ? "24px" : "40px"}
+                fontSize={isSmallerThan1023 ? "24px" : "40px"}
                 fontStyle={"normal"}
-                lineHeight={isSmallerThan1024 ? "37.78px" : "63px"}
-                mb={isSmallerThan1024 ? "12px" : ""}
+                lineHeight={isSmallerThan1023 ? "37.78px" : "63px"}
+                mb={isSmallerThan1023 ? "12px" : ""}
               >
                 CREATORS
               </Text>
@@ -109,7 +109,7 @@ export const PreRegistration = () => {
                 fontWeight={400}
                 fontSize={["12px", "15px", "16px"]}
                 fontStyle={"normal"}
-                lineHeight={isSmallerThan1024 ? "18.89px" : "25px"}
+                lineHeight={isSmallerThan1023 ? "18.89px" : "25px"}
                 mb={["20px", "40px", "56px"]}
                 h={["", "120px", "100px"]}
               >
@@ -120,8 +120,8 @@ export const PreRegistration = () => {
               </Text>
               <BasicButton
                 text="CREATORS"
-                h={isSmallerThan1024 ? "42px" : "53px"}
-                w={isSmallerThan1024 ? "120px" : "160px"}
+                h={isSmallerThan1023 ? "42px" : "53px"}
+                w={isSmallerThan1023 ? "120px" : "160px"}
                 color="white.0"
                 bg="transparent"
                 border="2px solid #ffffff"
@@ -136,13 +136,13 @@ export const PreRegistration = () => {
               w={["100%", "472px", "600px"]}
               pt={["33px", "114px", "160px"]}
               px={["18px", "40px", "60px"]}
-              mb={isSmallerThan1024 ? "20px" : ""}
+              mb={isSmallerThan1023 ? "20px" : ""}
               bg={
                 isSmallerThan1440
                   ? "linear-gradient(139.33deg, #82FFB4 -57.9%, #07F1FF 98.53%)"
                   : "blue.0"
               }
-              borderTopRightRadius={isSmallerThan1024 ? "" : "80px"}
+              borderTopRightRadius={isSmallerThan1023 ? "" : "80px"}
               color={theme.colors.blue[200]}
               _hover={{
                 background:
@@ -152,10 +152,10 @@ export const PreRegistration = () => {
             >
               <Text
                 fontWeight={600}
-                fontSize={isSmallerThan1024 ? "24px" : "40px"}
+                fontSize={isSmallerThan1023 ? "24px" : "40px"}
                 fontStyle={"normal"}
-                lineHeight={isSmallerThan1024 ? "37.78px" : "63px"}
-                mb={isSmallerThan1024 ? "12px" : ""}
+                lineHeight={isSmallerThan1023 ? "37.78px" : "63px"}
+                mb={isSmallerThan1023 ? "12px" : ""}
               >
                 FANS
               </Text>
@@ -163,7 +163,7 @@ export const PreRegistration = () => {
                 fontWeight={400}
                 fontSize={["12px", "15px", "16px"]}
                 fontStyle={"normal"}
-                lineHeight={isSmallerThan1024 ? "18.89px" : "25px"}
+                lineHeight={isSmallerThan1023 ? "18.89px" : "25px"}
                 mb={["20px", "40px", "56px"]}
                 h={["", "120px", "100px"]}
               >
@@ -173,8 +173,8 @@ export const PreRegistration = () => {
               </Text>
               <BasicButton
                 text="FANS"
-                h={isSmallerThan1024 ? "42px" : "53px"}
-                w={isSmallerThan1024 ? "120px" : "160px"}
+                h={isSmallerThan1023 ? "42px" : "53px"}
+                w={isSmallerThan1023 ? "120px" : "160px"}
                 color="blue.200"
                 bg="transparent"
                 border="2px solid #060B22"

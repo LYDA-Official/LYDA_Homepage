@@ -10,7 +10,7 @@ import onther from "../../assets/onther.png";
 import ontherTablet from "../../assets/ontherTablet.png";
 export const PartnersLayout = () => {
   const [isSmallerThan1440] = useMediaQuery("(max-width: 1440px)");
-  const [isSmallerThan1024] = useMediaQuery("(max-width: 1024px)");
+  const [isSmallerThan1023] = useMediaQuery("(max-width: 1023px)");
 
   const partnersList = [
     {
@@ -26,29 +26,29 @@ export const PartnersLayout = () => {
     return (
       <Flex
       
-        h={isSmallerThan1024 ? "100%" : "392px"}
-        w={isSmallerThan1024 ? "100%" : "360px"}
+        h={isSmallerThan1023 ? "100%" : "392px"}
+        w={isSmallerThan1023 ? "100%" : "360px"}
         bg={"blue.500"}
         borderTopRightRadius={"40px"}
-        p={isSmallerThan1024 ? "32px 20px 24px" : "64px 27px 40px"}
+        p={isSmallerThan1023 ? "32px 20px 24px" : "64px 27px 40px"}
         flexDir="column"
         alignItems={"center"}
         zIndex={100}
-        mb={isSmallerThan1024 ? "24px" : ""}
+        mb={isSmallerThan1023 ? "24px" : ""}
       >
         <Image
           src={image}
-          h={isSmallerThan1024 ? "80px" : "104px"}
-          w={isSmallerThan1024 ? "115.38px" : "150px"}
-          mb={isSmallerThan1024 ? "24px" : "40px"}
+          h={isSmallerThan1023 ? "80px" : "104px"}
+          w={isSmallerThan1023 ? "115.38px" : "150px"}
+          mb={isSmallerThan1023 ? "24px" : "40px"}
         ></Image>
         <Text
           textAlign={"center"}
           color="white.0"
           fontFamily={theme.fonts.main}
-          fontSize={isSmallerThan1024 ? "12px" : "14px"}
+          fontSize={isSmallerThan1023 ? "12px" : "14px"}
           fontWeight={400}
-          lineHeight={isSmallerThan1024 ? "18.89px" : "24px"}
+          lineHeight={isSmallerThan1023 ? "18.89px" : "24px"}
         >
           {bio}
         </Text>
@@ -91,9 +91,9 @@ export const PartnersLayout = () => {
     >
       <Flex position={"absolute"} width="100%"   h={["", "432px", "504px"]}    blendMode="color-dodge">
         <Image
-          src={isSmallerThan1024? PartnersBGM: isSmallerThan1440? PartnersBGT : PartnersBGD}
+          src={isSmallerThan1023? PartnersBGM: isSmallerThan1440? PartnersBGT : PartnersBGD}
           width="100%"
-          height={isSmallerThan1024 ? "432px" : "100%"}
+          height={isSmallerThan1023 ? "432px" : "100%"}
         ></Image>
       </Flex>
       <Flex
@@ -106,8 +106,8 @@ export const PartnersLayout = () => {
       >
         <Text
           fontWeight={600}
-          fontSize={isSmallerThan1024 ? "28px" : "48px"}
-          lineHeight={isSmallerThan1024 ? "44.07px" : "48px"}
+          fontSize={isSmallerThan1023 ? "28px" : "48px"}
+          lineHeight={isSmallerThan1023 ? "44.07px" : "48px"}
           fontStyle="normal"
           mb={ ["16px", "56px", '64px']}
         >
@@ -115,7 +115,7 @@ export const PartnersLayout = () => {
         </Text>
        
       </Flex>
-      {isSmallerThan1024 ? (
+      {isSmallerThan1023 ? (
         <Flex w={"100%"} alignItems={"center"} mb="56px" flexDir={"column"}>
           {partnersList.map((partner: any, index: number) => (
             <PartnerCard bio={partner.bio} image={partner.image} key={index} />
@@ -123,7 +123,7 @@ export const PartnersLayout = () => {
         </Flex>
       ) : (
         <Flex
-          w={isSmallerThan1024 ? "100%" : "944px"}
+          w={isSmallerThan1023 ? "100%" : "944px"}
           justifyContent={"space-between"}
           mb={"120px"}
         >
