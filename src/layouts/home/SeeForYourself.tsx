@@ -75,7 +75,7 @@ export const SeeForYourself = () => {
           alignItems={"center"}
           mb={["56px", "", ""]}
         >
-          <Image
+         {!isSmallerThan1024 && <Image
             src={PlayButton}
             zIndex={10000}
             display="flex"
@@ -83,7 +83,7 @@ export const SeeForYourself = () => {
             id="play-pause"
             _hover={{ cursor: "pointer" }}
             height={isSmallerThan1024 ? "64px" : "100px"}
-          />
+          />}
          
           <Box
             id="video_background"

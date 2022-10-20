@@ -120,7 +120,7 @@ export const MobileHeader: React.FC = () => {
                 </Text>
               </NavLink>
 
-              <HashLink to="/#pre-registration" onClick={onClose}  target={'_blank'}>
+              <HashLink to="/#pre-registration" onClick={onClose} >
                 <Text
                   color={registerCreators || registerFans ? "blue.100" : "white.0"}
                   _hover={{ color: "blue.100" }}
